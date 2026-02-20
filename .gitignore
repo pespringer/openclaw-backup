@@ -1,0 +1,8 @@
+# safety
+**/.DS_Store
+**/*.log
+
+# if any of these ever appear in workspace, never commit them
+**/credentials/**
+**/tokens/**
+
