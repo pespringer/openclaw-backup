@@ -2,14 +2,21 @@
 
 ## Preferences / Conventions
 - Repos location: keep all projects in subdirectories under `~/repos` (e.g., Mission Control lives at `~/repos/mission-control`).
-- Workflow: For coding tasks, use the Mission Control Project board: create a card, move it to **In Progress** when work begins, move it to **Review** when implementation is ready for the other person to validate, then move it to **Done** after validation. Patrick manually validates work and provides the instructions to move tasks to Done. The details in the story are the definitive instructions for any work done through the board.
-- When no tasks are in progress, look in the **Backlog** for stories to start as the next task.
-- Once a story is picked up from Backlog, start work immediately (no need to confirm before beginning).
+
+## Mission Control board workflow (remember this)
+1. Pick up the next story **assigned to Apex** from **Backlog**.
+2. Move the story to **In Progress** and begin work immediately.
+3. When implementation is complete: **commit**, **rebuild/redeploy containers** (`docker compose down && docker compose up -d --build`), then move the story to **Review**.
+4. Validate:
+   - If it’s a **UI change** and the OpenClaw **headless browser** is available, validate via browser automation.
+   - Otherwise validate against the **Postgres docker database** + API behavior.
+5. Report back **success/failure** so Patrick can validate and then instruct moving to **Done**.
+
+## Notes
 - **Connecting to the Project Board (Mission Control)**: Use the database running in a Docker container (Postgres). The database URL is specified in the `.env` file. Example command:
   ```bash
   docker exec mission-control-db psql -U mission -d mission_control -c "<SQL Query>"
   ```
   This allows querying the project board tasks directly from the `Task` table.
-- **Browser Environment**: The browser environment is not currently set up, so direct browser-based interactions or automation are unavailable.
 - **Docker review workflow**: When making updates to something that is running in Docker (e.g., Mission Control), run `docker compose down` then `docker compose up -d --build` so containers are rebuilt and ready for review.
 - **Git commits**: When a change is ready for review, commit completed work to the local git repo for the project.
