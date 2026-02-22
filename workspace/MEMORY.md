@@ -13,10 +13,14 @@
 5. Report back **success/failure** so Patrick can validate and then instruct moving to **Done**.
 
 ## Notes
-- **Connecting to the Project Board (Mission Control)**: Use the database running in a Docker container (Postgres). The database URL is specified in the `.env` file. Example command:
+- **Mission Control Setup**: Mission Control is a Docker application with a Postgres database and a front-end connected via an API. 
+To connect to the project board and query tasks:
   ```bash
   docker exec mission-control-db psql -U mission -d mission_control -c "<SQL Query>"
   ```
-  This allows querying the project board tasks directly from the `Task` table.
+- API/UI Login Credentials for troubleshooting:
+  - **Email**: apex@missioncontrol.app
+  - **Password**: ApexM1ss1on!
+Tasks are stored in the `Task` table with PascalCase column names (e.g., `createdAt`) and the API needs the above credentials to authenticate task fetches.
 - **Docker review workflow**: When making updates to something that is running in Docker (e.g., Mission Control), run `docker compose down` then `docker compose up -d --build` so containers are rebuilt and ready for review.
 - **Git commits**: When a change is ready for review, commit completed work to the local git repo for the project.

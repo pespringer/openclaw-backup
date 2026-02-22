@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.19-2",
-    "lastTouchedAt": "2026-02-20T08:59:30.015Z"
+    "lastTouchedAt": "2026-02-22T03:44:54.714Z"
   },
   "env": {
     "vars": {
@@ -45,8 +45,8 @@
         "api": "openai-completions",
         "models": [
           {
-            "id": "minimax-m2.5:cloud",
-            "name": "minimax-m2.5:cloud",
+            "id": "qwen3.5:cloud",
+            "name": "qwen3.5:cloud",
             "reasoning": true,
             "input": [
               "text"
@@ -57,7 +57,7 @@
               "cacheRead": 0,
               "cacheWrite": 0
             },
-            "contextWindow": 198000,
+            "contextWindow": 256000,
             "maxTokens": 8192
           }
         ]
@@ -74,17 +74,26 @@
       },
       "models": {
         "github-copilot/gpt-4o": {},
-        "openai-codex/gpt-5.2": {}
+        "openai-codex/gpt-5.2": {},
+        "ollama/qwen3.5:cloud": {}
       },
       "workspace": "/home/claw/.openclaw/workspace",
       "compaction": {
         "mode": "safeguard"
       },
-      "maxConcurrent": 4,
-      "subagents": {
-        "maxConcurrent": 8
+      "maxConcurrent": 4
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "lugnut",
+        "name": "Lugnut",
+        "workspace": "/home/claw/.openclaw/workspace-lugnut",
+        "agentDir": "/home/claw/.openclaw/agents/lugnut/agent"
       }
-    }
+    ]
   },
   "tools": {
     "web": {
