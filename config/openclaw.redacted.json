@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.19-2",
-    "lastTouchedAt": "2026-02-22T03:44:54.714Z"
+    "lastTouchedVersion": "2026.2.21-2",
+    "lastTouchedAt": "2026-02-23T16:12:08.553Z"
   },
   "env": {
     "vars": {
@@ -9,9 +9,9 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-02-15T23:18:15.469Z",
-    "lastRunVersion": "2026.2.13",
-    "lastRunCommand": "configure",
+    "lastRunAt": "2026-02-23T16:12:08.507Z",
+    "lastRunVersion": "2026.2.21-2",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "browser": {
@@ -81,11 +81,25 @@
       "compaction": {
         "mode": "safeguard"
       },
-      "maxConcurrent": 4
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8,
+        "maxSpawnDepth": 2,
+        "maxChildrenPerAgent": 5
+      }
     },
     "list": [
       {
-        "id": "main"
+        "id": "main",
+        "subagents": {
+          "allowAgents": [
+            "worker"
+          ]
+        }
+      },
+      {
+        "id": "worker",
+        "model": "openai-codex/gpt-5.2"
       },
       {
         "id": "lugnut",
@@ -95,44 +109,11 @@
       }
     ]
   },
-  "tools": {
-    "web": {
-      "search": {
-        "enabled": true,
-        "provider": "brave",
-        "apiKey": "***REDACTED***",
-        "maxResults": 5,
-        "timeoutSeconds": 20,
-        "cacheTtlMinutes": 10
-      }
-    }
-  },
-  "messages": {
-    "ackReactionScope": "group-mentions"
-  },
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
-    "restart": true
-  },
-  "hooks": {
-    "internal": {
-      "enabled": true,
-      "entries": {
-        "boot-md": {
-          "enabled": true
-        },
-        "bootstrap-extra-files": {
-          "enabled": true
-        },
-        "command-logger": {
-          "enabled": true
-        },
-        "session-memory": {
-          "enabled": true
-        }
-      }
-    }
+    "restart": true,
+    "ownerDisplay": "raw"
   },
   "channels": {
     "telegram": {
@@ -140,7 +121,7 @@
       "dmPolicy": "pairing",
       "botToken": "***REDACTED***",
       "groupPolicy": "allowlist",
-      "streamMode": "partial"
+      "streaming": true
     }
   },
   "gateway": {
