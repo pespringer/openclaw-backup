@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.21-2",
-    "lastTouchedAt": "2026-02-23T16:12:08.553Z"
+    "lastTouchedVersion": "2026.2.22-2",
+    "lastTouchedAt": "2026-02-24T05:57:20.201Z"
   },
   "env": {
     "vars": {
@@ -91,21 +91,42 @@
     "list": [
       {
         "id": "main",
-        "subagents": {
-          "allowAgents": [
-            "worker"
-          ]
-        }
+        "model": "openai-cod5/gpt-5.2"
       },
       {
-        "id": "worker",
-        "model": "openai-codex/gpt-5.2"
+        "id": "cockpit",
+        "name": "Cockpit",
+        "workspace": "/home/claw/.openclaw/workspace/agents/cockpit"
       },
       {
-        "id": "lugnut",
-        "name": "Lugnut",
-        "workspace": "/home/claw/.openclaw/workspace-lugnut",
-        "agentDir": "/home/claw/.openclaw/agents/lugnut/agent"
+        "id": "halo",
+        "name": "Halo",
+        "workspace": "/home/claw/.openclaw/workspace/agents/halo"
+      },
+      {
+        "id": "hans",
+        "name": "Hans",
+        "workspace": "/home/claw/.openclaw/workspace/agents/hans"
+      },
+      {
+        "id": "paddock",
+        "name": "Paddock",
+        "workspace": "/home/claw/.openclaw/workspace/agents/paddock"
+      },
+      {
+        "id": "pitcrew",
+        "name": "Pitcrew",
+        "workspace": "/home/claw/.openclaw/workspace/agents/pitcrew"
+      },
+      {
+        "id": "podium",
+        "name": "Podium",
+        "workspace": "/home/claw/.openclaw/workspace/agents/podium"
+      },
+      {
+        "id": "sector",
+        "name": "Sector",
+        "workspace": "/home/claw/.openclaw/workspace/agents/sector"
       }
     ]
   },
@@ -121,7 +142,7 @@
       "dmPolicy": "pairing",
       "botToken": "***REDACTED***",
       "groupPolicy": "allowlist",
-      "streaming": true
+      "streaming": "partial"
     }
   },
   "gateway": {
