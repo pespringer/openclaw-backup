@@ -1,7 +1,12 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.22-2",
-    "lastTouchedAt": "2026-02-24T05:57:20.201Z"
+    "lastTouchedVersion": "2026.2.26",
+    "lastTouchedAt": "2026-02-28T01:29:57.126Z"
+  },
+  "tools": {
+    "agentToAgent": {
+      "enabled": true
+    }
   },
   "env": {
     "vars": {
@@ -9,8 +14,8 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-02-23T16:12:08.507Z",
-    "lastRunVersion": "2026.2.21-2",
+    "lastRunAt": "2026-02-28T00:20:42.182Z",
+    "lastRunVersion": "2026.2.26",
     "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
@@ -18,7 +23,7 @@
     "enabled": true,
     "cdpUrl": "http://127.0.0.1:9222",
     "ssrfPolicy": {
-      "allowPrivateNetwork": true,
+      "dangerouslyAllowPrivateNetwork": true,
       "allowedHostnames": [
         "localhost",
         "127.0.0.1"
@@ -92,44 +97,18 @@
       {
         "id": "main",
         "model": "openai-cod5/gpt-5.2"
-      },
-      {
-        "id": "cockpit",
-        "name": "Cockpit",
-        "workspace": "/home/claw/.openclaw/workspace/agents/cockpit"
-      },
-      {
-        "id": "halo",
-        "name": "Halo",
-        "workspace": "/home/claw/.openclaw/workspace/agents/halo"
-      },
-      {
-        "id": "hans",
-        "name": "Hans",
-        "workspace": "/home/claw/.openclaw/workspace/agents/hans"
-      },
-      {
-        "id": "paddock",
-        "name": "Paddock",
-        "workspace": "/home/claw/.openclaw/workspace/agents/paddock"
-      },
-      {
-        "id": "pitcrew",
-        "name": "Pitcrew",
-        "workspace": "/home/claw/.openclaw/workspace/agents/pitcrew"
-      },
-      {
-        "id": "podium",
-        "name": "Podium",
-        "workspace": "/home/claw/.openclaw/workspace/agents/podium"
-      },
-      {
-        "id": "sector",
-        "name": "Sector",
-        "workspace": "/home/claw/.openclaw/workspace/agents/sector"
       }
     ]
   },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "telegram",
+        "accountId": "default"
+      }
+    }
+  ],
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
