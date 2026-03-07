@@ -1,119 +1,56 @@
 {
-  "meta": {
-    "lastTouchedVersion": "2026.2.26",
-    "lastTouchedAt": "2026-02-28T01:29:57.126Z"
-  },
-  "tools": {
-    "agentToAgent": {
-      "enabled": true
-    }
-  },
-  "env": {
-    "vars": {
-      "BRAVE_API_KEY": "***REDACTED***"
-    }
-  },
   "wizard": {
-    "lastRunAt": "2026-02-28T00:20:42.182Z",
-    "lastRunVersion": "2026.2.26",
-    "lastRunCommand": "doctor",
+    "lastRunAt": "2026-03-06T20:58:46.029Z",
+    "lastRunVersion": "2026.3.2",
+    "lastRunCommand": "onboard",
     "lastRunMode": "local"
-  },
-  "browser": {
-    "enabled": true,
-    "cdpUrl": "http://127.0.0.1:9222",
-    "ssrfPolicy": {
-      "dangerouslyAllowPrivateNetwork": true,
-      "allowedHostnames": [
-        "localhost",
-        "127.0.0.1"
-      ]
-    }
   },
   "auth": {
     "profiles": {
-      "github-copilot:github": {
-        "provider": "github-copilot",
-        "mode": "token"
-      },
       "openai-codex:default": {
         "provider": "openai-codex",
         "mode": "oauth"
       }
     }
   },
-  "models": {
-    "providers": {
-      "ollama": {
-        "baseUrl": "http://ollama-host:11434/v1",
-        "apiKey": "***REDACTED***",
-        "api": "openai-completions",
-        "models": [
-          {
-            "id": "qwen3.5:cloud",
-            "name": "qwen3.5:cloud",
-            "reasoning": true,
-            "input": [
-              "text"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 256000,
-            "maxTokens": 8192
-          }
-        ]
-      }
-    }
-  },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.2",
-        "fallbacks": [
-          "github-copilot/gpt-4o"
-        ]
+        "primary": "openai-codex/gpt-5.3-codex"
       },
-      "models": {
-        "github-copilot/gpt-4o": {},
-        "openai-codex/gpt-5.2": {},
-        "ollama/qwen3.5:cloud": {}
-      },
-      "workspace": "/home/claw/.openclaw/workspace",
-      "compaction": {
-        "mode": "safeguard"
-      },
-      "maxConcurrent": 4,
-      "subagents": {
-        "maxConcurrent": 8,
-        "maxSpawnDepth": 2,
-        "maxChildrenPerAgent": 5
-      }
-    },
-    "list": [
-      {
-        "id": "main",
-        "model": "openai-cod5/gpt-5.2"
-      }
-    ]
-  },
-  "bindings": [
-    {
-      "agentId": "main",
-      "match": {
-        "channel": "telegram",
-        "accountId": "default"
-      }
+      "workspace": "/home/claw/.openclaw/workspace"
     }
-  ],
+  },
+  "tools": {
+    "profile": "full"
+  },
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
     "restart": true,
     "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
   },
   "channels": {
     "telegram": {
@@ -141,18 +78,11 @@
         "camera.snap",
         "camera.clip",
         "screen.record",
-        "calendar.add",
         "contacts.add",
-        "reminders.add"
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
       ]
-    }
-  },
-  "memory": {
-    "backend": "qmd"
-  },
-  "skills": {
-    "install": {
-      "nodeManager": "npm"
     }
   },
   "plugins": {
@@ -161,5 +91,9 @@
         "enabled": true
       }
     }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.3.2",
+    "lastTouchedAt": "2026-03-06T20:58:46.057Z"
   }
 }
