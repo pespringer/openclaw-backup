@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "lastTouchedVersion": "2026.3.8",
+    "lastTouchedAt": "2026-03-09T18:50:43.589Z"
+  },
   "wizard": {
     "lastRunAt": "2026-03-06T20:58:46.029Z",
     "lastRunVersion": "2026.3.2",
@@ -18,7 +22,18 @@
       "model": {
         "primary": "openai-codex/gpt-5.3-codex"
       },
-      "workspace": "/home/claw/.openclaw/workspace"
+      "workspace": "/home/claw/.openclaw/workspace",
+      "memorySearch": {
+        "enabled": true,
+        "sources": [
+          "memory"
+        ],
+        "provider": "local",
+        "fallback": "none",
+        "local": {
+          "modelPath": "hf:ggml-org/embeddinggemma-300M-GGUF/embeddinggemma-300M-Q8_0.gguf"
+        }
+      }
     }
   },
   "tools": {
@@ -85,15 +100,30 @@
       ]
     }
   },
+  "memory": {
+    "backend": "qmd",
+    "citations": "auto",
+    "qmd": {
+      "command": "/home/claw/.bun/bin/qmd",
+      "searchMode": "search",
+      "includeDefaultMemory": true,
+      "update": {
+        "interval": "5m",
+        "debounceMs": 15000,
+        "onBoot": true,
+        "waitForBootSync": false
+      },
+      "limits": {
+        "maxResults": 6,
+        "timeoutMs": 4000
+      }
+    }
+  },
   "plugins": {
     "entries": {
       "telegram": {
         "enabled": true
       }
     }
-  },
-  "meta": {
-    "lastTouchedVersion": "2026.3.2",
-    "lastTouchedAt": "2026-03-06T20:58:46.057Z"
   }
 }
