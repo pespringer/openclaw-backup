@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.8",
-    "lastTouchedAt": "2026-03-10T21:18:09.098Z"
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-22T20:03:46.406Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-06T20:58:46.029Z",
@@ -33,6 +33,9 @@
         "local": {
           "modelPath": "hf:ggml-org/embeddinggemma-300M-GGUF/embeddinggemma-300M-Q8_0.gguf"
         }
+      },
+      "compaction": {
+        "mode": "safeguard"
       }
     }
   },
@@ -139,6 +142,24 @@
     "entries": {
       "telegram": {
         "enabled": true
+      },
+      "lossless-claw": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "lossless-claw": {
+        "source": "npm",
+        "spec": "@martian-engineering/lossless-claw",
+        "installPath": "/home/claw/.openclaw/extensions/lossless-claw",
+        "version": "0.5.0",
+        "resolvedName": "@martian-engineering/lossless-claw",
+        "resolvedVersion": "0.5.0",
+        "resolvedSpec": "@martian-engineering/lossless-claw@0.5.0",
+        "integrity": "sha512-bZO3SP1+U7WHy/Zuasb5o5gcccopGr3sF1EnqQWTIf33FewI7Rb1LxVv8Ru6IYo0oMXRh7IdsflxXrsSjD3Vqg==",
+        "shasum": "1c77e2331c37b69fb75c4f5463114aed6415ccb1",
+        "resolvedAt": "2026-03-22T20:02:37.821Z",
+        "installedAt": "2026-03-22T20:03:43.629Z"
       }
     }
   }
