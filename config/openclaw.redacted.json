@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.13",
-    "lastTouchedAt": "2026-03-22T20:03:46.406Z"
+    "lastTouchedVersion": "2026.3.23-2",
+    "lastTouchedAt": "2026-03-24T21:42:15.957Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-06T20:58:46.029Z",
-    "lastRunVersion": "2026.3.2",
+    "lastRunAt": "2026-03-24T21:42:15.911Z",
+    "lastRunVersion": "2026.3.23-2",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
@@ -14,13 +14,22 @@
       "openai-codex:default": {
         "provider": "openai-codex",
         "mode": "oauth"
+      },
+      "github-copilot:github": {
+        "provider": "github-copilot",
+        "mode": "token"
       }
     }
   },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.3-codex"
+        "primary": "github-copilot/gpt-4o"
+      },
+      "models": {
+        "openai-codex/gpt-5.4": {},
+        "openai-codex/gpt-5.4-codex": {},
+        "github-copilot/gpt-4o": {}
       },
       "workspace": "/home/claw/.openclaw/workspace",
       "memorySearch": {

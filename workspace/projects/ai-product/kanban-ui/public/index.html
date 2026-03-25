@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Product Kanban</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>AI Product Kanban</h1>
+      <div class="toolbar">
+        <input id="searchInput" placeholder="Filter cards…" />
+        <button id="newCardBtn">New Card</button>
+        <button id="exportJsonBtn">Export JSON</button>
+        <button id="exportCsvBtn">Export CSV</button>
+        <button id="refreshBtn">Refresh</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="board"></section>
+      <aside id="details">
+        <h2 id="storyTitle">Select a card</h2>
+        <p class="hint">Click a card to view/edit full story markdown.</p>
+
+        <label class="label">Status</label>
+        <select id="statusSelect"></select>
+
+        <textarea id="storyEditor" placeholder="Story content will appear here"></textarea>
+
+        <div class="actions">
+          <button id="archiveStoryBtn" class="danger" disabled>Archive</button>
+          <button id="saveStoryBtn" disabled>Save Story</button>
+        </div>
+
+        <h3>Recent Activity</h3>
+        <div id="activityList" class="activity"></div>
+      </aside>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
