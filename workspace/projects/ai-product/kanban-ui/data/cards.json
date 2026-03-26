@@ -1,0 +1,23 @@
+[
+  {
+    "id": "STORY-001",
+    "status": "Done",
+    "title": "Define product selection criteria and scoring matrix",
+    "description": "As a founder/operator, I want a clear scoring matrix for project ideas, so that we choose the best first product objectively.",
+    "deliverables": ["projects/ai-product/DECISION_MATRIX.md"]
+  },
+  {
+    "id": "STORY-002",
+    "status": "Backlog",
+    "title": "Evaluate top 3 ideas against scoring matrix",
+    "description": "Using the Weighted Decision Matrix, evaluate potential project ideas to prioritize the top 3.",
+    "deliverables": []
+  },
+  {
+    "id": "STORY-003",
+    "status": "Backlog",
+    "title": "Select first product to build",
+    "description": "Select the highest priority project idea based on the Weighted Decision Matrix and begin high-level scoping.",
+    "deliverables": []
+  }
+]
