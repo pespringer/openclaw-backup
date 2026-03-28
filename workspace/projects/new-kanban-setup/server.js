@@ -5,6 +5,7 @@ import path from 'path';
 const PORT = 4310;
 const HOST = '0.0.0.0'; // Bind to all network interfaces
 const ROOT_DIR = path.resolve('./'); // Project's root directory
+const PUBLIC_DIR = path.join(ROOT_DIR, 'public');
 const KANBAN_FILE = path.join(ROOT_DIR, 'KANBAN.md');
 const STORIES_DIR = path.join(ROOT_DIR, 'stories');
 
@@ -29,7 +30,16 @@ async function getKanbanData() {
 }
 
 const server = http.createServer(async (req, res) => {
-  if (req.method === 'GET' && req.url === '/api/kanban') {
+  if (req.method === 'GET' && req.url === '/') {
+    try {
+      const html = await fs.readFile(path.join(PUBLIC_DIR, 'index.html'), 'utf-8');
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(html);
+    } catch (err) {
+      res.writeHead(500);
+      res.end('Error loading index.html');
+    }
+  } else if (req.method === 'GET' && req.url === '/api/kanban') {
     try {
       const data = await getKanbanData();
       res.writeHead(200, { 'Content-Type': 'application/json' });
