@@ -1,10 +1,14 @@
 # STORY-004 — Update Kanban Parsing Logic
 
 ## Status
-Backlog
+Done
+
+
+
 
 ## Story
-As a user, I want the Kanban board to support `[ ]` and `[X]` markers seamlessly, so that cards remain flexible and robust during updates.
+As a user, I want the Kanban board to support [ ] and [X] markers seamlessly, so that cards remain flexible and robust during updates.
+
 
 ## Why this matters
 - Prevents cards from disappearing based on completion markers.
@@ -30,3 +34,9 @@ As a user, I want the Kanban board to support `[ ]` and `[X]` markers seamlessly
 
 ## Work Log
 - 2026-03-25T21:35: Added story logic/tests example building core SCRUM assignments.
+
+## Owner
+Patrick
+
+## Priority
+High
