@@ -11,5 +11,7 @@
 - Created missing story files for backlog items.
 - Added `README.md` runbook.
 - Added `MODULES.md` to define broader Mission Control roadmap.
+- Confirmed Telegram cron announce delivery is unreliable for visible updates.
+- Documented the working cron notification pattern: cron agent turn → explicit Telegram `message.send`.
 - Committed working baseline as:
   - `ef8d760 feat: stabilize and expand mission control kanban`

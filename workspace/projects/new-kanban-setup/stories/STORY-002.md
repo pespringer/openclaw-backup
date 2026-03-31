@@ -4,6 +4,7 @@
 Ready
 
 
+
 ## Story
 As a founder/operator, I want to evaluate the top 3 project ideas against the scoring matrix, so that I can select the strongest option with confidence.
 

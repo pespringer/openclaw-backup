@@ -13,21 +13,26 @@ _Last updated: 2026-03-30 (UTC)_
 ## Backlog
 
 - [ ] STORY-003 — Select first product to build (high scoring definitions like `Resume Optimizer` risk categories assigned champion roles)
-- [ ] STORY-009 — Add Agent Operations module to Mission Control
 - [ ] STORY-010 — Add Documentation Hub to Mission Control
+- [ ] STORY-011 — Make Mission Control survive gateway restarts and reboots
+- [ ] STORY-012 — Keep Mission Control board state fresh automatically
+- [ ] STORY-013 — Add project grouping metadata to story cards
+- [ ] STORY-014 — Add story lifecycle timestamps
+- [ ] STORY-015 — Add in-story update history log
 
 ## Ready
 
 - [ ] STORY-002 — Evaluate top 3 ideas against scoring matrix (scanning decision matrix now for alignment)
-- [ ] STORY-005 — Stabilize Mission Control deployment
 
 ## In Progress
 
-- [ ] STORY-008 — Add System Health panel to Mission Control
+- [ ] STORY-009 — Add Agent Operations module to Mission Control
 
 ## Done
 
+- [X] STORY-008 — Add System Health panel to Mission Control
 - [X] STORY-007 — Define broader Mission Control modules
 - [X] STORY-006 — Polish Mission Control UX
+- [X] STORY-005 — Stabilize Mission Control deployment
 - [X] STORY-004 — Update Kanban Parsing Logic
 - [X] STORY-001 — Define product selection criteria and scoring matrix

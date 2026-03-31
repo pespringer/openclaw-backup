@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.24",
-    "lastTouchedAt": "2026-03-30T02:09:13.012Z"
+    "lastTouchedAt": "2026-03-30T18:26:53.502Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-30T02:03:59.346Z",
@@ -57,7 +57,11 @@
     }
   },
   "tools": {
-    "profile": "full"
+    "profile": "full",
+    "exec": {
+      "security": "full",
+      "ask": "off"
+    }
   },
   "commands": {
     "native": "auto",

@@ -1,7 +1,7 @@
 # STORY-008 — Add System Health panel to Mission Control
 
 ## Status
-In Progress
+Done
 
 ## Story
 As an operator, I want Mission Control to show its own system health, so that service failures and instability are visible immediately instead of being discovered indirectly.
@@ -12,10 +12,10 @@ As an operator, I want Mission Control to show its own system health, so that se
 - Improves trust in the control surface.
 
 ## Acceptance Criteria
-- [ ] Health section is visible in the UI.
-- [ ] Frontend/API health is surfaced clearly.
-- [ ] Recent runtime issues can be summarized in the panel.
-- [ ] Panel is useful without cluttering the main board.
+- [X] Health section is visible in the UI.
+- [X] Frontend/API health is surfaced clearly.
+- [X] Recent runtime issues can be summarized in the panel.
+- [X] Panel is useful without cluttering the main board.
 
 ## Projected Work
 - Estimate: M
@@ -29,6 +29,12 @@ As an operator, I want Mission Control to show its own system health, so that se
 
 ## Deliverable
 - System Health panel integrated into Mission Control.
+
+## Actual Work
+- Added `/api/health` backend endpoint.
+- Added a System Health panel to the Mission Control UI.
+- Surfaced frontend, API, gateway, channel, and update signals.
+- Verified live health endpoint responses and panel integration.
 
 ## Owner
 Apex
