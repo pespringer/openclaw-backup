@@ -1,7 +1,8 @@
 # STORY-002 — Evaluate top 3 ideas against scoring matrix
 
 ## Status
-Ready
+Backlog
+
 
 
 
