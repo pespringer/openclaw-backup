@@ -1,0 +1,19 @@
+[Unit]
+Description=Mission Control UI
+After=network-online.target mission-control-api.service
+Wants=network-online.target
+PartOf=mission-control.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/claw/.openclaw/workspace/projects/new-kanban-setup/board-frontend
+ExecStart=/usr/bin/env npm run start
+Restart=always
+RestartSec=3
+Environment=NODE_ENV=production
+StandardOutput=append:/home/claw/.openclaw/workspace/projects/new-kanban-setup/.runtime/ui.log
+StandardError=append:/home/claw/.openclaw/workspace/projects/new-kanban-setup/.runtime/ui.log
+
+[Install]
+WantedBy=default.target
+WantedBy=mission-control.target

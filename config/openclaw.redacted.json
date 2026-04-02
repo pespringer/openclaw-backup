@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.24",
-    "lastTouchedAt": "2026-03-30T18:26:53.502Z"
+    "lastTouchedVersion": "2026.3.31",
+    "lastTouchedAt": "2026-04-01T04:15:52.456Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-30T02:03:59.346Z",
@@ -21,8 +21,7 @@
       },
       "openai-codex:patrick.springer@gmail.com": {
         "provider": "openai-codex",
-        "mode": "oauth",
-        "email": "patrick.springer@gmail.com"
+        "mode": "oauth"
       }
     }
   },

@@ -1,10 +1,13 @@
 # STORY-010 — Add Documentation Hub to Mission Control
 
 ## Status
-Backlog
+Done
+
+
 
 ## Story
 As an operator, I want Mission Control to surface important docs and runbooks, so that the system is easier to operate and maintain without context switching.
+
 
 ## Why this matters
 - Keeps critical reference material close to execution.
@@ -33,5 +36,7 @@ As an operator, I want Mission Control to surface important docs and runbooks, s
 ## Owner
 Apex
 
+
 ## Priority
 Medium
+

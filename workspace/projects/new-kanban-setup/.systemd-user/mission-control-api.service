@@ -1,0 +1,19 @@
+[Unit]
+Description=Mission Control API
+After=network-online.target
+Wants=network-online.target
+PartOf=mission-control.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/claw/.openclaw/workspace/projects/new-kanban-setup
+ExecStart=/usr/bin/env node server.js
+Restart=always
+RestartSec=3
+Environment=NODE_ENV=production
+StandardOutput=append:/home/claw/.openclaw/workspace/projects/new-kanban-setup/.runtime/api.log
+StandardError=append:/home/claw/.openclaw/workspace/projects/new-kanban-setup/.runtime/api.log
+
+[Install]
+WantedBy=default.target
+WantedBy=mission-control.target

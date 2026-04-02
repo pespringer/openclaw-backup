@@ -1,7 +1,8 @@
 # STORY-011 — Make Mission Control survive gateway restarts and reboots
 
 ## Status
-Backlog
+Ready
+
 
 ## Story
 As an operator, I want Mission Control to restart automatically when the gateway restarts or the machine reboots, so that the board remains available without manual intervention.

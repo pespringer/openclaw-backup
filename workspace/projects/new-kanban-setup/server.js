@@ -8,6 +8,230 @@ const ROOT_DIR = path.resolve('./');
 const PUBLIC_DIR = path.join(ROOT_DIR, 'public');
 const KANBAN_FILE = path.join(ROOT_DIR, 'KANBAN.md');
 const STORIES_DIR = path.join(ROOT_DIR, 'stories');
+const DOCS_INDEX = [
+  {
+    id: 'README',
+    title: 'Mission Control README',
+    path: 'README.md',
+    group: 'Runbooks',
+    summary: 'Core operating guide, ports, startup commands, and source-of-truth notes.',
+    tags: ['runbook', 'operations', 'overview'],
+  },
+  {
+    id: 'OPERATIONS',
+    title: 'Kanban Operations',
+    path: 'OPERATIONS.md',
+    group: 'Runbooks',
+    summary: 'Backup, recovery, migration, and change-control guidance for the markdown board.',
+    tags: ['backup', 'recovery', 'migration'],
+  },
+  {
+    id: 'MODULES',
+    title: 'Mission Control Modules',
+    path: 'MODULES.md',
+    group: 'Architecture',
+    summary: 'Defines module roadmap, rollout order, and the long-term Mission Control surface.',
+    tags: ['architecture', 'roadmap', 'modules'],
+  },
+  {
+    id: 'ROADMAP',
+    title: 'AI Product Roadmap',
+    path: 'ROADMAP.md',
+    group: 'Planning',
+    summary: 'High-level phases, success metrics, and constraints for the AI product effort.',
+    tags: ['planning', 'milestones', 'product'],
+  },
+  {
+    id: 'NOTES',
+    title: 'Mission Control Notes',
+    path: 'NOTES.md',
+    group: 'Decisions',
+    summary: 'Working notes and operational decisions, including the Telegram notification rule.',
+    tags: ['decisions', 'notes', 'notifications'],
+  },
+  {
+    id: 'DECISION_MATRIX',
+    title: 'Weighted Decision Matrix',
+    path: 'DECISION_MATRIX.md',
+    group: 'Planning',
+    summary: 'Scoring model for evaluating product ideas against weighted criteria.',
+    tags: ['decision-making', 'scoring', 'product'],
+  },
+];
+
+function parseOpenClawStatus(raw) {
+  const lines = raw.split('\n');
+  const sessions = [];
+  let inSessionsTable = false;
+
+  for (const line of lines) {
+    if (/^Sessions\s*$/.test(line.trim())) {
+      inSessionsTable = true;
+      continue;
+    }
+
+    if (!inSessionsTable) continue;
+    if (!line.includes('│')) continue;
+
+    const cells = line.split('│').map((cell) => cell.trim()).filter(Boolean);
+    if (cells.length !== 5) continue;
+    if (cells[0] === 'Key' || /^agent[:]/.test(cells[0]) === false) continue;
+
+    sessions.push({
+      key: cells[0],
+      kind: cells[1],
+      age: cells[2],
+      model: cells[3],
+      tokens: cells[4],
+    });
+  }
+
+  const overview = {
+    gatewayRunning: /Gateway service\s+.*running/i.test(raw),
+    tasksLine: raw.match(/│\s*Tasks\s*│\s*(.+?)\s*│/)?.[1]?.trim() ?? null,
+    heartbeatLine: raw.match(/│\s*Heartbeat\s*│\s*(.+?)\s*│/)?.[1]?.trim() ?? null,
+    defaultSessionModel: raw.match(/│\s*Sessions\s*│\s*\d+ active · default\s+([^·]+?)\s+\(/)?.[1]?.trim() ?? null,
+    channelTelegramOk: /Telegram\s+│\s+ON\s+│\s+OK/i.test(raw) || /Telegram\s+ON\s+OK/i.test(raw),
+  };
+
+  return { overview, sessions };
+}
+
+async function gatherDocumentationHub() {
+  const docs = await Promise.all(DOCS_INDEX.map(async (doc) => {
+    const filePath = path.join(ROOT_DIR, doc.path);
+    const raw = await fs.readFile(filePath, 'utf-8');
+    const lines = raw.split(/\r?\n/);
+    const heading = lines.find((line) => line.trim().startsWith('#'))?.replace(/^#+\s*/, '').trim() ?? doc.title;
+    const preview = lines
+      .filter((line) => line.trim() && !line.trim().startsWith('#'))
+      .slice(0, 3)
+      .join(' ')
+      .slice(0, 280);
+
+    return {
+      ...doc,
+      heading,
+      preview,
+      lineCount: lines.length,
+      lastReviewedAt: null,
+    };
+  }));
+
+  const groups = docs.reduce((acc, doc) => {
+    acc[doc.group] ??= [];
+    acc[doc.group].push(doc);
+    return acc;
+  }, {});
+
+  return {
+    checkedAt: new Date().toISOString(),
+    summary: {
+      totalDocs: docs.length,
+      runbookCount: docs.filter((doc) => doc.group === 'Runbooks').length,
+      architectureCount: docs.filter((doc) => doc.group === 'Architecture').length,
+      planningCount: docs.filter((doc) => doc.group === 'Planning').length,
+      decisionCount: docs.filter((doc) => doc.group === 'Decisions').length,
+    },
+    groups,
+    docs,
+    expansion: {
+      supportsDetailView: true,
+      nextHooks: [
+        'Render full document previews in drawer',
+        'Index story-linked docs automatically',
+        'Add search and recent-doc activity',
+      ],
+    },
+  };
+}
+
+async function gatherAgentOperations() {
+  const { execFile } = await import('child_process');
+  const execFileAsync = (cmd, args = []) => new Promise((resolve) => {
+    execFile(cmd, args, { timeout: 10000 }, (error, stdout, stderr) => {
+      resolve({
+        ok: !error,
+        stdout: stdout?.toString() ?? '',
+        stderr: stderr?.toString() ?? '',
+        code: error?.code ?? 0,
+      });
+    });
+  });
+
+  const [statusResult, boardResult] = await Promise.all([
+    execFileAsync('openclaw', ['status']),
+    getKanbanData(),
+  ]);
+
+  const parsed = parseOpenClawStatus(statusResult.stdout);
+  const storyMap = new Map(Object.values(boardResult).flat().map((item) => [item.id, item.title]));
+
+  const sessionStates = parsed.sessions.map((session) => {
+    const storyIdMatch = session.key.match(/(STORY-\d+)/i);
+    const storyId = storyIdMatch?.[1]?.toUpperCase() ?? null;
+    const lowerAge = session.age.toLowerCase();
+    const recentMatch = lowerAge.match(/(\d+)\s*([mhdw])/);
+    const amount = recentMatch ? Number(recentMatch[1]) : null;
+    const unit = recentMatch?.[2] ?? null;
+
+    let state = 'running';
+    if (unit === 'm' && amount !== null && amount > 30) state = 'recent';
+    if (unit === 'h') state = 'recent';
+    if (unit === 'd' || unit === 'w') state = 'recent';
+
+    return {
+      key: session.key,
+      kind: session.kind,
+      age: session.age,
+      model: session.model,
+      tokens: session.tokens,
+      state,
+      storyId,
+      storyTitle: storyId ? storyMap.get(storyId) ?? null : null,
+      blockedReason: null,
+      failedReason: null,
+    };
+  });
+
+  const running = sessionStates.filter((session) => session.state === 'running');
+  const recent = sessionStates.filter((session) => session.state === 'recent');
+  const blocked = sessionStates.filter((session) => session.state === 'blocked');
+  const failed = sessionStates.filter((session) => session.state === 'failed');
+
+  const statusSignals = [];
+  if (parsed.overview.tasksLine) statusSignals.push(`Tasks: ${parsed.overview.tasksLine}`);
+  if (parsed.overview.heartbeatLine) statusSignals.push(`Heartbeat: ${parsed.overview.heartbeatLine}`);
+
+  const expansion = {
+    supportsDetailView: true,
+    supportedStates: ['running', 'recent', 'blocked', 'failed', 'idle'],
+    nextHooks: [
+      'Attach session detail endpoints',
+      'Add event history timeline',
+      'Map sessions and tasks directly to stories',
+    ],
+  };
+
+  return {
+    checkedAt: new Date().toISOString(),
+    summary: {
+      activeCount: running.length,
+      recentCount: recent.length,
+      blockedCount: blocked.length,
+      failedCount: failed.length,
+      statusSignals,
+      defaultModel: parsed.overview.defaultSessionModel,
+      gatewayRunning: parsed.overview.gatewayRunning,
+      telegramOk: parsed.overview.channelTelegramOk,
+    },
+    active: running,
+    recent,
+    blocked,
+    failed,
+    expansion,
+  };
+}
 
 async function gatherSystemHealth() {
   const { execFile } = await import('child_process');
@@ -279,6 +503,18 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'GET' && req.url === '/api/health') {
       const health = await gatherSystemHealth();
       json(res, 200, { success: true, health });
+      return;
+    }
+
+    if (req.method === 'GET' && req.url === '/api/agent-operations') {
+      const agentOperations = await gatherAgentOperations();
+      json(res, 200, { success: true, agentOperations });
+      return;
+    }
+
+    if (req.method === 'GET' && req.url === '/api/documentation-hub') {
+      const documentationHub = await gatherDocumentationHub();
+      json(res, 200, { success: true, documentationHub });
       return;
     }
 

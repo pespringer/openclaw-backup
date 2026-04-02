@@ -14,8 +14,6 @@ _Last updated: 2026-03-31 (UTC)_
 
 - [ ] STORY-002 — Evaluate top 3 ideas against scoring matrix (scanning decision matrix now for alignment)
 - [ ] STORY-003 — Select first product to build (high scoring definitions like `Resume Optimizer` risk categories assigned champion roles)
-- [ ] STORY-010 — Add Documentation Hub to Mission Control
-- [ ] STORY-011 — Make Mission Control survive gateway restarts and reboots
 - [ ] STORY-012 — Keep Mission Control board state fresh automatically
 - [ ] STORY-013 — Add project grouping metadata to story cards
 - [ ] STORY-014 — Add story lifecycle timestamps
@@ -24,12 +22,15 @@ _Last updated: 2026-03-31 (UTC)_
 ## Ready
 
 
+- [ ] STORY-011 — Make Mission Control survive gateway restarts and reboots
 ## In Progress
 
-- [ ] STORY-009 — Add Agent Operations module to Mission Control
+- None
 
 ## Done
 
+- [X] STORY-010 — Add Documentation Hub to Mission Control
+- [X] STORY-009 — Add Agent Operations module to Mission Control
 - [X] STORY-008 — Add System Health panel to Mission Control
 - [X] STORY-007 — Define broader Mission Control modules
 - [X] STORY-006 — Polish Mission Control UX

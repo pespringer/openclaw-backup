@@ -1,7 +1,7 @@
 # STORY-009 — Add Agent Operations module to Mission Control
 
 ## Status
-In Progress
+Done
 
 ## Story
 As an operator, I want Mission Control to show agent activity and execution state, so that I can understand what is running, blocked, or recently completed.
