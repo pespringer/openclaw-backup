@@ -11,6 +11,22 @@ This directory contains the markdown-backed Mission Control prototype:
 - API: `http://192.168.5.51:4311/api/kanban`
 
 ## Runbook
+### Supervised runtime (current production model)
+Mission Control now runs under **user-level systemd** so it survives process exits and user-session boot with linger enabled.
+
+Installed units:
+- `mission-control-api.service`
+- `mission-control-ui.service`
+- `mission-control.target`
+
+Useful commands:
+```bash
+systemctl --user status mission-control-api.service mission-control-ui.service mission-control.target
+systemctl --user restart mission-control.target
+systemctl --user restart mission-control-api.service
+systemctl --user restart mission-control-ui.service
+```
+
 ### One-command startup
 ```bash
 cd /home/claw/.openclaw/workspace/projects/new-kanban-setup
@@ -55,6 +71,10 @@ npm run start
 - Save back to markdown
 - Runtime start/stop/status scripts
 - System Health panel
+- Agent Operations panel
+- Documentation Hub panel
+- Auto-refresh + freshness indicator
+- User-level systemd supervision for API + UI
 
 ## Notification rule
 For Telegram cron notifications, use:
@@ -65,5 +85,5 @@ For Telegram cron notifications, use:
 Avoid relying on cron `announce` for Telegram-visible updates until that behavior is fixed.
 
 ## Next tracked work
-- STORY-009 — Agent Operations module
-- STORY-010 — Documentation Hub
+- STORY-011 — restart/reboot reliability hardening
+- STORY-012 — board freshness automation

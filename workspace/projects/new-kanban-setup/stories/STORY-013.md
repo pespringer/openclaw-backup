@@ -1,7 +1,8 @@
 # STORY-013 — Add project grouping metadata to story cards
 
 ## Status
-Backlog
+Done
+
 
 ## Story
 As a user, I want each story card to show its project name, so that work can be grouped clearly across projects, agents, and sub-agents.
@@ -12,10 +13,10 @@ As a user, I want each story card to show its project name, so that work can be 
 - Makes agent/sub-agent execution easier to understand.
 
 ## Acceptance Criteria
-- [ ] Stories support a project field in markdown.
-- [ ] Project name is visible on story cards in the GUI.
-- [ ] Project name is editable in the story editor.
-- [ ] The data model supports future project-level filtering/grouping.
+- [X] Stories support a project field in markdown.
+- [X] Project name is visible on story cards in the GUI.
+- [X] Project name is editable in the story editor.
+- [X] The data model supports future project-level filtering/grouping.
 
 ## Projected Work
 - Estimate: M
@@ -30,8 +31,26 @@ As a user, I want each story card to show its project name, so that work can be 
 ## Deliverable
 - Project grouping metadata integrated into story model and UI.
 
+## Actual Work
+- Verified project metadata flows through markdown parsing, API read/write paths, story editor, and board card rendering.
+- Normalized existing story files to include a `Project` section for compatibility and future grouping/filtering.
+
 ## Owner
 Apex
 
 ## Priority
 Medium
+
+## Project
+Mission Control
+
+## Opened
+
+
+## Updated
+
+
+## Closed
+
+## Update Log
+

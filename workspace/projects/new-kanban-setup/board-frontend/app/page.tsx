@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 type BoardItem = { id: string; title: string };
 type BoardData = Record<string, BoardItem[]>;
@@ -9,9 +9,10 @@ type HealthState = 'loading' | 'ready' | 'error' | 'saving';
 
 type SystemHealth = {
   checkedAt: string;
-  ui: { port: number; listening: boolean };
-  api: { port: number; listening: boolean };
+  ui: { port: number; listening: boolean; supervised?: boolean };
+  api: { port: number; listening: boolean; supervised?: boolean };
   gateway: { running: boolean };
+  supervision?: { targetActive: boolean; mode: string };
   channels: { telegram: string };
   updates: { available: boolean; version: string | null };
   issues: string[];
@@ -102,12 +103,18 @@ type StoryDetails = {
   status: string;
   owner: string;
   priority: 'High' | 'Medium' | 'Low' | string;
+  project: string;
   story: string;
   why: string;
   deliverable: string;
+  updateLog: string[];
+  openedAt: string | null;
+  updatedAt: string | null;
+  closedAt: string | null;
 };
 
 const columns = ['Backlog', 'Ready', 'In Progress', 'Done'];
+const AUTO_REFRESH_MS = 30_000;
 
 function PriorityPill({ priority }: { priority: string }) {
   const normalized = priority.toLowerCase();
@@ -119,8 +126,30 @@ function AgentStatePill({ state }: { state: AgentState }) {
   return <span className={`agentState ${state}`}>{state}</span>;
 }
 
+function ProjectBadge({ project }: { project: string }) {
+  return <span className="projectBadge">{project}</span>;
+}
+
 function StatusBanner({ state, message }: { state: HealthState; message: string }) {
   return <div className={`statusBanner ${state}`}>{message}</div>;
+}
+
+function formatTimestamp(value: string | null) {
+  if (!value) return 'Not recorded';
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return value;
+  return parsed.toLocaleString();
+}
+
+function FreshnessBadge({ lastUpdatedAt, autoRefreshPaused }: { lastUpdatedAt: string | null; autoRefreshPaused: boolean }) {
+  const label = lastUpdatedAt ? `Fresh as of ${new Date(lastUpdatedAt).toLocaleTimeString()}` : 'Freshness pending';
+  return (
+    <div className="freshnessRow">
+      <div className="badge">Auto-refresh every 30s</div>
+      <div className="badge">{label}</div>
+      <div className="badge">{autoRefreshPaused ? 'Auto-refresh paused while editing' : 'Auto-refresh active'}</div>
+    </div>
+  );
 }
 
 function StoryEditor({
@@ -151,7 +180,7 @@ function StoryEditor({
           <button className="ghostButton" onClick={onClose}>Close</button>
         </div>
 
-        <div className="fieldGrid">
+        <div className="fieldGrid fourUp">
           <label>
             <span>Status</span>
             <select value={draft.status} onChange={(e) => setDraft({ ...draft, status: e.target.value })}>
@@ -172,6 +201,11 @@ function StoryEditor({
               <option value="Low">Low</option>
             </select>
           </label>
+
+          <label>
+            <span>Project</span>
+            <input value={draft.project} onChange={(e) => setDraft({ ...draft, project: e.target.value })} />
+          </label>
         </div>
 
         <label className="textField">
@@ -182,6 +216,23 @@ function StoryEditor({
         <div className="drawerMeta">
           <div><strong>Why:</strong> {draft.why || 'Not captured yet.'}</div>
           <div><strong>Deliverable:</strong> {draft.deliverable || 'Not specified.'}</div>
+        </div>
+
+        <div className="timestampGrid">
+          <div className="timestampCard"><span>Opened</span><strong>{formatTimestamp(draft.openedAt)}</strong></div>
+          <div className="timestampCard"><span>Updated</span><strong>{formatTimestamp(draft.updatedAt)}</strong></div>
+          <div className="timestampCard"><span>Closed</span><strong>{formatTimestamp(draft.closedAt)}</strong></div>
+        </div>
+
+        <div className="updateLogPanel">
+          <h3>Update History</h3>
+          {draft.updateLog?.length ? (
+            <ul className="updateLogList">
+              {draft.updateLog.map((entry, index) => <li key={`${draft.id}-log-${index}`}>{entry.replace(/^\-\s*/, '')}</li>)}
+            </ul>
+          ) : (
+            <div className="updateLogEmpty">No updates recorded yet.</div>
+          )}
         </div>
 
         <div className="drawerActions">
@@ -361,12 +412,19 @@ export default function Page() {
   const [systemHealth, setSystemHealth] = useState<SystemHealth | null>(null);
   const [agentOperations, setAgentOperations] = useState<AgentOperations | null>(null);
   const [documentationHub, setDocumentationHub] = useState<DocumentationHub | null>(null);
+  const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null);
+  const refreshInFlight = useRef(false);
 
-  async function loadBoard() {
+  async function loadBoard(options?: { silent?: boolean }) {
+    if (refreshInFlight.current) return;
+    refreshInFlight.current = true;
+
     try {
-      setLoading(true);
-      setHealth('loading');
-      setStatusMessage('Loading board…');
+      if (!options?.silent) {
+        setLoading(true);
+        setHealth('loading');
+        setStatusMessage('Loading board…');
+      }
 
       const res = await fetch('/api/kanban', { cache: 'no-store' });
       if (!res.ok) throw new Error(`Board request failed: ${res.status}`);
@@ -414,13 +472,16 @@ export default function Page() {
         setDocumentationHub(docsData.documentationHub as DocumentationHub);
       }
 
+      const nowIso = new Date().toISOString();
+      setLastUpdatedAt(nowIso);
       setHealth('ready');
-      setStatusMessage(`Board ready • ${ids.length} tracked stories`);
+      setStatusMessage(options?.silent ? `Board refreshed • ${ids.length} tracked stories` : `Board ready • ${ids.length} tracked stories`);
     } catch (error) {
       console.error('Failed to load board', error);
       setHealth('error');
       setStatusMessage('Board load failed. Refresh or check API health.');
     } finally {
+      refreshInFlight.current = false;
       setLoading(false);
     }
   }
@@ -428,6 +489,14 @@ export default function Page() {
   useEffect(() => {
     loadBoard();
   }, []);
+
+  useEffect(() => {
+    if (selectedId) return;
+    const intervalId = window.setInterval(() => {
+      loadBoard({ silent: true });
+    }, AUTO_REFRESH_MS);
+    return () => window.clearInterval(intervalId);
+  }, [selectedId]);
 
   const selectedStory = useMemo(() => (selectedId ? stories[selectedId] : null), [selectedId, stories]);
   const totalStories = useMemo(() => Object.values(board).flat().filter(isBoardItem).length, [board]);
@@ -444,11 +513,13 @@ export default function Page() {
           status: story.status,
           owner: story.owner,
           priority: story.priority,
+          project: story.project,
           story: story.story,
         }),
       });
-      await loadBoard();
+      await loadBoard({ silent: true });
       setSelectedId(story.id);
+      setStatusMessage(`${story.id} saved and board refreshed`);
     } finally {
       setSaving(false);
     }
@@ -464,10 +535,11 @@ export default function Page() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, targetColumn }),
       });
-      await loadBoard();
+      await loadBoard({ silent: true });
       setSelectedId(id);
       setDraggingId(null);
       setDropTarget(null);
+      setStatusMessage(`${id} moved to ${targetColumn} and board refreshed`);
     } finally {
       setSaving(false);
     }
@@ -497,8 +569,10 @@ export default function Page() {
           <div className="badge">Drag and drop enabled</div>
           <div className="badge">Markdown source of truth</div>
         </div>
-        <button className="ghostButton" onClick={loadBoard} disabled={loading || saving}>Refresh board</button>
+        <button className="ghostButton" onClick={() => loadBoard()} disabled={loading || saving}>Refresh board</button>
       </div>
+
+      <FreshnessBadge lastUpdatedAt={lastUpdatedAt} autoRefreshPaused={Boolean(selectedId)} />
 
       {documentationHub && <DocumentationHubPanel documentationHub={documentationHub} />}
       {agentOperations && <AgentOperationsPanel agentOperations={agentOperations} />}
@@ -513,10 +587,12 @@ export default function Page() {
             <div className="healthCard"><span>Frontend</span><strong>{systemHealth.ui.listening ? 'Listening' : 'Down'}</strong></div>
             <div className="healthCard"><span>API</span><strong>{systemHealth.api.listening ? 'Listening' : 'Down'}</strong></div>
             <div className="healthCard"><span>Gateway</span><strong>{systemHealth.gateway.running ? 'Running' : 'Unknown'}</strong></div>
-            <div className="healthCard"><span>Telegram</span><strong>{systemHealth.channels.telegram}</strong></div>
+            <div className="healthCard"><span>Supervision</span><strong>{systemHealth.supervision?.mode ?? 'Unknown'}</strong></div>
           </div>
           <div className="healthMetaRow">
             <div className="healthNote">{systemHealth.updates.available ? `Update available: ${systemHealth.updates.version}` : 'No update signal detected'}</div>
+            <div className="healthNote">Telegram: {systemHealth.channels.telegram}</div>
+            <div className="healthNote">Target active: {systemHealth.supervision?.targetActive ? 'yes' : 'no'}</div>
             <div className="healthNote">Issues: {systemHealth.issues.length}</div>
           </div>
           {systemHealth.issues.length > 0 && (
@@ -581,9 +657,14 @@ export default function Page() {
                           </div>
                           <PriorityPill priority={story?.priority ?? 'Medium'} />
                         </div>
+                        <div className="cardBadges">
+                          <ProjectBadge project={story?.project ?? 'Mission Control'} />
+                        </div>
                         <div className="meta">
                           <div className="metaRow"><span>Status</span><strong>{story?.status ?? column}</strong></div>
                           <div className="metaRow"><span>Owner</span><strong>{story?.owner ?? 'Apex'}</strong></div>
+                          <div className="metaRow"><span>Project</span><strong>{story?.project ?? 'Mission Control'}</strong></div>
+                          <div className="metaRow"><span>Updated</span><strong>{formatTimestamp(story?.updatedAt ?? null)}</strong></div>
                           <div className="metaRow"><span>Deliverable</span><strong>{story?.deliverable ?? 'Not specified'}</strong></div>
                         </div>
                         <div className="story">{story?.story ?? 'No story text available.'}</div>

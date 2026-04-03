@@ -246,9 +246,12 @@ async function gatherSystemHealth() {
     });
   });
 
-  const [statusResult, ssResult] = await Promise.all([
+  const [statusResult, ssResult, apiUnitResult, uiUnitResult, targetResult] = await Promise.all([
     execFileAsync('openclaw', ['status']),
     execFileAsync('ss', ['-ltnp', '( sport = :4310 or sport = :4311 )']),
+    execFileAsync('systemctl', ['--user', 'is-active', 'mission-control-api.service']),
+    execFileAsync('systemctl', ['--user', 'is-active', 'mission-control-ui.service']),
+    execFileAsync('systemctl', ['--user', 'is-active', 'mission-control.target']),
   ]);
 
   const gatewayRunning = /Gateway service\s+.*running/i.test(statusResult.stdout);
@@ -256,24 +259,39 @@ async function gatherSystemHealth() {
   const uiListening = /:4310/.test(ssResult.stdout);
   const apiListening = /:4311/.test(ssResult.stdout);
   const updateAvailableMatch = statusResult.stdout.match(/Update\s+available.*?(\d{4}\.\d+\.\d+)/i);
+  const supervisedApi = apiUnitResult.stdout.trim() === 'active';
+  const supervisedUi = uiUnitResult.stdout.trim() === 'active';
+  const supervisedTarget = targetResult.stdout.trim() === 'active';
 
   const issues = [];
   if (!gatewayRunning) issues.push('Gateway service not confirmed running');
   if (!uiListening) issues.push('Frontend port 4310 not listening');
   if (!apiListening) issues.push('API port 4311 not listening');
   if (!channelOk) issues.push('Telegram channel not confirmed OK');
+  if (!supervisedApi) issues.push('Mission Control API systemd unit not active');
+  if (!supervisedUi) issues.push('Mission Control UI systemd unit not active');
+  if (!supervisedTarget) issues.push('Mission Control target not active');
 
   return {
     checkedAt: new Date().toISOString(),
-    ui: { port: 4310, listening: uiListening },
-    api: { port: 4311, listening: apiListening },
+    ui: { port: 4310, listening: uiListening, supervised: supervisedUi },
+    api: { port: 4311, listening: apiListening, supervised: supervisedApi },
     gateway: { running: gatewayRunning },
+    supervision: {
+      targetActive: supervisedTarget,
+      mode: supervisedApi && supervisedUi ? 'systemd-user' : 'unsupervised',
+    },
     channels: { telegram: channelOk ? 'OK' : 'Unknown' },
     updates: { available: Boolean(updateAvailableMatch), version: updateAvailableMatch?.[1] ?? null },
     issues,
     raw: {
       statusExcerpt: statusResult.stdout.split('\n').slice(0, 40),
       socketsExcerpt: ssResult.stdout.split('\n').slice(0, 20),
+      supervision: {
+        api: apiUnitResult.stdout.trim(),
+        ui: uiUnitResult.stdout.trim(),
+        target: targetResult.stdout.trim(),
+      },
     },
   };
 }
@@ -341,19 +359,68 @@ async function getKanbanData() {
   return board;
 }
 
+function getStoryLifecycle(raw, fallbackStatus) {
+  const openedAt = parseSection(raw, 'Opened') || null;
+  const updatedAt = parseSection(raw, 'Updated') || openedAt || null;
+  const closedAt = parseSection(raw, 'Closed') || null;
+
+  if (fallbackStatus === 'Done' && !closedAt) {
+    return { openedAt, updatedAt, closedAt: updatedAt || openedAt || null };
+  }
+
+  if (fallbackStatus !== 'Done' && closedAt) {
+    return { openedAt, updatedAt, closedAt: null };
+  }
+
+  return { openedAt, updatedAt, closedAt };
+}
+
+function parseUpdateLog(raw) {
+  const section = parseSection(raw, 'Update Log');
+  if (!section) return [];
+  return section
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((line) => line.startsWith('- '));
+}
+
+function formatUpdateLog(entries) {
+  if (!entries.length) return '';
+  return entries.join('\n');
+}
+
+function buildUpdateLogEntry(timestamp, summary) {
+  return `- ${timestamp} — ${summary}`;
+}
+
+function makeUpdateLog(raw, summary, timestamp) {
+  const entries = parseUpdateLog(raw);
+  const nextEntry = buildUpdateLogEntry(timestamp, summary);
+  if (entries[0] === nextEntry) return formatUpdateLog(entries);
+  return formatUpdateLog([nextEntry, ...entries].slice(0, 12));
+}
+
 async function readStory(id) {
   const filePath = path.join(STORIES_DIR, `${id}.md`);
   const raw = await fs.readFile(filePath, 'utf-8');
   const titleMatch = raw.match(/^#\s+(STORY-\d+)\s+—\s+(.+)$/m);
+  const status = parseSection(raw, 'Status');
+  const lifecycle = getStoryLifecycle(raw, status);
   return {
     id,
     title: titleMatch?.[2]?.trim() ?? id,
-    status: parseSection(raw, 'Status'),
+    status,
     story: parseSection(raw, 'Story'),
     why: parseSection(raw, 'Why this matters'),
     deliverable: parseSection(raw, 'Deliverables') || parseSection(raw, 'Deliverable'),
     owner: parseSection(raw, 'Owner') || 'Apex',
     priority: parseSection(raw, 'Priority') || 'Medium',
+    project: parseSection(raw, 'Project') || 'Mission Control',
+    updateLog: parseUpdateLog(raw),
+    openedAt: lifecycle.openedAt,
+    updatedAt: lifecycle.updatedAt,
+    closedAt: lifecycle.closedAt,
     raw,
   };
 }
@@ -361,12 +428,45 @@ async function readStory(id) {
 async function writeStory(id, updates) {
   const filePath = path.join(STORIES_DIR, `${id}.md`);
   let raw = await fs.readFile(filePath, 'utf-8');
+  const currentStatus = parseSection(raw, 'Status');
+  const currentStory = parseSection(raw, 'Story');
+  const currentOwner = parseSection(raw, 'Owner') || 'Apex';
+  const currentPriority = parseSection(raw, 'Priority') || 'Medium';
+  const currentProject = parseSection(raw, 'Project') || 'Mission Control';
+  const currentOpenedAt = parseSection(raw, 'Opened') || null;
+  const currentClosedAt = parseSection(raw, 'Closed') || null;
+  const nextStatus = updates.status === undefined ? currentStatus : String(updates.status).trim();
+  const nextStory = updates.story === undefined ? currentStory : String(updates.story).trim();
+  const nextOwner = updates.owner === undefined ? currentOwner : String(updates.owner).trim();
+  const nextPriority = updates.priority === undefined ? currentPriority : String(updates.priority).trim();
+  const nextProject = updates.project === undefined ? currentProject : String(updates.project).trim();
+  const nowIso = new Date().toISOString();
+  const nextUpdatedAt = updates.updatedAt ?? nowIso;
+  const nextClosedAt = updates.closedAt ?? (nextStatus === 'Done' ? currentClosedAt || nextUpdatedAt : '');
+  const nextOpenedAt = updates.openedAt ?? currentOpenedAt ?? currentClosedAt ?? nextUpdatedAt;
+
+  const changeParts = [];
+  if (nextStatus !== currentStatus) changeParts.push(`status ${currentStatus || 'unset'} → ${nextStatus}`);
+  if (nextOwner !== currentOwner) changeParts.push(`owner ${currentOwner} → ${nextOwner}`);
+  if (nextPriority !== currentPriority) changeParts.push(`priority ${currentPriority} → ${nextPriority}`);
+  if (nextProject !== currentProject) changeParts.push(`project ${currentProject} → ${nextProject}`);
+  if (nextStory !== currentStory) changeParts.push('story details updated');
+
+  let nextUpdateLog = updates.updateLog;
+  if (nextUpdateLog === undefined && changeParts.length > 0) {
+    nextUpdateLog = makeUpdateLog(raw, changeParts.join(' · '), nextUpdatedAt);
+  }
 
   const sections = [
     ['Status', updates.status],
     ['Owner', updates.owner],
     ['Priority', updates.priority],
+    ['Project', updates.project],
     ['Story', updates.story],
+    ['Update Log', nextUpdateLog],
+    ['Opened', nextOpenedAt],
+    ['Updated', nextUpdatedAt],
+    ['Closed', nextClosedAt],
   ];
 
   for (const [section, value] of sections) {
@@ -541,9 +641,14 @@ const server = http.createServer(async (req, res) => {
         json(res, 400, { success: false, error: 'id and targetColumn are required' });
         return;
       }
+      const currentStory = await readStory(payload.id);
       await moveCardInBoard(payload.id, payload.targetColumn);
       if (payload.targetColumn) {
-        await writeStory(payload.id, { status: normalizeColumnName(payload.targetColumn) });
+        const targetStatus = normalizeColumnName(payload.targetColumn);
+        await writeStory(payload.id, {
+          status: targetStatus,
+          updateLog: makeUpdateLog(currentStory.raw, `moved ${currentStory.status} → ${targetStatus}`, new Date().toISOString()),
+        });
       }
       json(res, 200, { success: true, board: await getKanbanData() });
       return;

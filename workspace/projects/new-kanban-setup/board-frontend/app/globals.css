@@ -31,9 +31,10 @@ a { color: inherit; }
 .statusBanner.ready { background: rgba(142,240,199,0.1); color: #d3f9eb; }
 .statusBanner.error { background: rgba(255,122,122,0.12); color: #ffd9d9; border-color: #7a3333; }
 .statusBanner.saving { background: rgba(255,204,102,0.12); color: #ffe7b2; }
-.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
-.badgeRow { display: flex; gap: 10px; flex-wrap: wrap; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+.badgeRow, .freshnessRow { display: flex; gap: 10px; flex-wrap: wrap; }
 .badge { background: var(--panel); border: 1px solid var(--border); color: var(--muted); padding: 8px 12px; border-radius: 999px; font-size: 0.9rem; }
+.freshnessRow { margin-bottom: 24px; }
 .healthPanel, .operationsPanel { background: rgba(18,25,51,0.88); border: 1px solid var(--border); border-radius: 18px; padding: 18px; margin-bottom: 24px; box-shadow: 0 10px 30px var(--shadow); }
 .healthHeader, .operationsHeader { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
 .healthHeader h2, .operationsHeader h2 { margin: 0; font-size: 1.05rem; }
@@ -92,6 +93,8 @@ a { color: inherit; }
 .draggingCard { opacity: 0.55; transform: rotate(1deg); }
 .cardTop { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
 .cardId { font-size: 0.82rem; color: var(--accent); font-weight: 700; }
+.cardBadges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.projectBadge { font-size: 0.75rem; border-radius: 999px; padding: 5px 9px; border: 1px solid #365487; color: #d7e6ff; background: rgba(54, 84, 135, 0.2); }
 .priority { font-size: 0.75rem; border-radius: 999px; padding: 5px 9px; border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
 .priority.high { color: #ffd1d1; border-color: #7a3333; background: rgba(122, 51, 51, 0.2); }
 .priority.medium { color: #ffe9b0; border-color: #7c6731; background: rgba(124, 103, 49, 0.2); }
@@ -111,10 +114,20 @@ a { color: inherit; }
 .drawerHeader { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; margin-bottom: 18px; }
 .drawerHeader h2 { margin: 6px 0 0; }
 .fieldGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+.fieldGrid.fourUp { grid-template-columns: repeat(4, 1fr); }
 .fieldGrid label, .textField { display: flex; flex-direction: column; gap: 6px; color: var(--muted); font-size: 0.9rem; }
 .fieldGrid input, .fieldGrid select, .textField textarea { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; font: inherit; }
 .textField { margin-bottom: 16px; }
 .drawerMeta { display: grid; gap: 10px; color: var(--muted); margin-bottom: 18px; line-height: 1.45; }
+.timestampGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
+.timestampCard { background: var(--panel-2); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+.timestampCard span { color: var(--muted); font-size: 0.82rem; }
+.timestampCard strong { color: var(--text); font-size: 0.92rem; line-height: 1.35; }
+.updateLogPanel { background: var(--panel-2); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 18px; }
+.updateLogPanel h3 { margin: 0 0 12px; font-size: 0.96rem; }
+.updateLogList { margin: 0; padding-left: 18px; display: grid; gap: 8px; color: #dfe7ff; }
+.updateLogList li { line-height: 1.45; }
+.updateLogEmpty { color: var(--muted); font-size: 0.9rem; }
 .drawerActions { display: flex; gap: 12px; justify-content: flex-end; }
 .primaryButton, .secondaryButton, .ghostButton { border-radius: 10px; padding: 10px 14px; font: inherit; cursor: pointer; }
 .primaryButton { background: var(--accent); color: #08101f; border: none; font-weight: 700; }
@@ -133,6 +146,6 @@ a { color: inherit; }
   .toolbar { align-items: flex-start; }
   .heroStats { grid-template-columns: 1fr; }
   .board { grid-template-columns: 1fr; }
-  .fieldGrid { grid-template-columns: 1fr; }
+  .fieldGrid, .fieldGrid.fourUp, .timestampGrid { grid-template-columns: 1fr; }
   .healthGrid, .operationsSummaryGrid, .operationsSignals { grid-template-columns: 1fr; }
 }

@@ -1,7 +1,7 @@
 # STORY-011 — Make Mission Control survive gateway restarts and reboots
 
 ## Status
-Ready
+Done
 
 
 ## Story
@@ -36,3 +36,17 @@ Apex
 
 ## Priority
 Medium
+
+## Project
+Mission Control
+
+## Opened
+
+
+## Updated
+
+
+## Closed
+
+## Update Log
+

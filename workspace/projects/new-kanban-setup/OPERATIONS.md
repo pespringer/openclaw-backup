@@ -44,6 +44,34 @@ Because data is markdown, migration to Trello/Notion/Jira is straightforward.
 - Map statuses to destination board columns.
 - Keep original `STORY-###` IDs as external reference.
 
+## Runtime Supervision
+
+Mission Control now uses **user-level systemd** instead of relying only on `nohup` background processes.
+
+Installed units:
+- `mission-control-api.service`
+- `mission-control-ui.service`
+- `mission-control.target`
+
+Expected behavior:
+- API and UI auto-restart on process failure (`Restart=always`)
+- Services come back with the user service manager after reboot because linger is enabled for the `claw` user
+- `mission-control.target` can restart both components together
+
+Useful commands:
+```bash
+systemctl --user daemon-reload
+systemctl --user status mission-control-api.service mission-control-ui.service mission-control.target
+systemctl --user restart mission-control.target
+systemctl --user restart mission-control-api.service
+systemctl --user restart mission-control-ui.service
+```
+
+Validation notes:
+- Confirm ports `4310` and `4311` are listening after restart
+- Confirm `/api/health` reports listening + supervised state
+- Confirm the UI loads without manual process recovery
+
 ## Change Control
 
 - Never rename story IDs.

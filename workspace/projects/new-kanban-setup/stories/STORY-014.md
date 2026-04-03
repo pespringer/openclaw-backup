@@ -1,10 +1,22 @@
 # STORY-014 — Add story lifecycle timestamps
 
 ## Status
-Backlog
+Done
+
+
+
+
+
+
 
 ## Story
 As a user, I want to see open, update, and close timestamps on each story, so that key lifecycle events are visible without manual reconstruction.
+
+
+
+
+
+
 
 ## Why this matters
 - Improves auditability.
@@ -12,10 +24,10 @@ As a user, I want to see open, update, and close timestamps on each story, so th
 - Helps track pace and responsiveness.
 
 ## Acceptance Criteria
-- [ ] Stories support opened/updated/closed timestamp fields.
-- [ ] Timestamps are shown in the story detail view.
-- [ ] Updated timestamp changes automatically when stories change.
-- [ ] Closed timestamp is set when a story moves to Done.
+- [X] Stories support opened/updated/closed timestamp fields.
+- [X] Timestamps are shown in the story detail view.
+- [X] Updated timestamp changes automatically when stories change.
+- [X] Closed timestamp is set when a story moves to Done.
 
 ## Projected Work
 - Estimate: M
@@ -30,8 +42,60 @@ As a user, I want to see open, update, and close timestamps on each story, so th
 ## Deliverable
 - Lifecycle timestamps integrated into story storage and UI.
 
+## Actual Work
+- Added opened/updated/closed lifecycle fields to the story model and API responses.
+- Updated markdown write flows so opened is initialized on first write, updated refreshes on each save, and closed is set when stories move to Done and cleared when reopened.
+- Surfaced lifecycle timestamps in the story detail drawer and updated timestamp visibility on board cards.
+- Normalized existing story markdown to include lifecycle sections without inventing fake historical timestamps.
+
 ## Owner
 Apex
 
+
+
+
+
+
+
 ## Priority
 Medium
+
+
+
+
+
+
+
+## Project
+Mission Control
+
+
+
+
+
+
+
+## Opened
+2026-04-03T03:36:39.164Z
+
+
+
+
+
+
+
+## Updated
+2026-04-03T03:39:21.176Z
+
+
+
+
+
+
+
+
+## Closed
+2026-04-03T03:36:39.164Z
+
+## Update Log
+

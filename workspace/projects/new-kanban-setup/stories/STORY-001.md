@@ -42,3 +42,17 @@ As a founder/operator, I want a clear scoring matrix for project ideas, so that 
 
 ## Next Actions
 - None — card complete.
+
+## Project
+AI Product
+
+## Opened
+
+
+## Updated
+
+
+## Closed
+
+## Update Log
+

@@ -1,7 +1,7 @@
 # STORY-012 — Keep Mission Control board state fresh automatically
 
 ## Status
-Backlog
+Done
 
 ## Story
 As a user, I want the Mission Control board to refresh automatically and immediately reflect in-GUI changes, so that the displayed state stays current without manual reloads.
@@ -35,3 +35,17 @@ Apex
 
 ## Priority
 Medium
+
+## Project
+Mission Control
+
+## Opened
+
+
+## Updated
+
+
+## Closed
+
+## Update Log
+
