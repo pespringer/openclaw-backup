@@ -102,16 +102,27 @@ type StoryDetails = {
   title: string;
   status: string;
   owner: string;
+  agent: string;
+  executionMode: string;
+  linkedSession: string;
+  linkedRun: string;
+  lastExecutionStatus: string;
+  lastExecutionSummary: string;
   priority: 'High' | 'Medium' | 'Low' | string;
   project: string;
   story: string;
   why: string;
   deliverable: string;
   updateLog: string[];
+  executionTimeline: string[];
   openedAt: string | null;
   updatedAt: string | null;
   closedAt: string | null;
 };
+
+const namedAgents = ['Apex', 'Recon', 'Groove', 'Mach', 'Pitstop', 'Marker'];
+const executionModes = ['manual', 'subagent', 'acp', 'cron', 'mixed'];
+const executionStatuses = ['idle', 'running', 'recent', 'blocked', 'failed', 'completed'];
 
 const columns = ['Backlog', 'Ready', 'In Progress', 'Done'];
 const AUTO_REFRESH_MS = 30_000;
@@ -157,12 +168,14 @@ function StoryEditor({
   onClose,
   onSave,
   onMove,
+  onLaunch,
   saving,
 }: {
   story: StoryDetails;
   onClose: () => void;
   onSave: (story: StoryDetails) => Promise<void>;
   onMove: (id: string, targetColumn: string) => Promise<void>;
+  onLaunch: (id: string, agent: string) => Promise<void>;
   saving: boolean;
 }) {
   const [draft, setDraft] = useState(story);
@@ -203,8 +216,46 @@ function StoryEditor({
           </label>
 
           <label>
+            <span>Agent</span>
+            <select value={draft.agent} onChange={(e) => setDraft({ ...draft, agent: e.target.value })}>
+              {namedAgents.map((agent) => <option key={agent} value={agent}>{agent}</option>)}
+            </select>
+          </label>
+
+          <label>
+            <span>Execution Mode</span>
+            <select value={draft.executionMode} onChange={(e) => setDraft({ ...draft, executionMode: e.target.value })}>
+              {executionModes.map((mode) => <option key={mode} value={mode}>{mode}</option>)}
+            </select>
+          </label>
+
+          <label>
+            <span>Execution Status</span>
+            <select value={draft.lastExecutionStatus} onChange={(e) => setDraft({ ...draft, lastExecutionStatus: e.target.value })}>
+              {executionStatuses.map((status) => <option key={status} value={status}>{status}</option>)}
+            </select>
+          </label>
+
+          <label>
             <span>Project</span>
             <input value={draft.project} onChange={(e) => setDraft({ ...draft, project: e.target.value })} />
+          </label>
+        </div>
+
+        <div className="fieldGrid">
+          <label>
+            <span>Linked Session</span>
+            <input value={draft.linkedSession} onChange={(e) => setDraft({ ...draft, linkedSession: e.target.value })} placeholder="agent:... or session key" />
+          </label>
+
+          <label>
+            <span>Linked Run</span>
+            <input value={draft.linkedRun} onChange={(e) => setDraft({ ...draft, linkedRun: e.target.value })} placeholder="run id / task ref" />
+          </label>
+
+          <label>
+            <span>Execution Summary</span>
+            <input value={draft.lastExecutionSummary} onChange={(e) => setDraft({ ...draft, lastExecutionSummary: e.target.value })} placeholder="Short latest run summary" />
           </label>
         </div>
 
@@ -216,12 +267,27 @@ function StoryEditor({
         <div className="drawerMeta">
           <div><strong>Why:</strong> {draft.why || 'Not captured yet.'}</div>
           <div><strong>Deliverable:</strong> {draft.deliverable || 'Not specified.'}</div>
+          <div><strong>Execution:</strong> {draft.executionMode} • {draft.lastExecutionStatus}</div>
+          <div><strong>Linked session:</strong> {draft.linkedSession || 'Not linked'}</div>
+          <div><strong>Linked run:</strong> {draft.linkedRun || 'Not linked'}</div>
+          <div><strong>Last execution summary:</strong> {draft.lastExecutionSummary || 'No execution summary yet.'}</div>
         </div>
 
         <div className="timestampGrid">
           <div className="timestampCard"><span>Opened</span><strong>{formatTimestamp(draft.openedAt)}</strong></div>
           <div className="timestampCard"><span>Updated</span><strong>{formatTimestamp(draft.updatedAt)}</strong></div>
           <div className="timestampCard"><span>Closed</span><strong>{formatTimestamp(draft.closedAt)}</strong></div>
+        </div>
+
+        <div className="updateLogPanel">
+          <h3>Execution Timeline</h3>
+          {draft.executionTimeline?.length ? (
+            <ul className="updateLogList">
+              {draft.executionTimeline.map((entry, index) => <li key={`${draft.id}-timeline-${index}`}>{entry.replace(/^\-\s*/, '')}</li>)}
+            </ul>
+          ) : (
+            <div className="updateLogEmpty">No execution events recorded yet.</div>
+          )}
         </div>
 
         <div className="updateLogPanel">
@@ -233,6 +299,15 @@ function StoryEditor({
           ) : (
             <div className="updateLogEmpty">No updates recorded yet.</div>
           )}
+        </div>
+
+        <div className="launchControls">
+          <span>Launch as:</span>
+          {namedAgents.filter((agent) => agent !== 'Apex').map((agent) => (
+            <button key={agent} className="tinyButton" onClick={() => onLaunch(draft.id, agent)} disabled={saving}>
+              {agent}
+            </button>
+          ))}
         </div>
 
         <div className="drawerActions">
@@ -413,6 +488,8 @@ export default function Page() {
   const [agentOperations, setAgentOperations] = useState<AgentOperations | null>(null);
   const [documentationHub, setDocumentationHub] = useState<DocumentationHub | null>(null);
   const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null);
+  const [activeProject, setActiveProject] = useState<string>('All Projects');
+  const [groupByProject, setGroupByProject] = useState<boolean>(false);
   const refreshInFlight = useRef(false);
 
   async function loadBoard(options?: { silent?: boolean }) {
@@ -501,6 +578,38 @@ export default function Page() {
   const selectedStory = useMemo(() => (selectedId ? stories[selectedId] : null), [selectedId, stories]);
   const totalStories = useMemo(() => Object.values(board).flat().filter(isBoardItem).length, [board]);
 
+  const projectOptions = useMemo(() => {
+    const set = new Set<string>();
+    Object.values(stories).forEach((story) => set.add(story.project || 'Unassigned'));
+    return ['All Projects', ...Array.from(set).sort((a, b) => a.localeCompare(b))];
+  }, [stories]);
+
+  const filteredBoard = useMemo(() => {
+    if (activeProject === 'All Projects') return board;
+    return Object.fromEntries(
+      Object.entries(board).map(([column, items]) => [
+        column,
+        items.filter((item) => (stories[item.id]?.project || 'Unassigned') === activeProject),
+      ]),
+    ) as BoardData;
+  }, [activeProject, board, stories]);
+
+  const groupedProjects = useMemo(() => {
+    const projectNames = activeProject === 'All Projects'
+      ? Array.from(new Set(Object.values(stories).map((story) => story.project || 'Unassigned'))).sort((a, b) => a.localeCompare(b))
+      : [activeProject];
+
+    return projectNames.map((project) => ({
+      project,
+      board: Object.fromEntries(
+        Object.entries(board).map(([column, items]) => [
+          column,
+          items.filter((item) => (stories[item.id]?.project || 'Unassigned') === project),
+        ]),
+      ) as BoardData,
+    }));
+  }, [activeProject, board, stories]);
+
   async function saveStory(story: StoryDetails) {
     setSaving(true);
     setHealth('saving');
@@ -512,6 +621,12 @@ export default function Page() {
         body: JSON.stringify({
           status: story.status,
           owner: story.owner,
+          agent: story.agent,
+          executionMode: story.executionMode,
+          linkedSession: story.linkedSession,
+          linkedRun: story.linkedRun,
+          lastExecutionStatus: story.lastExecutionStatus,
+          lastExecutionSummary: story.lastExecutionSummary,
           priority: story.priority,
           project: story.project,
           story: story.story,
@@ -545,6 +660,24 @@ export default function Page() {
     }
   }
 
+  async function launchStoryAgent(id: string, agent: string) {
+    setSaving(true);
+    setHealth('saving');
+    setStatusMessage(`Launching ${agent} for ${id}…`);
+    try {
+      await fetch(`/api/stories/${id}/launch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent }),
+      });
+      await loadBoard({ silent: true });
+      setSelectedId(id);
+      setStatusMessage(`${agent} launched for ${id}`);
+    } finally {
+      setSaving(false);
+    }
+  }
+
   return (
     <main className="page">
       <header className="hero">
@@ -569,7 +702,15 @@ export default function Page() {
           <div className="badge">Drag and drop enabled</div>
           <div className="badge">Markdown source of truth</div>
         </div>
-        <button className="ghostButton" onClick={() => loadBoard()} disabled={loading || saving}>Refresh board</button>
+        <div className="toolbarActions">
+          <select className="toolbarSelect" value={activeProject} onChange={(e) => setActiveProject(e.target.value)}>
+            {projectOptions.map((project) => <option key={project} value={project}>{project}</option>)}
+          </select>
+          <button className="ghostButton" onClick={() => setGroupByProject((current) => !current)}>
+            {groupByProject ? 'Ungroup projects' : 'Group by project'}
+          </button>
+          <button className="ghostButton" onClick={() => loadBoard()} disabled={loading || saving}>Refresh board</button>
+        </div>
       </div>
 
       <FreshnessBadge lastUpdatedAt={lastUpdatedAt} autoRefreshPaused={Boolean(selectedId)} />
@@ -603,87 +744,185 @@ export default function Page() {
         </section>
       )}
 
-      <section className="board">
-        {columns.map((column) => {
-          const items = board[column] ?? [];
-          return (
-            <div
-              key={column}
-              className={`column ${dropTarget === column ? 'columnDropTarget' : ''}`}
-              onDragOver={(e) => {
-                e.preventDefault();
-                setDropTarget(column);
-              }}
-              onDragLeave={() => setDropTarget((current) => (current === column ? null : current))}
-              onDrop={async (e) => {
-                e.preventDefault();
-                const draggedId = e.dataTransfer.getData('text/story-id') || draggingId;
-                if (draggedId) await moveStory(draggedId, column);
-              }}
-            >
-              <div className="columnHeader">
-                <h2>{column}</h2>
-                <span className="count">{items.length}</span>
+      {groupByProject ? (
+        <div className="groupedBoards">
+          {groupedProjects.map(({ project, board: projectBoard }) => (
+            <section key={project} className="projectGroupSection">
+              <div className="projectGroupHeader">
+                <h2>{project}</h2>
+                <span>{Object.values(projectBoard).flat().length} stories</span>
               </div>
-              <div className="columnControls">
-                <span className="columnHint">Drag a story here, use quick move buttons, or edit via the drawer.</span>
+              <div className="board">
+                {columns.map((column) => {
+                  const items = projectBoard[column] ?? [];
+                  return (
+                    <div
+                      key={`${project}-${column}`}
+                      className={`column ${dropTarget === column ? 'columnDropTarget' : ''}`}
+                      onDragOver={(e) => {
+                        e.preventDefault();
+                        setDropTarget(column);
+                      }}
+                      onDragLeave={() => setDropTarget((current) => (current === column ? null : current))}
+                      onDrop={async (e) => {
+                        e.preventDefault();
+                        const draggedId = e.dataTransfer.getData('text/story-id') || draggingId;
+                        if (draggedId) await moveStory(draggedId, column);
+                      }}
+                    >
+                      <div className="columnHeader">
+                        <h2>{column}</h2>
+                        <span className="count">{items.length}</span>
+                      </div>
+                      <div className="columnControls">
+                        <span className="columnHint">Drag a story here, use quick move buttons, or edit via the drawer.</span>
+                      </div>
+                      <div className="cardList">
+                        {items.length === 0 ? (
+                          <div className="empty">No stories here.</div>
+                        ) : (
+                          items.map((item) => {
+                            const story = stories[item.id];
+                            return (
+                              <article
+                                key={item.id}
+                                className={`card clickableCard ${draggingId === item.id ? 'draggingCard' : ''}`}
+                                onClick={() => setSelectedId(item.id)}
+                                draggable
+                                onDragStart={(e) => {
+                                  setDraggingId(item.id);
+                                  e.dataTransfer.setData('text/story-id', item.id);
+                                  e.dataTransfer.effectAllowed = 'move';
+                                }}
+                                onDragEnd={() => {
+                                  setDraggingId(null);
+                                  setDropTarget(null);
+                                }}
+                              >
+                                <div className="cardTop">
+                                  <div>
+                                    <div className="cardId">{item.id}</div>
+                                    <h3>{story?.title ?? item.title}</h3>
+                                  </div>
+                                  <PriorityPill priority={story?.priority ?? 'Medium'} />
+                                </div>
+                                <div className="cardBadges">
+                                  <ProjectBadge project={story?.project ?? 'Mission Control'} />
+                                </div>
+                                <div className="meta">
+                                  <div className="metaRow"><span>Status</span><strong>{story?.status ?? column}</strong></div>
+                                  <div className="metaRow"><span>Owner</span><strong>{story?.owner ?? 'Apex'}</strong></div>
+                                  <div className="metaRow"><span>Agent</span><strong>{story?.agent ?? 'Apex'}</strong></div>
+                                  <div className="metaRow"><span>Execution</span><strong>{story?.executionMode ?? 'manual'} • {story?.lastExecutionStatus ?? 'idle'}</strong></div>
+                                  <div className="metaRow"><span>Project</span><strong>{story?.project ?? 'Mission Control'}</strong></div>
+                                  <div className="metaRow"><span>Updated</span><strong>{formatTimestamp(story?.updatedAt ?? null)}</strong></div>
+                                  <div className="metaRow"><span>Deliverable</span><strong>{story?.deliverable ?? 'Not specified'}</strong></div>
+                                </div>
+                                <div className="story">{story?.story ?? 'No story text available.'}</div>
+                                <div className="quickActions" onClick={(e) => e.stopPropagation()}>
+                                  {columns.filter((target) => target !== column).map((target) => (
+                                    <button key={target} className="tinyButton" onClick={() => moveStory(item.id, target)} disabled={saving}>
+                                      Move to {target}
+                                    </button>
+                                  ))}
+                                </div>
+                              </article>
+                            );
+                          })
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-              <div className="cardList">
-                {items.length === 0 ? (
-                  <div className="empty">No stories here.</div>
-                ) : (
-                  items.map((item) => {
-                    const story = stories[item.id];
-                    return (
-                      <article
-                        key={item.id}
-                        className={`card clickableCard ${draggingId === item.id ? 'draggingCard' : ''}`}
-                        onClick={() => setSelectedId(item.id)}
-                        draggable
-                        onDragStart={(e) => {
-                          setDraggingId(item.id);
-                          e.dataTransfer.setData('text/story-id', item.id);
-                          e.dataTransfer.effectAllowed = 'move';
-                        }}
-                        onDragEnd={() => {
-                          setDraggingId(null);
-                          setDropTarget(null);
-                        }}
-                      >
-                        <div className="cardTop">
-                          <div>
-                            <div className="cardId">{item.id}</div>
-                            <h3>{story?.title ?? item.title}</h3>
+            </section>
+          ))}
+        </div>
+      ) : (
+        <section className="board">
+          {columns.map((column) => {
+            const items = filteredBoard[column] ?? [];
+            return (
+              <div
+                key={column}
+                className={`column ${dropTarget === column ? 'columnDropTarget' : ''}`}
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  setDropTarget(column);
+                }}
+                onDragLeave={() => setDropTarget((current) => (current === column ? null : current))}
+                onDrop={async (e) => {
+                  e.preventDefault();
+                  const draggedId = e.dataTransfer.getData('text/story-id') || draggingId;
+                  if (draggedId) await moveStory(draggedId, column);
+                }}
+              >
+                <div className="columnHeader">
+                  <h2>{column}</h2>
+                  <span className="count">{items.length}</span>
+                </div>
+                <div className="columnControls">
+                  <span className="columnHint">Drag a story here, use quick move buttons, or edit via the drawer.</span>
+                </div>
+                <div className="cardList">
+                  {items.length === 0 ? (
+                    <div className="empty">No stories here.</div>
+                  ) : (
+                    items.map((item) => {
+                      const story = stories[item.id];
+                      return (
+                        <article
+                          key={item.id}
+                          className={`card clickableCard ${draggingId === item.id ? 'draggingCard' : ''}`}
+                          onClick={() => setSelectedId(item.id)}
+                          draggable
+                          onDragStart={(e) => {
+                            setDraggingId(item.id);
+                            e.dataTransfer.setData('text/story-id', item.id);
+                            e.dataTransfer.effectAllowed = 'move';
+                          }}
+                          onDragEnd={() => {
+                            setDraggingId(null);
+                            setDropTarget(null);
+                          }}
+                        >
+                          <div className="cardTop">
+                            <div>
+                              <div className="cardId">{item.id}</div>
+                              <h3>{story?.title ?? item.title}</h3>
+                            </div>
+                            <PriorityPill priority={story?.priority ?? 'Medium'} />
                           </div>
-                          <PriorityPill priority={story?.priority ?? 'Medium'} />
-                        </div>
-                        <div className="cardBadges">
-                          <ProjectBadge project={story?.project ?? 'Mission Control'} />
-                        </div>
-                        <div className="meta">
-                          <div className="metaRow"><span>Status</span><strong>{story?.status ?? column}</strong></div>
-                          <div className="metaRow"><span>Owner</span><strong>{story?.owner ?? 'Apex'}</strong></div>
-                          <div className="metaRow"><span>Project</span><strong>{story?.project ?? 'Mission Control'}</strong></div>
-                          <div className="metaRow"><span>Updated</span><strong>{formatTimestamp(story?.updatedAt ?? null)}</strong></div>
-                          <div className="metaRow"><span>Deliverable</span><strong>{story?.deliverable ?? 'Not specified'}</strong></div>
-                        </div>
-                        <div className="story">{story?.story ?? 'No story text available.'}</div>
-                        <div className="quickActions" onClick={(e) => e.stopPropagation()}>
-                          {columns.filter((target) => target !== column).map((target) => (
-                            <button key={target} className="tinyButton" onClick={() => moveStory(item.id, target)} disabled={saving}>
-                              Move to {target}
-                            </button>
-                          ))}
-                        </div>
-                      </article>
-                    );
-                  })
-                )}
+                          <div className="cardBadges">
+                            <ProjectBadge project={story?.project ?? 'Mission Control'} />
+                          </div>
+                          <div className="meta">
+                            <div className="metaRow"><span>Status</span><strong>{story?.status ?? column}</strong></div>
+                            <div className="metaRow"><span>Owner</span><strong>{story?.owner ?? 'Apex'}</strong></div>
+                            <div className="metaRow"><span>Agent</span><strong>{story?.agent ?? 'Apex'}</strong></div>
+                            <div className="metaRow"><span>Execution</span><strong>{story?.executionMode ?? 'manual'} • {story?.lastExecutionStatus ?? 'idle'}</strong></div>
+                            <div className="metaRow"><span>Project</span><strong>{story?.project ?? 'Mission Control'}</strong></div>
+                            <div className="metaRow"><span>Updated</span><strong>{formatTimestamp(story?.updatedAt ?? null)}</strong></div>
+                            <div className="metaRow"><span>Deliverable</span><strong>{story?.deliverable ?? 'Not specified'}</strong></div>
+                          </div>
+                          <div className="story">{story?.story ?? 'No story text available.'}</div>
+                          <div className="quickActions" onClick={(e) => e.stopPropagation()}>
+                            {columns.filter((target) => target !== column).map((target) => (
+                              <button key={target} className="tinyButton" onClick={() => moveStory(item.id, target)} disabled={saving}>
+                                Move to {target}
+                              </button>
+                            ))}
+                          </div>
+                        </article>
+                      );
+                    })
+                  )}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </section>
+            );
+          })}
+        </section>
+      )}
 
       <p className="footerNote">
         {loading ? 'Loading stories…' : health === 'error' ? 'Mission Control hit a load problem.' : 'Click a story to edit it, or drag it between columns.'}
@@ -695,6 +934,7 @@ export default function Page() {
           onClose={() => setSelectedId(null)}
           onSave={saveStory}
           onMove={moveStory}
+          onLaunch={launchStoryAgent}
           saving={saving}
         />
       )}

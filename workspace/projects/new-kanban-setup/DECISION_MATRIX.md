@@ -18,12 +18,13 @@ Below are the evaluation criteria and their respective weights:
 
 ---
 
-## Example Ideas and Scores
+## Top 3 Candidate Ideas and Scores
 
-| Project Idea                     | Feasibility | Market Potential | Time to Implement | Cost to Implement | Innovation Factor | Weighted Score |
-|----------------------------------|-------------|------------------|-------------------|-------------------|------------------|----------------|
-| AI-Powered Resume Optimizer      | 8/10 (20)   | 9/10 (27)        | 7/10 (14)         | 6/10 (9)          | 9/10 (9)         | **79**         |
-| Machine Learning Sports Analyzer | 7/10 (17.5) | 8/10 (24)        | 8/10 (16)         | 5/10 (7.5)        | 8/10 (8)         | **73**         |
+| Project Idea                        | Feasibility | Market Potential | Time to Implement | Cost to Implement | Innovation Factor | Weighted Score |
+|-------------------------------------|-------------|------------------|-------------------|-------------------|------------------|----------------|
+| AI-Powered Resume Optimizer         | 8/10 (20)   | 9/10 (27)        | 7/10 (14)         | 6/10 (9)          | 9/10 (9)         | **79**         |
+| DevSecOps Policy / Evidence Copilot | 8/10 (20)   | 8/10 (24)        | 6/10 (12)         | 7/10 (10.5)       | 7/10 (7)         | **73.5**       |
+| Machine Learning Sports Analyzer    | 7/10 (17.5) | 8/10 (24)        | 8/10 (16)         | 5/10 (7.5)        | 8/10 (8)         | **73**         |
 
 ### Explanation
 - **Feasibility** refers to how practical the idea is to implement given available resources.
@@ -32,6 +33,7 @@ Below are the evaluation criteria and their respective weights:
 - **Cost to Implement** evaluates the financial resources required.
 - **Innovation Factor** measures how unique and innovative the idea is.
 
-Scores are normalized to a scale of 0–10 and weighted accordingly. In this example:
-- AI-Powered Resume Optimizer scores higher due to its market potential and feasibility.
-- Machine Learning Sports Analyzer is strong but scores slightly lower due to higher implementation cost.
+Scores are normalized to a scale of 0–10 and weighted accordingly. Current recommendation set:
+- **AI-Powered Resume Optimizer** leads on market clarity and straightforward buyer value.
+- **DevSecOps Policy / Evidence Copilot** is the strongest fit to Patrick's domain strengths and low-maintenance constraints, but likely needs tighter positioning to sell cleanly.
+- **Machine Learning Sports Analyzer** is viable, but it is less aligned to Patrick's strongest unfair advantage and risks becoming a more novelty-driven product.

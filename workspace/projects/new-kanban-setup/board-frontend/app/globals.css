@@ -32,6 +32,8 @@ a { color: inherit; }
 .statusBanner.error { background: rgba(255,122,122,0.12); color: #ffd9d9; border-color: #7a3333; }
 .statusBanner.saving { background: rgba(255,204,102,0.12); color: #ffe7b2; }
 .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+.toolbarActions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.toolbarSelect { background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; font: inherit; min-width: 180px; }
 .badgeRow, .freshnessRow { display: flex; gap: 10px; flex-wrap: wrap; }
 .badge { background: var(--panel); border: 1px solid var(--border); color: var(--muted); padding: 8px 12px; border-radius: 999px; font-size: 0.9rem; }
 .freshnessRow { margin-bottom: 24px; }
@@ -78,6 +80,11 @@ a { color: inherit; }
 .docTags { display: flex; flex-wrap: wrap; gap: 8px; }
 .operationsFooter { margin-top: 18px; color: var(--muted); font-size: 0.9rem; display: grid; gap: 10px; }
 .operationsFooter ul { margin: 0; padding-left: 18px; }
+.groupedBoards { display: grid; gap: 22px; }
+.projectGroupSection { display: grid; gap: 14px; }
+.projectGroupHeader { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: rgba(18,25,51,0.88); border: 1px solid var(--border); border-radius: 16px; padding: 14px 16px; box-shadow: 0 10px 30px var(--shadow); }
+.projectGroupHeader h2 { margin: 0; font-size: 1rem; }
+.projectGroupHeader span { color: var(--muted); font-size: 0.9rem; }
 .board { display: grid; grid-template-columns: repeat(4, minmax(260px, 1fr)); gap: 18px; align-items: start; }
 .column { background: rgba(18, 25, 51, 0.88); border: 1px solid var(--border); border-radius: 18px; padding: 14px; box-shadow: 0 10px 30px var(--shadow); }
 .columnDropTarget { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(110,168,254,0.35), 0 10px 30px var(--shadow); }
@@ -128,6 +135,7 @@ a { color: inherit; }
 .updateLogList { margin: 0; padding-left: 18px; display: grid; gap: 8px; color: #dfe7ff; }
 .updateLogList li { line-height: 1.45; }
 .updateLogEmpty { color: var(--muted); font-size: 0.9rem; }
+.launchControls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 18px; color: var(--muted); font-size: 0.9rem; }
 .drawerActions { display: flex; gap: 12px; justify-content: flex-end; }
 .primaryButton, .secondaryButton, .ghostButton { border-radius: 10px; padding: 10px 14px; font: inherit; cursor: pointer; }
 .primaryButton { background: var(--accent); color: #08101f; border: none; font-weight: 700; }

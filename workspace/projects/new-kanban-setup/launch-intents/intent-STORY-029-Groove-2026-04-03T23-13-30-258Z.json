@@ -1,0 +1,15 @@
+{
+  "id": "intent-STORY-029-Groove-2026-04-03T23-13-30-258Z",
+  "createdAt": "2026-04-03T23:13:30.258Z",
+  "storyId": "STORY-029",
+  "project": "Mission Control",
+  "title": "Add real delegated execution behind named agent launch controls",
+  "agent": "Groove",
+  "executionMode": "subagent",
+  "status": "running",
+  "prompt": "Groove requested from STORY-029: As a user, I want named-agent launch controls to trigger real delegated OpenClaw work where possible, so that Mission Control launches actual execution instead of only writing placeholder linkage metadata.",
+  "resolvedAt": "2026-04-03T23:13:30.267Z",
+  "linkedSession": "agent:main:subagent:story-029-groove-real",
+  "linkedRun": "real-run-story-029-groove",
+  "summary": "Groove delegated planning run started"
+}

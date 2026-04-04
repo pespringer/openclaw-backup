@@ -8,6 +8,7 @@ const ROOT_DIR = path.resolve('./');
 const PUBLIC_DIR = path.join(ROOT_DIR, 'public');
 const KANBAN_FILE = path.join(ROOT_DIR, 'KANBAN.md');
 const STORIES_DIR = path.join(ROOT_DIR, 'stories');
+const LAUNCH_INTENTS_DIR = path.join(ROOT_DIR, 'launch-intents');
 const DOCS_INDEX = [
   {
     id: 'README',
@@ -375,8 +376,8 @@ function getStoryLifecycle(raw, fallbackStatus) {
   return { openedAt, updatedAt, closedAt };
 }
 
-function parseUpdateLog(raw) {
-  const section = parseSection(raw, 'Update Log');
+function parseBulletSection(raw, sectionName) {
+  const section = parseSection(raw, sectionName);
   if (!section) return [];
   return section
     .split(/\r?\n/)
@@ -385,13 +386,35 @@ function parseUpdateLog(raw) {
     .filter((line) => line.startsWith('- '));
 }
 
-function formatUpdateLog(entries) {
+function formatBulletSection(entries) {
   if (!entries.length) return '';
   return entries.join('\n');
 }
 
+function parseUpdateLog(raw) {
+  return parseBulletSection(raw, 'Update Log');
+}
+
+function parseExecutionTimeline(raw) {
+  return parseBulletSection(raw, 'Execution Timeline');
+}
+
+function formatUpdateLog(entries) {
+  return formatBulletSection(entries);
+}
+
+function formatExecutionTimeline(entries) {
+  return formatBulletSection(entries);
+}
+
 function buildUpdateLogEntry(timestamp, summary) {
   return `- ${timestamp} — ${summary}`;
+}
+
+function buildExecutionTimelineEntry(timestamp, agent, status, summary) {
+  const parts = [agent || 'Unknown', status || 'unknown'];
+  if (summary) parts.push(summary);
+  return `- ${timestamp} — ${parts.join(' • ')}`;
 }
 
 function makeUpdateLog(raw, summary, timestamp) {
@@ -399,6 +422,13 @@ function makeUpdateLog(raw, summary, timestamp) {
   const nextEntry = buildUpdateLogEntry(timestamp, summary);
   if (entries[0] === nextEntry) return formatUpdateLog(entries);
   return formatUpdateLog([nextEntry, ...entries].slice(0, 12));
+}
+
+function makeExecutionTimeline(raw, agent, status, summary, timestamp) {
+  const entries = parseExecutionTimeline(raw);
+  const nextEntry = buildExecutionTimelineEntry(timestamp, agent, status, summary);
+  if (entries[0] === nextEntry) return formatExecutionTimeline(entries);
+  return formatExecutionTimeline([nextEntry, ...entries].slice(0, 20));
 }
 
 async function readStory(id) {
@@ -415,9 +445,16 @@ async function readStory(id) {
     why: parseSection(raw, 'Why this matters'),
     deliverable: parseSection(raw, 'Deliverables') || parseSection(raw, 'Deliverable'),
     owner: parseSection(raw, 'Owner') || 'Apex',
+    agent: parseSection(raw, 'Agent') || 'Apex',
+    executionMode: parseSection(raw, 'Execution Mode') || 'manual',
+    linkedSession: parseSection(raw, 'Linked Session') || '',
+    linkedRun: parseSection(raw, 'Linked Run') || '',
+    lastExecutionStatus: parseSection(raw, 'Last Execution Status') || 'idle',
+    lastExecutionSummary: parseSection(raw, 'Last Execution Summary') || '',
     priority: parseSection(raw, 'Priority') || 'Medium',
     project: parseSection(raw, 'Project') || 'Mission Control',
     updateLog: parseUpdateLog(raw),
+    executionTimeline: parseExecutionTimeline(raw),
     openedAt: lifecycle.openedAt,
     updatedAt: lifecycle.updatedAt,
     closedAt: lifecycle.closedAt,
@@ -431,13 +468,26 @@ async function writeStory(id, updates) {
   const currentStatus = parseSection(raw, 'Status');
   const currentStory = parseSection(raw, 'Story');
   const currentOwner = parseSection(raw, 'Owner') || 'Apex';
+  const currentAgent = parseSection(raw, 'Agent') || 'Apex';
+  const currentExecutionMode = parseSection(raw, 'Execution Mode') || 'manual';
+  const currentLinkedSession = parseSection(raw, 'Linked Session') || '';
+  const currentLinkedRun = parseSection(raw, 'Linked Run') || '';
+  const currentLastExecutionStatus = parseSection(raw, 'Last Execution Status') || 'idle';
+  const currentLastExecutionSummary = parseSection(raw, 'Last Execution Summary') || '';
   const currentPriority = parseSection(raw, 'Priority') || 'Medium';
   const currentProject = parseSection(raw, 'Project') || 'Mission Control';
+  const currentExecutionTimeline = parseExecutionTimeline(raw);
   const currentOpenedAt = parseSection(raw, 'Opened') || null;
   const currentClosedAt = parseSection(raw, 'Closed') || null;
   const nextStatus = updates.status === undefined ? currentStatus : String(updates.status).trim();
   const nextStory = updates.story === undefined ? currentStory : String(updates.story).trim();
   const nextOwner = updates.owner === undefined ? currentOwner : String(updates.owner).trim();
+  const nextAgent = updates.agent === undefined ? currentAgent : String(updates.agent).trim();
+  const nextExecutionMode = updates.executionMode === undefined ? currentExecutionMode : String(updates.executionMode).trim();
+  const nextLinkedSession = updates.linkedSession === undefined ? currentLinkedSession : String(updates.linkedSession).trim();
+  const nextLinkedRun = updates.linkedRun === undefined ? currentLinkedRun : String(updates.linkedRun).trim();
+  const nextLastExecutionStatus = updates.lastExecutionStatus === undefined ? currentLastExecutionStatus : String(updates.lastExecutionStatus).trim();
+  const nextLastExecutionSummary = updates.lastExecutionSummary === undefined ? currentLastExecutionSummary : String(updates.lastExecutionSummary).trim();
   const nextPriority = updates.priority === undefined ? currentPriority : String(updates.priority).trim();
   const nextProject = updates.project === undefined ? currentProject : String(updates.project).trim();
   const nowIso = new Date().toISOString();
@@ -448,6 +498,12 @@ async function writeStory(id, updates) {
   const changeParts = [];
   if (nextStatus !== currentStatus) changeParts.push(`status ${currentStatus || 'unset'} → ${nextStatus}`);
   if (nextOwner !== currentOwner) changeParts.push(`owner ${currentOwner} → ${nextOwner}`);
+  if (nextAgent !== currentAgent) changeParts.push(`agent ${currentAgent} → ${nextAgent}`);
+  if (nextExecutionMode !== currentExecutionMode) changeParts.push(`execution mode ${currentExecutionMode} → ${nextExecutionMode}`);
+  if (nextLinkedSession !== currentLinkedSession) changeParts.push(`linked session updated`);
+  if (nextLinkedRun !== currentLinkedRun) changeParts.push(`linked run updated`);
+  if (nextLastExecutionStatus !== currentLastExecutionStatus) changeParts.push(`execution status ${currentLastExecutionStatus} → ${nextLastExecutionStatus}`);
+  if (nextLastExecutionSummary !== currentLastExecutionSummary) changeParts.push('execution summary updated');
   if (nextPriority !== currentPriority) changeParts.push(`priority ${currentPriority} → ${nextPriority}`);
   if (nextProject !== currentProject) changeParts.push(`project ${currentProject} → ${nextProject}`);
   if (nextStory !== currentStory) changeParts.push('story details updated');
@@ -457,13 +513,45 @@ async function writeStory(id, updates) {
     nextUpdateLog = makeUpdateLog(raw, changeParts.join(' · '), nextUpdatedAt);
   }
 
+  let nextExecutionTimeline = updates.executionTimeline;
+  if (nextExecutionTimeline === undefined && (
+    nextAgent !== currentAgent ||
+    nextLastExecutionStatus !== currentLastExecutionStatus ||
+    nextLastExecutionSummary !== currentLastExecutionSummary ||
+    nextLinkedSession !== currentLinkedSession ||
+    nextLinkedRun !== currentLinkedRun ||
+    nextExecutionMode !== currentExecutionMode
+  )) {
+    const timelineSummaryParts = [];
+    if (nextExecutionMode !== currentExecutionMode) timelineSummaryParts.push(`mode ${nextExecutionMode}`);
+    if (nextLinkedSession !== currentLinkedSession && nextLinkedSession) timelineSummaryParts.push(`session ${nextLinkedSession}`);
+    if (nextLinkedRun !== currentLinkedRun && nextLinkedRun) timelineSummaryParts.push(`run ${nextLinkedRun}`);
+    if (nextLastExecutionSummary) timelineSummaryParts.push(nextLastExecutionSummary);
+    nextExecutionTimeline = makeExecutionTimeline(
+      raw,
+      nextAgent,
+      nextLastExecutionStatus,
+      timelineSummaryParts.join(' • '),
+      nextUpdatedAt,
+    );
+  } else if (nextExecutionTimeline === undefined) {
+    nextExecutionTimeline = formatExecutionTimeline(currentExecutionTimeline);
+  }
+
   const sections = [
     ['Status', updates.status],
     ['Owner', updates.owner],
+    ['Agent', updates.agent],
+    ['Execution Mode', updates.executionMode],
+    ['Linked Session', updates.linkedSession],
+    ['Linked Run', updates.linkedRun],
+    ['Last Execution Status', updates.lastExecutionStatus],
+    ['Last Execution Summary', updates.lastExecutionSummary],
     ['Priority', updates.priority],
     ['Project', updates.project],
     ['Story', updates.story],
     ['Update Log', nextUpdateLog],
+    ['Execution Timeline', nextExecutionTimeline],
     ['Opened', nextOpenedAt],
     ['Updated', nextUpdatedAt],
     ['Closed', nextClosedAt],
@@ -563,6 +651,106 @@ async function moveCardInBoard(id, targetColumn) {
   await fs.writeFile(KANBAN_FILE, cleaned.join('\n'));
 }
 
+function roleExecutionMode(agentName) {
+  const modeByAgent = {
+    Apex: 'manual',
+    Recon: 'subagent',
+    Groove: 'subagent',
+    Mach: 'subagent',
+    Pitstop: 'subagent',
+    Marker: 'subagent',
+  };
+  return modeByAgent[agentName] || 'manual';
+}
+
+function roleLaunchSummary(agentName) {
+  const summaryByAgent = {
+    Recon: 'Recon launch requested for research/discovery pass',
+    Groove: 'Groove launch requested for planning/decomposition pass',
+    Mach: 'Mach launch requested for implementation pass',
+    Pitstop: 'Pitstop launch requested for QA/review pass',
+    Marker: 'Marker launch requested for documentation/handoff pass',
+    Apex: 'Apex assigned orchestration follow-up',
+  };
+  return summaryByAgent[agentName] || `${agentName} launch requested`;
+}
+
+async function ensureLaunchIntentDir() {
+  await fs.mkdir(LAUNCH_INTENTS_DIR, { recursive: true });
+}
+
+async function createLaunchIntent(storyId, agentName) {
+  await ensureLaunchIntentDir();
+  const story = await readStory(storyId);
+  const timestamp = new Date().toISOString();
+  const safeAgent = String(agentName || story.agent || 'Apex').trim() || 'Apex';
+  const executionMode = roleExecutionMode(safeAgent);
+  const intentId = `intent-${storyId}-${safeAgent}-${timestamp.replace(/[:.]/g, '-')}`;
+  const intent = {
+    id: intentId,
+    createdAt: timestamp,
+    storyId,
+    project: story.project,
+    title: story.title,
+    agent: safeAgent,
+    executionMode,
+    status: 'pending',
+    prompt: `${safeAgent} requested from ${storyId}: ${story.story}`,
+  };
+  await fs.writeFile(path.join(LAUNCH_INTENTS_DIR, `${intentId}.json`), JSON.stringify(intent, null, 2));
+
+  await writeStory(storyId, {
+    agent: safeAgent,
+    executionMode,
+    linkedRun: intentId,
+    lastExecutionStatus: executionMode === 'subagent' ? 'pending' : 'idle',
+    lastExecutionSummary: roleLaunchSummary(safeAgent),
+    updatedAt: timestamp,
+  });
+
+  return { intent, story: await readStory(storyId) };
+}
+
+async function listLaunchIntents() {
+  await ensureLaunchIntentDir();
+  const files = await fs.readdir(LAUNCH_INTENTS_DIR);
+  const intents = [];
+  for (const file of files.filter((file) => file.endsWith('.json')).sort()) {
+    const raw = await fs.readFile(path.join(LAUNCH_INTENTS_DIR, file), 'utf-8');
+    intents.push(JSON.parse(raw));
+  }
+  return intents.sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+}
+
+async function resolveLaunchIntent(intentId, resolution) {
+  await ensureLaunchIntentDir();
+  const filePath = path.join(LAUNCH_INTENTS_DIR, `${intentId}.json`);
+  const raw = await fs.readFile(filePath, 'utf-8');
+  const intent = JSON.parse(raw);
+  const resolvedAt = new Date().toISOString();
+  const nextIntent = {
+    ...intent,
+    status: resolution.status || 'running',
+    resolvedAt,
+    linkedSession: resolution.linkedSession || '',
+    linkedRun: resolution.linkedRun || intent.id,
+    summary: resolution.summary || intent.prompt,
+  };
+  await fs.writeFile(filePath, JSON.stringify(nextIntent, null, 2));
+
+  await writeStory(intent.storyId, {
+    agent: intent.agent,
+    executionMode: intent.executionMode,
+    linkedSession: nextIntent.linkedSession,
+    linkedRun: nextIntent.linkedRun,
+    lastExecutionStatus: nextIntent.status,
+    lastExecutionSummary: nextIntent.summary,
+    updatedAt: resolvedAt,
+  });
+
+  return { intent: nextIntent, story: await readStory(intent.storyId) };
+}
+
 function collectBody(req) {
   return new Promise((resolve, reject) => {
     let body = '';
@@ -651,6 +839,40 @@ const server = http.createServer(async (req, res) => {
         });
       }
       json(res, 200, { success: true, board: await getKanbanData() });
+      return;
+    }
+
+    const storyLaunchMatch = req.url?.match(/^\/api\/stories\/(STORY-\d+)\/launch$/);
+    if (req.method === 'POST' && storyLaunchMatch) {
+      const body = await collectBody(req);
+      const payload = JSON.parse(body || '{}');
+      const agent = String(payload.agent || '').trim();
+      if (!agent) {
+        json(res, 400, { success: false, error: 'agent is required' });
+        return;
+      }
+      const result = await createLaunchIntent(storyLaunchMatch[1], agent);
+      json(res, 200, { success: true, story: result.story, launchIntent: result.intent });
+      return;
+    }
+
+    if (req.method === 'GET' && req.url === '/api/launch-intents') {
+      const intents = await listLaunchIntents();
+      json(res, 200, { success: true, launchIntents: intents });
+      return;
+    }
+
+    const launchIntentResolveMatch = req.url?.match(/^\/api\/launch-intents\/([^/]+)\/resolve$/);
+    if (req.method === 'POST' && launchIntentResolveMatch) {
+      const body = await collectBody(req);
+      const payload = JSON.parse(body || '{}');
+      const result = await resolveLaunchIntent(launchIntentResolveMatch[1], {
+        status: payload.status,
+        linkedSession: payload.linkedSession,
+        linkedRun: payload.linkedRun,
+        summary: payload.summary,
+      });
+      json(res, 200, { success: true, launchIntent: result.intent, story: result.story });
       return;
     }
 

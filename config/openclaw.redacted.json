@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.31",
-    "lastTouchedAt": "2026-04-01T04:15:52.456Z"
+    "lastTouchedVersion": "2026.4.2",
+    "lastTouchedAt": "2026-04-03T04:19:47.303Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-30T02:03:59.346Z",
@@ -165,6 +165,9 @@
       },
       "lossless-claw": {
         "enabled": true
+      },
+      "browser": {
+        "enabled": true
       }
     },
     "installs": {
@@ -180,6 +183,23 @@
         "shasum": "1c77e2331c37b69fb75c4f5463114aed6415ccb1",
         "resolvedAt": "2026-03-22T20:02:37.821Z",
         "installedAt": "2026-03-22T20:03:43.629Z"
+      }
+    }
+  },
+  "browser": {
+    "noSandbox": true,
+    "defaultProfile": "tmp-cdp",
+    "profiles": {
+      "tmp-existing": {
+        "cdpPort": 18950,
+        "userDataDir": "/tmp/openclaw-browser-existing",
+        "driver": "existing-session",
+        "color": "#00AA00"
+      },
+      "tmp-cdp": {
+        "cdpUrl": "ws://127.0.0.1:18950/devtools/browser/13faa9a0-d663-4f04-b610-24e414aae636",
+        "driver": "openclaw",
+        "color": "#22AA88"
       }
     }
   }

@@ -49,3 +49,20 @@ Mission Control
 
 ## Update Log
 
+## Agent
+Apex
+
+## Execution Mode
+manual
+
+## Linked Session
+
+## Linked Run
+
+## Last Execution Status
+idle
+
+## Last Execution Summary
+
+## Execution Timeline
+

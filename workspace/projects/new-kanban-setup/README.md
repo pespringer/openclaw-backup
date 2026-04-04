@@ -62,6 +62,8 @@ npm run start
 ## Source of truth
 - Board columns: `KANBAN.md`
 - Story details: `stories/STORY-###.md`
+- Named agent roles: `AGENT_CHARTER.md`
+- Launch intent queue: `launch-intents/*.json`
 
 ## Implemented
 - Dark mode UI
@@ -75,6 +77,8 @@ npm run start
 - Documentation Hub panel
 - Auto-refresh + freshness indicator
 - User-level systemd supervision for API + UI
+- Named agent assignment, execution linkage, execution timeline, launch controls
+- Durable launch-intent bridge (`launch-intents/` + create/list/resolve API endpoints)
 
 ## Notification rule
 For Telegram cron notifications, use:
