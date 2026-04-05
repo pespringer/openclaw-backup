@@ -22,6 +22,10 @@ stop_pid() {
   kill -9 "$pid" 2>/dev/null || true
 }
 
+if systemctl --user list-unit-files mission-control.target >/dev/null 2>&1; then
+  systemctl --user stop mission-control.target || true
+fi
+
 for FILE in "$LOG_DIR/ui.pid" "$LOG_DIR/api.pid"; do
   if [ -f "$FILE" ]; then
     PID=$(cat "$FILE")

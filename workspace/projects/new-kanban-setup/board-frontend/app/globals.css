@@ -57,11 +57,15 @@ a { color: inherit; }
 .statusSignalList { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
 .statusSignal { background: rgba(110,168,254,0.12); border: 1px solid rgba(110,168,254,0.28); color: #d7e6ff; border-radius: 999px; padding: 8px 12px; font-size: 0.84rem; }
 .operationsBuckets { display: grid; grid-template-columns: repeat(2, minmax(260px, 1fr)); gap: 14px; margin-top: 18px; }
+.singleColumnBucket { grid-template-columns: 1fr; }
+.dependencyBuckets { align-items: start; }
 .operationsBucket { background: var(--panel-3); border: 1px solid var(--border); border-radius: 16px; padding: 14px; }
 .operationsBucketHeader { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
 .operationsBucketHeader h3 { margin: 0; font-size: 0.98rem; }
 .agentList { display: flex; flex-direction: column; gap: 10px; }
 .agentCard { background: var(--panel-2); border: 1px solid var(--border); border-radius: 14px; padding: 12px; }
+.dependencyCard.blockedCard { border-color: #7c6731; }
+.dependencyCard.candidateCard { border-color: #2c6b55; }
 .agentCardTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
 .agentKey { color: var(--accent); font-size: 0.8rem; font-weight: 700; word-break: break-all; }
 .agentMetaLine { color: var(--muted); font-size: 0.82rem; margin-top: 4px; }
@@ -80,6 +84,15 @@ a { color: inherit; }
 .docTags { display: flex; flex-wrap: wrap; gap: 8px; }
 .operationsFooter { margin-top: 18px; color: var(--muted); font-size: 0.9rem; display: grid; gap: 10px; }
 .operationsFooter ul { margin: 0; padding-left: 18px; }
+.nextActionPanel { border-color: #365487; }
+.nextActionHero { background: linear-gradient(135deg, rgba(54,84,135,0.24), rgba(44,107,85,0.16)); border: 1px solid #365487; border-radius: 18px; padding: 18px; margin-top: 8px; }
+.nextActionTop { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+.nextActionTop h3 { margin: 6px 0 0; font-size: 1.2rem; }
+.nextActionScore { color: #d7e6ff; border: 1px solid #365487; background: rgba(54, 84, 135, 0.22); border-radius: 999px; padding: 8px 12px; font-size: 0.88rem; white-space: nowrap; }
+.nextActionReasons { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.nextActionMeta { display: grid; gap: 10px; color: var(--muted); font-size: 0.92rem; }
+.nextActionMeta > div { display: flex; justify-content: space-between; gap: 12px; }
+.nextActionMeta strong { color: var(--text); text-align: right; }
 .groupedBoards { display: grid; gap: 22px; }
 .projectGroupSection { display: grid; gap: 14px; }
 .projectGroupHeader { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: rgba(18,25,51,0.88); border: 1px solid var(--border); border-radius: 16px; padding: 14px 16px; box-shadow: 0 10px 30px var(--shadow); }
@@ -95,6 +108,7 @@ a { color: inherit; }
 .count { color: var(--muted); font-size: 0.9rem; }
 .cardList { display: flex; flex-direction: column; gap: 12px; }
 .card { background: var(--panel-2); border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
+.blockedStoryCard { border-color: #7c6731; box-shadow: inset 0 0 0 1px rgba(255, 204, 102, 0.18); }
 .clickableCard { cursor: pointer; transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease; }
 .clickableCard:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 12px 24px rgba(0,0,0,0.28); }
 .draggingCard { opacity: 0.55; transform: rotate(1deg); }
@@ -122,9 +136,12 @@ a { color: inherit; }
 .drawerHeader h2 { margin: 6px 0 0; }
 .fieldGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
 .fieldGrid.fourUp { grid-template-columns: repeat(4, 1fr); }
+.fieldGrid.twoUp { grid-template-columns: repeat(2, 1fr); }
 .fieldGrid label, .textField { display: flex; flex-direction: column; gap: 6px; color: var(--muted); font-size: 0.9rem; }
 .fieldGrid input, .fieldGrid select, .textField textarea { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; font: inherit; }
 .textField { margin-bottom: 16px; }
+.compactTextField { margin-bottom: 0; }
+.dependencyMetaPanel { background: var(--panel-2); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 18px; display: grid; gap: 10px; color: var(--muted); line-height: 1.45; }
 .drawerMeta { display: grid; gap: 10px; color: var(--muted); margin-bottom: 18px; line-height: 1.45; }
 .timestampGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
 .timestampCard { background: var(--panel-2); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }

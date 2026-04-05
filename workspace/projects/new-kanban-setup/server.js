@@ -386,9 +386,21 @@ function parseBulletSection(raw, sectionName) {
     .filter((line) => line.startsWith('- '));
 }
 
+function parseReferenceSection(raw, sectionName) {
+  return parseBulletSection(raw, sectionName)
+    .map((line) => line.replace(/^[-*]\s*/, '').trim())
+    .filter(Boolean);
+}
+
 function formatBulletSection(entries) {
   if (!entries.length) return '';
   return entries.join('\n');
+}
+
+function formatReferenceSection(entries) {
+  const cleaned = Array.from(new Set((entries || []).map((entry) => String(entry).trim()).filter(Boolean)));
+  if (!cleaned.length) return '';
+  return cleaned.map((entry) => `- ${entry}`).join('\n');
 }
 
 function parseUpdateLog(raw) {
@@ -453,6 +465,8 @@ async function readStory(id) {
     lastExecutionSummary: parseSection(raw, 'Last Execution Summary') || '',
     priority: parseSection(raw, 'Priority') || 'Medium',
     project: parseSection(raw, 'Project') || 'Mission Control',
+    dependencies: parseReferenceSection(raw, 'Dependencies'),
+    blockers: parseReferenceSection(raw, 'Blockers'),
     updateLog: parseUpdateLog(raw),
     executionTimeline: parseExecutionTimeline(raw),
     openedAt: lifecycle.openedAt,
@@ -476,6 +490,8 @@ async function writeStory(id, updates) {
   const currentLastExecutionSummary = parseSection(raw, 'Last Execution Summary') || '';
   const currentPriority = parseSection(raw, 'Priority') || 'Medium';
   const currentProject = parseSection(raw, 'Project') || 'Mission Control';
+  const currentDependencies = parseReferenceSection(raw, 'Dependencies');
+  const currentBlockers = parseReferenceSection(raw, 'Blockers');
   const currentExecutionTimeline = parseExecutionTimeline(raw);
   const currentOpenedAt = parseSection(raw, 'Opened') || null;
   const currentClosedAt = parseSection(raw, 'Closed') || null;
@@ -490,6 +506,8 @@ async function writeStory(id, updates) {
   const nextLastExecutionSummary = updates.lastExecutionSummary === undefined ? currentLastExecutionSummary : String(updates.lastExecutionSummary).trim();
   const nextPriority = updates.priority === undefined ? currentPriority : String(updates.priority).trim();
   const nextProject = updates.project === undefined ? currentProject : String(updates.project).trim();
+  const nextDependencies = updates.dependencies === undefined ? currentDependencies : (Array.isArray(updates.dependencies) ? updates.dependencies : String(updates.dependencies).split(/\r?\n|,/)).map((entry) => String(entry).trim()).filter(Boolean);
+  const nextBlockers = updates.blockers === undefined ? currentBlockers : (Array.isArray(updates.blockers) ? updates.blockers : String(updates.blockers).split(/\r?\n|,/)).map((entry) => String(entry).trim()).filter(Boolean);
   const nowIso = new Date().toISOString();
   const nextUpdatedAt = updates.updatedAt ?? nowIso;
   const nextClosedAt = updates.closedAt ?? (nextStatus === 'Done' ? currentClosedAt || nextUpdatedAt : '');
@@ -506,6 +524,8 @@ async function writeStory(id, updates) {
   if (nextLastExecutionSummary !== currentLastExecutionSummary) changeParts.push('execution summary updated');
   if (nextPriority !== currentPriority) changeParts.push(`priority ${currentPriority} → ${nextPriority}`);
   if (nextProject !== currentProject) changeParts.push(`project ${currentProject} → ${nextProject}`);
+  if (JSON.stringify(nextDependencies) !== JSON.stringify(currentDependencies)) changeParts.push('dependencies updated');
+  if (JSON.stringify(nextBlockers) !== JSON.stringify(currentBlockers)) changeParts.push('blockers updated');
   if (nextStory !== currentStory) changeParts.push('story details updated');
 
   let nextUpdateLog = updates.updateLog;
@@ -549,6 +569,8 @@ async function writeStory(id, updates) {
     ['Last Execution Summary', updates.lastExecutionSummary],
     ['Priority', updates.priority],
     ['Project', updates.project],
+    ['Dependencies', formatReferenceSection(nextDependencies)],
+    ['Blockers', formatReferenceSection(nextBlockers)],
     ['Story', updates.story],
     ['Update Log', nextUpdateLog],
     ['Execution Timeline', nextExecutionTimeline],
@@ -679,6 +701,162 @@ async function ensureLaunchIntentDir() {
   await fs.mkdir(LAUNCH_INTENTS_DIR, { recursive: true });
 }
 
+function priorityWeight(priority) {
+  const normalized = String(priority || '').toLowerCase();
+  if (normalized === 'high') return 30;
+  if (normalized === 'low') return 5;
+  return 15;
+}
+
+function statusWeight(status) {
+  const normalized = String(status || '').toLowerCase();
+  if (normalized === 'in progress') return 40;
+  if (normalized === 'ready') return 28;
+  if (normalized === 'backlog') return 12;
+  return 0;
+}
+
+function recencyPenalty(updatedAt) {
+  if (!updatedAt) return 0;
+  const timestamp = new Date(updatedAt).getTime();
+  if (Number.isNaN(timestamp)) return 0;
+  const hours = (Date.now() - timestamp) / 3_600_000;
+  if (hours < 2) return 8;
+  if (hours < 12) return 4;
+  if (hours > 72) return -4;
+  return 0;
+}
+
+async function gatherDependencyInsights() {
+  const board = await getKanbanData();
+  const allIds = Object.values(board).flat().map((item) => item.id);
+  const stories = await Promise.all(allIds.map((id) => readStory(id)));
+  const storyMap = new Map(stories.map((story) => [story.id, story]));
+
+  const blockersByStory = new Map();
+  const blockedByMap = new Map();
+
+  for (const story of stories) {
+    const reasons = [];
+
+    for (const dependencyId of story.dependencies) {
+      const dependency = storyMap.get(dependencyId);
+      if (!dependency) {
+        reasons.push(`Missing dependency ${dependencyId}`);
+        continue;
+      }
+      if (dependency.status !== 'Done') {
+        reasons.push(`${dependency.id} not done (${dependency.status})`);
+        const currentBlockedBy = blockedByMap.get(dependency.id) || [];
+        currentBlockedBy.push(story.id);
+        blockedByMap.set(dependency.id, currentBlockedBy);
+      }
+    }
+
+    for (const blocker of story.blockers) {
+      if (/^STORY-\d+$/i.test(blocker)) {
+        const blockerStoryId = blocker.toUpperCase();
+        const blockerStory = storyMap.get(blockerStoryId);
+        if (!blockerStory) {
+          reasons.push(`Missing blocker ${blockerStoryId}`);
+        } else if (blockerStory.status !== 'Done') {
+          reasons.push(`Blocked by ${blockerStory.id} (${blockerStory.status})`);
+          const currentBlockedBy = blockedByMap.get(blockerStory.id) || [];
+          currentBlockedBy.push(story.id);
+          blockedByMap.set(blockerStory.id, currentBlockedBy);
+        }
+      } else {
+        reasons.push(blocker);
+      }
+    }
+
+    blockersByStory.set(story.id, reasons);
+  }
+
+  const storyStates = stories.map((story) => {
+    const blockingReasons = Array.from(new Set(blockersByStory.get(story.id) || []));
+    const unlocks = Array.from(new Set(blockedByMap.get(story.id) || []));
+    return {
+      id: story.id,
+      title: story.title,
+      status: story.status,
+      priority: story.priority,
+      project: story.project,
+      dependencies: story.dependencies,
+      blockers: story.blockers,
+      updatedAt: story.updatedAt,
+      blockingReasons,
+      isBlocked: blockingReasons.length > 0,
+      unlocks,
+    };
+  });
+
+  const unblockCandidates = storyStates
+    .filter((story) => !story.isBlocked && story.status !== 'Done' && story.unlocks.length > 0)
+    .sort((a, b) => {
+      const unlockDelta = (b.unlocks.length - a.unlocks.length);
+      if (unlockDelta !== 0) return unlockDelta;
+      return a.id.localeCompare(b.id);
+    });
+
+  const nextActionCandidates = storyStates
+    .filter((story) => !story.isBlocked && story.status !== 'Done')
+    .map((story) => {
+      const reasons = [];
+      let score = 0;
+
+      const statusScore = statusWeight(story.status);
+      score += statusScore;
+      if (statusScore > 0) reasons.push(`${story.status} work gets priority`);
+
+      const priorityScore = priorityWeight(story.priority);
+      score += priorityScore;
+      reasons.push(`${story.priority} priority`);
+
+      if (story.unlocks.length > 0) {
+        const unlockScore = story.unlocks.length * 10;
+        score += unlockScore;
+        reasons.push(`unblocks ${story.unlocks.length} ${story.unlocks.length === 1 ? 'story' : 'stories'}`);
+      }
+
+      const freshnessScore = recencyPenalty(story.updatedAt);
+      score += freshnessScore;
+      if (freshnessScore > 0) reasons.push('recently active, good to continue');
+      if (freshnessScore < 0) reasons.push('stale enough to revisit soon');
+
+      if ((story.status || '').toLowerCase() === 'backlog' && story.unlocks.length === 0) {
+        score -= 6;
+        reasons.push('less urgent than active or leverage-driving work');
+      }
+
+      return {
+        ...story,
+        score,
+        reasons,
+      };
+    })
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.id.localeCompare(b.id);
+    });
+
+  const recommendedNextAction = nextActionCandidates[0] || null;
+
+  return {
+    checkedAt: new Date().toISOString(),
+    summary: {
+      blockedCount: storyStates.filter((story) => story.isBlocked).length,
+      readyToUnblockCount: unblockCandidates.length,
+      linkedStoryCount: storyStates.filter((story) => story.dependencies.length || story.blockers.length).length,
+      nextActionCandidateCount: nextActionCandidates.length,
+    },
+    stories: storyStates,
+    unblockCandidates,
+    nextActionCandidates,
+    recommendedNextAction,
+  };
+}
+
 async function createLaunchIntent(storyId, agentName) {
   await ensureLaunchIntentDir();
   const story = await readStory(storyId);
@@ -803,6 +981,26 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'GET' && req.url === '/api/documentation-hub') {
       const documentationHub = await gatherDocumentationHub();
       json(res, 200, { success: true, documentationHub });
+      return;
+    }
+
+    if (req.method === 'GET' && req.url === '/api/dependencies') {
+      const dependencyInsights = await gatherDependencyInsights();
+      json(res, 200, { success: true, dependencyInsights });
+      return;
+    }
+
+    if (req.method === 'GET' && req.url === '/api/next-action') {
+      const dependencyInsights = await gatherDependencyInsights();
+      json(res, 200, {
+        success: true,
+        nextAction: {
+          checkedAt: dependencyInsights.checkedAt,
+          recommended: dependencyInsights.recommendedNextAction,
+          candidates: dependencyInsights.nextActionCandidates,
+          summary: dependencyInsights.summary,
+        },
+      });
       return;
     }
 

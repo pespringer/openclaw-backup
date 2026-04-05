@@ -28,6 +28,16 @@ wait_for_http() {
   return 1
 }
 
+if systemctl --user list-unit-files mission-control.target >/dev/null 2>&1; then
+  systemctl --user restart mission-control.target
+  wait_for_http "http://127.0.0.1:4311/api/kanban" "API"
+  wait_for_http "http://127.0.0.1:4310/" "UI"
+  echo "Mission Control started (systemd)"
+  echo "UI:  http://$HOST_IP:4310"
+  echo "API: http://$HOST_IP:4311/api/kanban"
+  exit 0
+fi
+
 "$ROOT/stop-mission-control.sh" >/dev/null 2>&1 || true
 
 for PORT in 4310 4311; do
@@ -49,6 +59,6 @@ echo $! > "$LOG_DIR/ui.pid"
 wait_for_http "http://127.0.0.1:4311/api/kanban" "API"
 wait_for_http "http://127.0.0.1:4310/" "UI"
 
-echo "Mission Control started"
+echo "Mission Control started (manual fallback)"
 echo "UI:  http://$HOST_IP:4310"
 echo "API: http://$HOST_IP:4311/api/kanban"

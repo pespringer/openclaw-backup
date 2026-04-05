@@ -1,7 +1,7 @@
 # STORY-019 — Add dependency and blocker mapping to stories
 
 ## Status
-Backlog
+Done
 
 ## Story
 As a user, I want stories to declare blockers and dependencies, so that Mission Control can show what is blocked, what unlocks progress, and what should happen next.
@@ -12,10 +12,10 @@ As a user, I want stories to declare blockers and dependencies, so that Mission 
 - Improves prioritization beyond raw column status.
 
 ## Acceptance Criteria
-- [ ] Stories support blocker/dependency metadata.
-- [ ] Blocked cards are visually identifiable.
-- [ ] Dependencies are visible in story detail view.
-- [ ] Board can surface unblock-first candidates.
+- [x] Stories support blocker/dependency metadata.
+- [x] Blocked cards are visually identifiable.
+- [x] Dependencies are visible in story detail view.
+- [x] Board can surface unblock-first candidates.
 
 ## Projected Work
 - Estimate: M
@@ -41,9 +41,18 @@ Mission Control
 
 ## Opened
 
+## Dependencies
+- STORY-024
+- STORY-018
+
+## Blockers
+
 ## Updated
+2026-04-04T20:32:00Z
 
 ## Update Log
+- 2026-04-04T20:32:00Z — restarted Mission Control, verified dependency API/UI live, and closed STORY-019
+- 2026-04-04T13:20:00Z — dependency metadata model, dependency insights API, and blocked/unblock-first UI cues in progress
 
 ## Agent
 Apex
@@ -59,6 +68,11 @@ manual
 idle
 
 ## Last Execution Summary
+Mission Control restarted and dependency/blocker flow verified live.
 
 ## Execution Timeline
+- 2026-04-04T20:32:00Z — Apex • completed • Mission Control restarted and dependency/blocker flow verified live.
+
+## Closed
+2026-04-04T20:32:00Z
 

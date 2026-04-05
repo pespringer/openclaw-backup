@@ -1,7 +1,7 @@
 # STORY-020 — Add next-action priority mode to Mission Control
 
 ## Status
-Backlog
+Done
 
 ## Story
 As a user, I want Mission Control to highlight the best next action, so that I can act quickly without manually scanning the entire board every time.
@@ -12,10 +12,10 @@ As a user, I want Mission Control to highlight the best next action, so that I c
 - Helps enforce WIP limits and unblock high-leverage work.
 
 ## Acceptance Criteria
-- [ ] Mission Control can identify candidate next actions.
-- [ ] Priority mode considers blockers, status, and recency.
-- [ ] The recommended next action is clearly visible.
-- [ ] The reasoning is understandable, not a black box.
+- [x] Mission Control can identify candidate next actions.
+- [x] Priority mode considers blockers, status, and recency.
+- [x] The recommended next action is clearly visible.
+- [x] The reasoning is understandable, not a black box.
 
 ## Projected Work
 - Estimate: M
@@ -42,8 +42,11 @@ Mission Control
 ## Opened
 
 ## Updated
+2026-04-05T00:34:00Z
 
 ## Update Log
+- 2026-04-05T00:34:00Z — implemented next-action scoring, added visible recommendation panel, verified API/UI live
+- 2026-04-04T22:56:00Z — pulled into active work after STORY-019 closeout; scoping next-action ranking rules and UI entry point
 
 ## Agent
 Apex
@@ -59,6 +62,12 @@ manual
 idle
 
 ## Last Execution Summary
+Implemented next-action scoring and recommendation UI, then verified it live after restart.
 
 ## Execution Timeline
+- 2026-04-05T00:34:00Z — Apex • completed • Implemented next-action scoring and recommendation UI, then verified it live after restart.
+- 2026-04-04T22:56:00Z — Apex • running • Story pulled into active work after STORY-019 completion.
+
+## Closed
+2026-04-05T00:34:00Z
 

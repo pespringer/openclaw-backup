@@ -12,9 +12,6 @@ _Last updated: 2026-03-31 (UTC)_
 
 ## Backlog
 
-- [ ] STORY-019 — Add dependency and blocker mapping to stories
-- [ ] STORY-020 — Add next-action priority mode to Mission Control
-- [ ] STORY-021 — Add decision log panel to Mission Control
 - [ ] STORY-022 — Add research and validation desk to Mission Control
 
 ## Ready
@@ -23,10 +20,14 @@ _Last updated: 2026-03-31 (UTC)_
 
 ## In Progress
 
-- None
+- [ ] STORY-021 — Add decision log panel to Mission Control
 
 ## Done
 
+- [X] STORY-020 — Add next-action priority mode to Mission Control
+- [X] STORY-019 — Add dependency and blocker mapping to stories
+
+- [X] STORY-031 — Eliminate duplicate-start noise and port collision retries in Mission Control
 - [X] STORY-030 — Add trusted executor helper for automatic launch-intent consumption
 - [X] STORY-029 — Add real delegated execution behind named agent launch controls
 - [X] STORY-028 — Add launch controls for named agent execution from stories

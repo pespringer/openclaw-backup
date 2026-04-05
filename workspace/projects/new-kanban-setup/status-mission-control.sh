@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+echo "== Ownership Model =="
+if systemctl --user list-unit-files mission-control.target >/dev/null 2>&1; then
+  echo "systemd user services available"
+  systemctl --user --no-pager --plain --full status mission-control.target mission-control-api.service mission-control-ui.service || true
+else
+  echo "manual fallback"
+fi
+
+echo
 echo "== Listening Ports =="
 ss -ltnp '( sport = :4310 or sport = :4311 )' || true
 

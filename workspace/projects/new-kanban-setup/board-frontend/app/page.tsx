@@ -86,6 +86,22 @@ type DocumentationHub = {
   };
 };
 
+type LaunchIntent = {
+  id: string;
+  createdAt: string;
+  storyId: string;
+  project: string;
+  title: string;
+  agent: string;
+  executionMode: string;
+  status: string;
+  prompt: string;
+  resolvedAt?: string;
+  linkedSession?: string;
+  linkedRun?: string;
+  summary?: string;
+};
+
 function isBoardItem(item: unknown): item is BoardItem {
   return Boolean(
     item &&
@@ -113,11 +129,45 @@ type StoryDetails = {
   story: string;
   why: string;
   deliverable: string;
+  dependencies: string[];
+  blockers: string[];
   updateLog: string[];
   executionTimeline: string[];
   openedAt: string | null;
   updatedAt: string | null;
   closedAt: string | null;
+};
+
+type DependencyStoryState = {
+  id: string;
+  title: string;
+  status: string;
+  priority: string;
+  project: string;
+  dependencies: string[];
+  blockers: string[];
+  blockingReasons: string[];
+  isBlocked: boolean;
+  unlocks: string[];
+};
+
+type NextActionCandidate = DependencyStoryState & {
+  score: number;
+  reasons: string[];
+};
+
+type DependencyInsights = {
+  checkedAt: string;
+  summary: {
+    blockedCount: number;
+    readyToUnblockCount: number;
+    linkedStoryCount: number;
+    nextActionCandidateCount: number;
+  };
+  stories: DependencyStoryState[];
+  unblockCandidates: DependencyStoryState[];
+  nextActionCandidates: NextActionCandidate[];
+  recommendedNextAction: NextActionCandidate | null;
 };
 
 const namedAgents = ['Apex', 'Recon', 'Groove', 'Mach', 'Pitstop', 'Marker'];
@@ -165,6 +215,7 @@ function FreshnessBadge({ lastUpdatedAt, autoRefreshPaused }: { lastUpdatedAt: s
 
 function StoryEditor({
   story,
+  dependencyState,
   onClose,
   onSave,
   onMove,
@@ -172,6 +223,7 @@ function StoryEditor({
   saving,
 }: {
   story: StoryDetails;
+  dependencyState?: DependencyStoryState;
   onClose: () => void;
   onSave: (story: StoryDetails) => Promise<void>;
   onMove: (id: string, targetColumn: string) => Promise<void>;
@@ -259,10 +311,38 @@ function StoryEditor({
           </label>
         </div>
 
+        <div className="fieldGrid twoUp">
+          <label className="textField compactTextField">
+            <span>Dependencies</span>
+            <textarea
+              rows={5}
+              value={draft.dependencies.join('\n')}
+              onChange={(e) => setDraft({ ...draft, dependencies: e.target.value.split(/\r?\n/).map((line) => line.trim()).filter(Boolean) })}
+              placeholder="One per line, e.g. STORY-017"
+            />
+          </label>
+
+          <label className="textField compactTextField">
+            <span>Blockers</span>
+            <textarea
+              rows={5}
+              value={draft.blockers.join('\n')}
+              onChange={(e) => setDraft({ ...draft, blockers: e.target.value.split(/\r?\n/).map((line) => line.trim()).filter(Boolean) })}
+              placeholder="Story IDs or free-text blockers"
+            />
+          </label>
+        </div>
+
         <label className="textField">
           <span>Story Details</span>
           <textarea rows={8} value={draft.story} onChange={(e) => setDraft({ ...draft, story: e.target.value })} />
         </label>
+
+        <div className="dependencyMetaPanel">
+          <div><strong>Blocked now:</strong> {dependencyState?.isBlocked ? 'Yes' : 'No'}</div>
+          <div><strong>Blocking reasons:</strong> {dependencyState?.blockingReasons?.length ? dependencyState.blockingReasons.join(' • ') : 'None'}</div>
+          <div><strong>Unblocks:</strong> {dependencyState?.unlocks?.length ? dependencyState.unlocks.join(', ') : 'No downstream stories yet'}</div>
+        </div>
 
         <div className="drawerMeta">
           <div><strong>Why:</strong> {draft.why || 'Not captured yet.'}</div>
@@ -474,6 +554,228 @@ function DocumentationHubPanel({ documentationHub }: { documentationHub: Documen
   );
 }
 
+function NextActionPanel({ dependencyInsights }: { dependencyInsights: DependencyInsights }) {
+  const recommended = dependencyInsights.recommendedNextAction;
+  const alternates = dependencyInsights.nextActionCandidates.slice(1, 4);
+
+  return (
+    <section className="operationsPanel nextActionPanel">
+      <div className="operationsHeader">
+        <div>
+          <h2>Next Action</h2>
+          <p>Best recommended move right now based on status, priority, blockers, and leverage.</p>
+        </div>
+        <span className="healthTimestamp">Checked {new Date(dependencyInsights.checkedAt).toLocaleTimeString()}</span>
+      </div>
+
+      {recommended ? (
+        <div className="nextActionHero">
+          <div className="nextActionTop">
+            <div>
+              <div className="agentKey">{recommended.id}</div>
+              <h3>{recommended.title}</h3>
+            </div>
+            <div className="nextActionScore">Score {recommended.score}</div>
+          </div>
+          <div className="cardBadges">
+            <ProjectBadge project={recommended.project} />
+            <PriorityPill priority={recommended.priority} />
+            <span className="agentState running">{recommended.status}</span>
+          </div>
+          <div className="nextActionReasons">
+            {recommended.reasons.map((reason) => <span key={`${recommended.id}-${reason}`} className="statusSignal">{reason}</span>)}
+          </div>
+          <div className="nextActionMeta">
+            <div><span>Why this one</span><strong>{recommended.reasons.join(' • ')}</strong></div>
+            <div><span>Would unblock</span><strong>{recommended.unlocks.length ? recommended.unlocks.join(', ') : 'No downstream stories'}</strong></div>
+          </div>
+        </div>
+      ) : (
+        <div className="empty">No actionable story is ready right now.</div>
+      )}
+
+      {alternates.length > 0 && (
+        <div className="operationsBuckets singleColumnBucket">
+          <div className="operationsBucket">
+            <div className="operationsBucketHeader">
+              <h3>Alternates</h3>
+              <span>{alternates.length}</span>
+            </div>
+            <div className="agentList">
+              {alternates.map((story) => (
+                <article key={story.id} className="agentCard candidateCard">
+                  <div className="agentCardTop">
+                    <div>
+                      <div className="agentKey">{story.id}</div>
+                      <div className="agentMetaLine">{story.title}</div>
+                    </div>
+                    <span className="agentState recent">score {story.score}</span>
+                  </div>
+                  <div className="agentMetaGrid">
+                    <div><span>Status</span><strong>{story.status}</strong></div>
+                    <div><span>Priority</span><strong>{story.priority}</strong></div>
+                    <div><span>Reasoning</span><strong>{story.reasons.join(' • ')}</strong></div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function DependencyPanel({ dependencyInsights }: { dependencyInsights: DependencyInsights }) {
+  const blockedStories = dependencyInsights.stories.filter((story) => story.isBlocked);
+
+  return (
+    <section className="operationsPanel">
+      <div className="operationsHeader">
+        <div>
+          <h2>Dependency Radar</h2>
+          <p>Shows blocked stories, what is waiting on what, and the best stories to finish first to unlock more work.</p>
+        </div>
+        <span className="healthTimestamp">Checked {new Date(dependencyInsights.checkedAt).toLocaleTimeString()}</span>
+      </div>
+
+      <div className="operationsSummaryGrid">
+        <div className="healthCard"><span>Stories with links</span><strong>{dependencyInsights.summary.linkedStoryCount}</strong></div>
+        <div className="healthCard"><span>Blocked now</span><strong>{dependencyInsights.summary.blockedCount}</strong></div>
+        <div className="healthCard"><span>Unblock-first candidates</span><strong>{dependencyInsights.summary.readyToUnblockCount}</strong></div>
+        <div className="healthCard"><span>Dependency view</span><strong>Active</strong></div>
+      </div>
+
+      <div className="operationsBuckets dependencyBuckets">
+        <div className="operationsBucket">
+          <div className="operationsBucketHeader">
+            <h3>Blocked Stories</h3>
+            <span>{blockedStories.length}</span>
+          </div>
+          {blockedStories.length === 0 ? (
+            <div className="empty">No stories are blocked right now.</div>
+          ) : (
+            <div className="agentList">
+              {blockedStories.map((story) => (
+                <article key={story.id} className="agentCard dependencyCard blockedCard">
+                  <div className="agentCardTop">
+                    <div>
+                      <div className="agentKey">{story.id}</div>
+                      <div className="agentMetaLine">{story.title}</div>
+                    </div>
+                    <span className="agentState blocked">blocked</span>
+                  </div>
+                  <div className="agentMetaGrid">
+                    <div><span>Status</span><strong>{story.status}</strong></div>
+                    <div><span>Dependencies</span><strong>{story.dependencies.length ? story.dependencies.join(', ') : 'None'}</strong></div>
+                    <div><span>Blockers</span><strong>{story.blockers.length ? story.blockers.join(', ') : 'None'}</strong></div>
+                    <div><span>Reasons</span><strong>{story.blockingReasons.join(' • ')}</strong></div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="operationsBucket">
+          <div className="operationsBucketHeader">
+            <h3>Unblock-First Candidates</h3>
+            <span>{dependencyInsights.unblockCandidates.length}</span>
+          </div>
+          {dependencyInsights.unblockCandidates.length === 0 ? (
+            <div className="empty">No unblock-first candidates yet.</div>
+          ) : (
+            <div className="agentList">
+              {dependencyInsights.unblockCandidates.map((story) => (
+                <article key={story.id} className="agentCard dependencyCard candidateCard">
+                  <div className="agentCardTop">
+                    <div>
+                      <div className="agentKey">{story.id}</div>
+                      <div className="agentMetaLine">{story.title}</div>
+                    </div>
+                    <span className="agentState running">ready</span>
+                  </div>
+                  <div className="agentMetaGrid">
+                    <div><span>Status</span><strong>{story.status}</strong></div>
+                    <div><span>Project</span><strong>{story.project}</strong></div>
+                    <div><span>Priority</span><strong>{story.priority}</strong></div>
+                    <div><span>Would unblock</span><strong>{story.unlocks.length ? story.unlocks.join(', ') : 'No downstream stories'}</strong></div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function LaunchIntentsPanel({ launchIntents }: { launchIntents: LaunchIntent[] }) {
+  const pending = launchIntents.filter((intent) => intent.status === 'pending');
+  const active = launchIntents.filter((intent) => intent.status === 'running');
+  const resolved = launchIntents.filter((intent) => intent.status !== 'pending' && intent.status !== 'running');
+  const buckets = [
+    { key: 'pending', label: 'Pending', items: pending },
+    { key: 'running', label: 'Running', items: active },
+    { key: 'resolved', label: 'Resolved', items: resolved },
+  ] as const;
+
+  return (
+    <section className="operationsPanel">
+      <div className="operationsHeader">
+        <div>
+          <h2>Launch Intents</h2>
+          <p>Durable queue for named-agent launches before and after runtime execution is linked back into Mission Control.</p>
+        </div>
+        <span className="healthTimestamp">{launchIntents.length} total</span>
+      </div>
+
+      <div className="operationsSummaryGrid">
+        <div className="healthCard"><span>Pending</span><strong>{pending.length}</strong></div>
+        <div className="healthCard"><span>Running</span><strong>{active.length}</strong></div>
+        <div className="healthCard"><span>Resolved</span><strong>{resolved.length}</strong></div>
+        <div className="healthCard"><span>Queue source</span><strong>launch-intents/</strong></div>
+      </div>
+
+      <div className="operationsBuckets">
+        {buckets.map((bucket) => (
+          <div key={bucket.key} className="operationsBucket">
+            <div className="operationsBucketHeader">
+              <h3>{bucket.label}</h3>
+              <span>{bucket.items.length}</span>
+            </div>
+            {bucket.items.length === 0 ? (
+              <div className="empty">No {bucket.label.toLowerCase()} launch intents.</div>
+            ) : (
+              <div className="agentList">
+                {bucket.items.map((intent) => (
+                  <article key={intent.id} className="agentCard">
+                    <div className="agentCardTop">
+                      <div>
+                        <div className="agentKey">{intent.id}</div>
+                        <div className="agentMetaLine">{intent.storyId} • {intent.agent} • {intent.project}</div>
+                      </div>
+                      <span className={`agentState ${intent.status === 'running' ? 'running' : intent.status === 'pending' ? 'blocked' : 'recent'}`}>{intent.status}</span>
+                    </div>
+                    <div className="agentMetaGrid">
+                      <div><span>Title</span><strong>{intent.title}</strong></div>
+                      <div><span>Mode</span><strong>{intent.executionMode}</strong></div>
+                      <div><span>Created</span><strong>{new Date(intent.createdAt).toLocaleString()}</strong></div>
+                      <div><span>Linked run</span><strong>{intent.linkedRun || 'Pending'}</strong></div>
+                    </div>
+                    <div className="docPreview">{intent.summary || intent.prompt}</div>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function Page() {
   const [board, setBoard] = useState<BoardData>({ Backlog: [], Ready: [], 'In Progress': [], Done: [] });
   const [stories, setStories] = useState<Record<string, StoryDetails>>({});
@@ -487,6 +789,8 @@ export default function Page() {
   const [systemHealth, setSystemHealth] = useState<SystemHealth | null>(null);
   const [agentOperations, setAgentOperations] = useState<AgentOperations | null>(null);
   const [documentationHub, setDocumentationHub] = useState<DocumentationHub | null>(null);
+  const [launchIntents, setLaunchIntents] = useState<LaunchIntent[]>([]);
+  const [dependencyInsights, setDependencyInsights] = useState<DependencyInsights | null>(null);
   const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null);
   const [activeProject, setActiveProject] = useState<string>('All Projects');
   const [groupByProject, setGroupByProject] = useState<boolean>(false);
@@ -518,21 +822,33 @@ export default function Page() {
         ),
       ];
 
-      const [loadedStories, healthRes, agentOpsRes, docsRes] = await Promise.all([
+      const [loadedStories, healthRes, agentOpsRes, docsRes, launchIntentsRes, dependencyRes] = await Promise.all([
         Promise.all(ids.map(async (id: string) => {
-          const storyRes = await fetch(`/api/stories/${id}`, { cache: 'no-store' });
-          if (!storyRes.ok) return undefined;
-          const storyData = await storyRes.json();
-          return storyData.story as StoryDetails | undefined;
+          try {
+            const storyRes = await fetch(`/api/stories/${id}`, { cache: 'no-store' });
+            if (!storyRes.ok) {
+              console.warn(`Story request failed for ${id}: ${storyRes.status}`);
+              return undefined;
+            }
+            const storyData = await storyRes.json();
+            return storyData.story as StoryDetails | undefined;
+          } catch (error) {
+            console.warn(`Story request crashed for ${id}`, error);
+            return undefined;
+          }
         })),
         fetch('/api/health', { cache: 'no-store' }),
         fetch('/api/agent-operations', { cache: 'no-store' }),
         fetch('/api/documentation-hub', { cache: 'no-store' }),
+        fetch('/api/launch-intents', { cache: 'no-store' }),
+        fetch('/api/dependencies', { cache: 'no-store' }),
       ]);
 
       const validStories = loadedStories.filter((story): story is StoryDetails => Boolean(story && story.id));
       const mapped = Object.fromEntries(validStories.map((story) => [story.id, story]));
       setStories(mapped);
+
+      const failedStoryCount = ids.length - validStories.length;
 
       if (healthRes.ok) {
         const healthData = await healthRes.json();
@@ -549,10 +865,26 @@ export default function Page() {
         setDocumentationHub(docsData.documentationHub as DocumentationHub);
       }
 
+      if (launchIntentsRes.ok) {
+        const launchData = await launchIntentsRes.json();
+        setLaunchIntents((launchData.launchIntents ?? []) as LaunchIntent[]);
+      }
+
+      if (dependencyRes.ok) {
+        const dependencyData = await dependencyRes.json();
+        setDependencyInsights(dependencyData.dependencyInsights as DependencyInsights);
+      }
+
       const nowIso = new Date().toISOString();
       setLastUpdatedAt(nowIso);
-      setHealth('ready');
-      setStatusMessage(options?.silent ? `Board refreshed • ${ids.length} tracked stories` : `Board ready • ${ids.length} tracked stories`);
+      setHealth(failedStoryCount > 0 ? 'error' : 'ready');
+      setStatusMessage(
+        failedStoryCount > 0
+          ? `Board loaded with ${failedStoryCount} story fetch issue(s) • ${validStories.length}/${ids.length} stories available`
+          : options?.silent
+            ? `Board refreshed • ${ids.length} tracked stories`
+            : `Board ready • ${ids.length} tracked stories`
+      );
     } catch (error) {
       console.error('Failed to load board', error);
       setHealth('error');
@@ -629,6 +961,8 @@ export default function Page() {
           lastExecutionSummary: story.lastExecutionSummary,
           priority: story.priority,
           project: story.project,
+          dependencies: story.dependencies,
+          blockers: story.blockers,
           story: story.story,
         }),
       });
@@ -717,6 +1051,9 @@ export default function Page() {
 
       {documentationHub && <DocumentationHubPanel documentationHub={documentationHub} />}
       {agentOperations && <AgentOperationsPanel agentOperations={agentOperations} />}
+      {dependencyInsights && <NextActionPanel dependencyInsights={dependencyInsights} />}
+      {dependencyInsights && <DependencyPanel dependencyInsights={dependencyInsights} />}
+      <LaunchIntentsPanel launchIntents={launchIntents} />
 
       {systemHealth && (
         <section className="healthPanel">
@@ -786,7 +1123,7 @@ export default function Page() {
                             return (
                               <article
                                 key={item.id}
-                                className={`card clickableCard ${draggingId === item.id ? 'draggingCard' : ''}`}
+                                className={`card clickableCard ${draggingId === item.id ? 'draggingCard' : ''} ${dependencyInsights?.stories.find((entry) => entry.id === item.id)?.isBlocked ? 'blockedStoryCard' : ''}`}
                                 onClick={() => setSelectedId(item.id)}
                                 draggable
                                 onDragStart={(e) => {
@@ -808,6 +1145,8 @@ export default function Page() {
                                 </div>
                                 <div className="cardBadges">
                                   <ProjectBadge project={story?.project ?? 'Mission Control'} />
+                                  {dependencyInsights?.stories.find((entry) => entry.id === item.id)?.isBlocked && <span className="agentState blocked">Blocked</span>}
+                                  {dependencyInsights?.stories.find((entry) => entry.id === item.id)?.unlocks?.length ? <span className="agentState running">Unblocks {dependencyInsights.stories.find((entry) => entry.id === item.id)?.unlocks.length}</span> : null}
                                 </div>
                                 <div className="meta">
                                   <div className="metaRow"><span>Status</span><strong>{story?.status ?? column}</strong></div>
@@ -817,6 +1156,8 @@ export default function Page() {
                                   <div className="metaRow"><span>Project</span><strong>{story?.project ?? 'Mission Control'}</strong></div>
                                   <div className="metaRow"><span>Updated</span><strong>{formatTimestamp(story?.updatedAt ?? null)}</strong></div>
                                   <div className="metaRow"><span>Deliverable</span><strong>{story?.deliverable ?? 'Not specified'}</strong></div>
+                                  <div className="metaRow"><span>Dependencies</span><strong>{story?.dependencies?.length ? story.dependencies.join(', ') : 'None'}</strong></div>
+                                  <div className="metaRow"><span>Blockers</span><strong>{story?.blockers?.length ? story.blockers.join(', ') : 'None'}</strong></div>
                                 </div>
                                 <div className="story">{story?.story ?? 'No story text available.'}</div>
                                 <div className="quickActions" onClick={(e) => e.stopPropagation()}>
@@ -873,7 +1214,7 @@ export default function Page() {
                       return (
                         <article
                           key={item.id}
-                          className={`card clickableCard ${draggingId === item.id ? 'draggingCard' : ''}`}
+                          className={`card clickableCard ${draggingId === item.id ? 'draggingCard' : ''} ${dependencyInsights?.stories.find((entry) => entry.id === item.id)?.isBlocked ? 'blockedStoryCard' : ''}`}
                           onClick={() => setSelectedId(item.id)}
                           draggable
                           onDragStart={(e) => {
@@ -895,6 +1236,8 @@ export default function Page() {
                           </div>
                           <div className="cardBadges">
                             <ProjectBadge project={story?.project ?? 'Mission Control'} />
+                            {dependencyInsights?.stories.find((entry) => entry.id === item.id)?.isBlocked && <span className="agentState blocked">Blocked</span>}
+                            {dependencyInsights?.stories.find((entry) => entry.id === item.id)?.unlocks?.length ? <span className="agentState running">Unblocks {dependencyInsights.stories.find((entry) => entry.id === item.id)?.unlocks.length}</span> : null}
                           </div>
                           <div className="meta">
                             <div className="metaRow"><span>Status</span><strong>{story?.status ?? column}</strong></div>
@@ -904,6 +1247,8 @@ export default function Page() {
                             <div className="metaRow"><span>Project</span><strong>{story?.project ?? 'Mission Control'}</strong></div>
                             <div className="metaRow"><span>Updated</span><strong>{formatTimestamp(story?.updatedAt ?? null)}</strong></div>
                             <div className="metaRow"><span>Deliverable</span><strong>{story?.deliverable ?? 'Not specified'}</strong></div>
+                            <div className="metaRow"><span>Dependencies</span><strong>{story?.dependencies?.length ? story.dependencies.join(', ') : 'None'}</strong></div>
+                            <div className="metaRow"><span>Blockers</span><strong>{story?.blockers?.length ? story.blockers.join(', ') : 'None'}</strong></div>
                           </div>
                           <div className="story">{story?.story ?? 'No story text available.'}</div>
                           <div className="quickActions" onClick={(e) => e.stopPropagation()}>
@@ -931,6 +1276,7 @@ export default function Page() {
       {selectedStory && (
         <StoryEditor
           story={selectedStory}
+          dependencyState={dependencyInsights?.stories.find((entry) => entry.id === selectedStory.id)}
           onClose={() => setSelectedId(null)}
           onSave={saveStory}
           onMove={moveStory}
