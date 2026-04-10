@@ -1,0 +1,17 @@
+# Apex Dispatch Integration
+
+## Summary
+- This document outlines the integration of Apex with the automated multi-agent workflow (Coding + QA).
+- Apex will dynamically dispatch tasks to agent workspaces for immediate processing.
+
+## Workflow Plan
+### 1. Dispatch Testing
+- Enable Apex to write tasks to Coding and QA directories.
+
+### 2. End-to-End Hello World Python Sample
+- Apex -> Coding -> QA pipeline.
+- Test file: `hello_world_test.py`.
+
+### Details
+- Apex inserts tasks with a standardized format into the `/coding/tasks` and `/qa/tasks` directories.
+- Tasks execute immediately through periodic watcher automation.

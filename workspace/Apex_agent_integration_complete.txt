@@ -1,0 +1,21 @@
+# Apex-Agent Integration Complete
+
+### Summary:
+The Apex control plane is now fully integrated with the Coding and QA agents. Heres how tasks are handled:
+
+1. **Task Dispatch:**
+   - From Apex, tasks will be dynamically placed in respective agent workspaces (`coding` or `qa`).
+   - Tasks can include Python scripts, configuration files, or plain text directives.
+
+2. **Automated Processing:**
+   - Agents autonomously detect, process, and log task results.
+   - Logs are persistent, providing clear visibility into agent outputs.
+
+3. **Workflow Validation:**
+   - Successfully tested with `hello_world.py` and `hello_again.py` tasks.
+   - End-to-end pipeline validated with task propagation and execution.
+
+### Next Steps:
+1. Extend the workflow to support more agents (e.g., Documentation).
+2. Enforce structured task formats passed to agents for scalable operations.
+3. Create a comprehensive dashboard/reporting system for real-time status monitoring.

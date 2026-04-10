@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.4.5",
-    "lastTouchedAt": "2026-04-06T19:03:55.993Z"
+    "lastTouchedVersion": "2026.4.9",
+    "lastTouchedAt": "2026-04-10T03:03:26.598Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-30T02:03:59.346Z",
@@ -53,7 +53,24 @@
       "compaction": {
         "mode": "safeguard"
       }
-    }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "coding",
+        "identity": {
+          "name": "Coding Agent"
+        }
+      },
+      {
+        "id": "qa",
+        "identity": {
+          "name": "QA Agent"
+        }
+      }
+    ]
   },
   "tools": {
     "profile": "full",
@@ -102,7 +119,9 @@
         "8445509532"
       ],
       "groupPolicy": "allowlist",
-      "streaming": "partial"
+      "streaming": {
+        "mode": "partial"
+      }
     }
   },
   "gateway": {
@@ -208,5 +227,28 @@
         "color": "#22AA88"
       }
     }
-  }
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "main",
+      "match": {
+        "channel": "telegram"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "coding",
+      "match": {
+        "channel": "telegram"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "qa",
+      "match": {
+        "channel": "telegram"
+      }
+    }
+  ]
 }
