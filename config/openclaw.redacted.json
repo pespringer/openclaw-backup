@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.9",
-    "lastTouchedAt": "2026-04-10T03:03:26.598Z"
+    "lastTouchedAt": "2026-04-11T20:53:22.396Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-30T02:03:59.346Z",
@@ -21,7 +21,8 @@
       },
       "openai-codex:patrick.springer@gmail.com": {
         "provider": "openai-codex",
-        "mode": "oauth"
+        "mode": "oauth",
+        "email": "patrick.springer@gmail.com"
       }
     }
   },
@@ -34,9 +35,7 @@
         ]
       },
       "models": {
-        "openai-codex/gpt-5.4": {},
-        "openai-codex/gpt-5.4-codex": {},
-        "github-copilot/gpt-4o": {}
+        "openai-codex/gpt-5.4": {}
       },
       "workspace": "/home/claw/.openclaw/workspace",
       "memorySearch": {
@@ -59,16 +58,11 @@
         "id": "main"
       },
       {
-        "id": "coding",
-        "identity": {
-          "name": "Coding Agent"
-        }
-      },
-      {
-        "id": "qa",
-        "identity": {
-          "name": "QA Agent"
-        }
+        "id": "recon",
+        "name": "Recon",
+        "workspace": "/home/claw/.openclaw/workspace/recon",
+        "agentDir": "/home/claw/.openclaw/agents/recon/agent",
+        "model": "openai-codex/gpt-5.4"
       }
     ]
   },
@@ -110,17 +104,30 @@
   "channels": {
     "telegram": {
       "enabled": true,
-      "dmPolicy": "pairing",
-      "botToken": "***REDACTED***",
-      "allowFrom": [
-        "8445509532"
-      ],
-      "groupAllowFrom": [
-        "8445509532"
-      ],
-      "groupPolicy": "allowlist",
-      "streaming": {
-        "mode": "partial"
+      "accounts": {
+        "default": {
+          "dmPolicy": "pairing",
+          "botToken": "***REDACTED***",
+          "allowFrom": [
+            "8445509532"
+          ],
+          "groupAllowFrom": [
+            "8445509532"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": {
+            "mode": "partial"
+          }
+        },
+        "research_agent_recon": {
+          "enabled": true,
+          "groups": {
+            "*": {
+              "requireMention": true
+            }
+          },
+          "botToken": "***REDACTED***"
+        }
       }
     }
   },
@@ -193,6 +200,13 @@
       },
       "github-copilot": {
         "enabled": true
+      },
+      "memory-core": {
+        "config": {
+          "dreaming": {
+            "enabled": true
+          }
+        }
       }
     },
     "installs": {
@@ -238,16 +252,10 @@
     },
     {
       "type": "route",
-      "agentId": "coding",
+      "agentId": "recon",
       "match": {
-        "channel": "telegram"
-      }
-    },
-    {
-      "type": "route",
-      "agentId": "qa",
-      "match": {
-        "channel": "telegram"
+        "channel": "telegram",
+        "accountId": "research_agent_recon"
       }
     }
   ]

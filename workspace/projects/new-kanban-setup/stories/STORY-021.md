@@ -1,10 +1,14 @@
 # STORY-021 — Add decision log panel to Mission Control
 
 ## Status
-In Progress
+Backlog
+
+
+
 
 ## Story
 As a user, I want a visible decision log in Mission Control, so that important choices are easy to review without digging through story notes and markdown files.
+
 
 ## Why this matters
 - Reduces repeated debates.
@@ -33,35 +37,72 @@ As a user, I want a visible decision log in Mission Control, so that important c
 ## Owner
 Apex
 
+
 ## Priority
 Medium
+
 
 ## Project
 Mission Control
 
+
 ## Opened
+2026-04-11T20:41:25.209Z
+
+
 
 ## Updated
-2026-04-05T01:12:00Z
+2026-04-11T20:41:31.739Z
+
+
+
 
 ## Update Log
+- 2026-04-11T20:41:30.285Z — moved Backlog → Backlog
+- 2026-04-11T20:41:25.207Z — moved In Progress → Backlog
+
 - 2026-04-05T01:12:00Z — pulled into active work after STORY-020 completion; preparing decision-log storage and panel design
+
 
 ## Agent
 Apex
 
+
 ## Execution Mode
 manual
 
+
 ## Linked Session
 
+
 ## Linked Run
+
 
 ## Last Execution Status
 idle
 
+
 ## Last Execution Summary
+
 
 ## Execution Timeline
 - 2026-04-05T01:12:00Z — Apex • running • Story pulled into active work after STORY-020 completion.
+
+
+
+
+
+
+## Dependencies
+
+
+
+
+## Blockers
+
+
+
+
+## Closed
+
 

@@ -12,6 +12,7 @@ _Last updated: 2026-03-31 (UTC)_
 
 ## Backlog
 
+- [ ] STORY-021 — Add decision log panel to Mission Control
 - [ ] STORY-022 — Add research and validation desk to Mission Control
 
 ## Ready
@@ -20,7 +21,6 @@ _Last updated: 2026-03-31 (UTC)_
 
 ## In Progress
 
-- [ ] STORY-021 — Add decision log panel to Mission Control
 
 ## Done
 
