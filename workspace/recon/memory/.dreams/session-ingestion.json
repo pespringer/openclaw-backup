@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "files": {
+    "recon:sessions/f4e2a9ab-893f-4f33-9e7f-047d4962ab30.jsonl": {
+      "mtimeMs": 1775877143859,
+      "size": 27231,
+      "contentHash": "71905a4a53e612985c6a80be54522b79629ec80235b830810ca98da04137306f",
+      "lineCount": 5,
+      "lastContentLine": 5
+    }
+  },
+  "seenMessages": {
+    "recon:f4e2a9ab-893f-4f33-9e7f-047d4962ab30": []
+  }
+}

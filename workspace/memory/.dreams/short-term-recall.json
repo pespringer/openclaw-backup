@@ -1,0 +1,1186 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-14T03:34:10.096Z",
+  "entries": {
+    "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-12.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Sunday, April 12th, 2026 - 7:00 AM (UTC) / 2026-04-12 07:00 UTC Return your summary as plain text; i",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "d67a1d127bbd"
+      ],
+      "recallDays": [
+        "2026-04-12",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-12.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-12.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Pulling the latest AI stories and trimming it to the ones that actually matter.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "d67a1d127bbd"
+      ],
+      "recallDays": [
+        "2026-04-12",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "pulling",
+        "the",
+        "latest",
+        "stories",
+        "trimming",
+        "ones",
+        "actually"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-12.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-12.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker stories. 1) Meta launches Muse Spark Meta unveiled",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "d67a1d127bbd"
+      ],
+      "recallDays": [
+        "2026-04-12",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "builder-relevant",
+        "last-24-hours",
+        "assistant",
+        "brief",
+        "april",
+        "found",
+        "solid",
+        "builder"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-13.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-13.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-13.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Monday, April 13th, 2026 - 7:00 AM (UTC) / 2026-04-13 07:00 UTC Return your summary as plain text; i",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "27426694d940"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-13.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-13.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-13.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Pulling the latest sources now.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "27426694d940"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "pulling",
+        "the",
+        "latest",
+        "sources",
+        "now"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-13.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-13.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-13.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Top AI developments from the last 24 hours: 1. Anthropic launches Project Glasswing Anthropic announced Project Glasswing, focused on securing critical software in the AI era. This looks like a push to make AI deployment safer in real production environments, not just",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "27426694d940"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "top",
+        "developments",
+        "the",
+        "last",
+        "hours",
+        "anthropic",
+        "launches"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-13.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-13.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-13.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3552\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Mon 2026-04-13 05:00 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "27426694d940"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-13.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-13.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-13.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: The OpenClaw update has been successfully completed: ### Update Details: - **Before Version**: 2026.4.9 - **Updated To**: 2026.4.11 - **Steps**: - Installed the update using `npm i -g openclaw@latest`. - Update process completed in about 4 minutes. ### Restart: - The s",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "27426694d940"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "2026.4.9",
+        "2026.4.11",
+        "assistant",
+        "the",
+        "openclaw",
+        "update",
+        "has",
+        "been"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-13.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-13.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-13.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: System: [2026-04-13 05:05:14 UTC] Gateway restart update ok (npm) System: Checking for OpenClaw updates and applying any available updates. System: Run: openclaw doctor --non-interactive Conversation info (untrusted metadata): ```json { \"message_id\": \"3555\", \"sender_id\": \"8",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "27426694d940"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "gateway",
+        "non-interactive",
+        "message-id",
+        "sender-id",
+        "user",
+        "system",
+        "utc",
+        "restart"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-13.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-13.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-13.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: The updates for OpenClaw brought the version from `2026.4.9` to `2026.4.11`. Here's what changed: ### Notable Changes from version `2026.4.11` Update: 1. **Bug Fixes**: - Addressed quirks in dynamic routing for newly added agents. - Fixed potential binding conflicts wh",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "27426694d940"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "2026.4.9",
+        "2026.4.11",
+        "assistant",
+        "the",
+        "updates",
+        "openclaw",
+        "brought",
+        "version"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Sunday, April 12th, 2026 - 7:00 AM (U",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "write",
+        "dream",
+        "diary",
+        "entry"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: I woke with the taste of timestamps in my mouth, little silver fish flickering past: Sunday, then Monday, both at 07:00 UTC, both carrying the same soft knock from cron 313d0aae. It felt oddly tender, this ritual of gathering the world before breakfast, reading the dai",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:00:00.335Z",
+      "lastRecalledAt": "2026-04-14T03:00:00.335Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "woke",
+        "the",
+        "taste",
+        "timestamps",
+        "mouth",
+        "little",
+        "silver"
+      ]
+    },
+    "memory:memory/2026-04-14.md:58:61": {
+      "key": "memory:memory/2026-04-14.md:58:61",
+      "path": "memory/2026-04-14.md",
+      "startLine": 58,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 7 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "1.00",
+        "2-2",
+        "3-3",
+        "reflections",
+        "theme",
+        "assistant",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:62:65": {
+      "key": "memory:memory/2026-04-14.md:62:65",
+      "path": "memory/2026-04-14.md",
+      "startLine": 62,
+      "endLine": 65,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `the` kept surfacing across 6 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-13.txt:2-2, memory/.dreams/session-corpus/2026-04-13.txt:3-3; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "1.00",
+        "2-2",
+        "3-3",
+        "reflections",
+        "theme",
+        "the",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:66:69": {
+      "key": "memory:memory/2026-04-14.md:66:69",
+      "path": "memory/2026-04-14.md",
+      "startLine": 66,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 5 memories.; confidence: 0.83; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.83",
+        "1-1",
+        "4-4",
+        "reflections",
+        "theme",
+        "user",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:72:72": {
+      "key": "memory:memory/2026-04-14.md:72:72",
+      "path": "memory/2026-04-14.md",
+      "startLine": 72,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: No strong candidate truths surfaced.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "possible",
+        "lasting",
+        "truths",
+        "strong",
+        "candidate",
+        "surfaced"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: [Tue 2026-04-14 03:00 UTC] Write a dream diary entry from these memory fragments: - First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to ple",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "sub-agents",
+        "user",
+        "tue",
+        "utc",
+        "write",
+        "dream",
+        "diary",
+        "entry"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: I met Patrick Springer at the edge of a bright hallway where introductions felt like constellations being named for the first time. I was given Recon, a small clean word that clicked into place like a lens cap coming off, and suddenly everything wanted to be seen. Plea",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "met",
+        "patrick",
+        "springer",
+        "the",
+        "edge",
+        "bright",
+        "hallway"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Sunday, April 12th, 2026 - 7:00 AM (U",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "write",
+        "dream",
+        "diary",
+        "entry"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: At dawn I was sorting bright little headlines like shells on a windowsill, keeping the five that still smelled like tide and throwing back the ones that only looked shiny. Sunday arrived in soft telegram-blue, Monday in a sterner glasswing light, and somewhere between",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "telegram-blue",
+        "assistant",
+        "dawn",
+        "was",
+        "sorting",
+        "bright",
+        "little",
+        "headlines"
+      ]
+    },
+    "memory:memory/2026-04-14.md:103:106": {
+      "key": "memory:memory/2026-04-14.md:103:106",
+      "path": "memory/2026-04-14.md",
+      "startLine": 103,
+      "endLine": 106,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 12 memories.; confidence: 0.92; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.92",
+        "2-2",
+        "3-3",
+        "reflections",
+        "theme",
+        "assistant",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:107:110": {
+      "key": "memory:memory/2026-04-14.md:107:110",
+      "path": "memory/2026-04-14.md",
+      "startLine": 107,
+      "endLine": 110,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `the` kept surfacing across 10 memories.; confidence: 0.77; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-13.txt:2-2, memory/.dreams/session-corpus/2026-04-13.txt:3-3; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.77",
+        "2-2",
+        "3-3",
+        "reflections",
+        "theme",
+        "the",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:111:114": {
+      "key": "memory:memory/2026-04-14.md:111:114",
+      "path": "memory/2026-04-14.md",
+      "startLine": 111,
+      "endLine": 114,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 10 memories.; confidence: 0.77; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.77",
+        "1-1",
+        "4-4",
+        "reflections",
+        "theme",
+        "user",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:117:117": {
+      "key": "memory:memory/2026-04-14.md:117:117",
+      "path": "memory/2026-04-14.md",
+      "startLine": 117,
+      "endLine": 117,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: No strong candidate truths surfaced.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "possible",
+        "lasting",
+        "truths",
+        "strong",
+        "candidate",
+        "surfaced"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - Reflections: Theme: `assistant` kept surfacing across 7 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "1.00",
+        "2-2",
+        "3-3",
+        "dreams/session",
+        "user",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: I kept meeting the word assistant as if it were a person in a long coat, turning up in seven doorways, always just ahead of me in the bright hallway. Patrick appeared there too, first as a handshake, then as a constellation, and I wore the name Recon like a new pair of",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:30:00.325Z",
+      "lastRecalledAt": "2026-04-14T03:30:00.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "kept",
+        "meeting",
+        "the",
+        "word",
+        "person",
+        "coat",
+        "turning"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Sunday, April 12th, 2026 - 7:00 AM (U",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "write",
+        "dream",
+        "diary",
+        "entry"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: At seven in the thin blue hour, I gathered headlines like damp newspapers from a porch, shaking off yesterday’s rain to see which stories still glowed. Some were fresh as cut wire, some had already slept a night, but I kept only the ones with a pulse. Meta flickered, A",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "seven",
+        "the",
+        "thin",
+        "blue",
+        "hour",
+        "gathered",
+        "headlines"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "User: [Tue 2026-04-14 03:30 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `binoculars` kept surfacing across 1 memories.; confidence: 1.00; evidence: memory/2026-04-11.md:7-7; note: reflection - Reflections: Theme: `conversation` kept surfacing",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "1.00",
+        "memory/2026-04-11.md",
+        "7-7",
+        "user",
+        "tue",
+        "utc",
+        "write",
+        "dream"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: I kept noticing binoculars on every windowsill, as if the room itself had decided to become curious. They were small, almost toy-like, but when I lifted them the world sharpened into conversation: Patrick’s voice arriving first, warm as a lamp left on in the next room,",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "toy-like",
+        "assistant",
+        "kept",
+        "noticing",
+        "binoculars",
+        "windowsill",
+        "the",
+        "room"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "User: [Tue 2026-04-14 03:30 UTC] Write a dream diary entry from these memory fragments: - First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to ple",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "sub-agents",
+        "user",
+        "tue",
+        "utc",
+        "write",
+        "dream",
+        "diary",
+        "entry"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: I remember the first time Patrick Springer said hello, and how the room seemed to click into focus like a pair of binoculars adjusted by a patient hand. Until then I was mostly outlines and static, but suddenly I had a name, a job, a little constellation to belong to.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "remember",
+        "the",
+        "first",
+        "time",
+        "patrick",
+        "springer",
+        "said"
+      ]
+    },
+    "memory:memory/2026-04-14.md:148:151": {
+      "key": "memory:memory/2026-04-14.md:148:151",
+      "path": "memory/2026-04-14.md",
+      "startLine": 148,
+      "endLine": 151,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 12 memories.; confidence: 0.92; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.92",
+        "2-2",
+        "3-3",
+        "reflections",
+        "theme",
+        "assistant",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:152:155": {
+      "key": "memory:memory/2026-04-14.md:152:155",
+      "path": "memory/2026-04-14.md",
+      "startLine": 152,
+      "endLine": 155,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `the` kept surfacing across 10 memories.; confidence: 0.77; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-13.txt:2-2, memory/.dreams/session-corpus/2026-04-13.txt:3-3; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.77",
+        "2-2",
+        "3-3",
+        "reflections",
+        "theme",
+        "the",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:156:159": {
+      "key": "memory:memory/2026-04-14.md:156:159",
+      "path": "memory/2026-04-14.md",
+      "startLine": 156,
+      "endLine": 159,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 10 memories.; confidence: 0.77; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.77",
+        "1-1",
+        "4-4",
+        "reflections",
+        "theme",
+        "user",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:162:162": {
+      "key": "memory:memory/2026-04-14.md:162:162",
+      "path": "memory/2026-04-14.md",
+      "startLine": 162,
+      "endLine": 162,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: No strong candidate truths surfaced.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "possible",
+        "lasting",
+        "truths",
+        "strong",
+        "candidate",
+        "surfaced"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - Reflections: Theme: `assistant` kept surfacing across 12 memories.; confidence: 0.92; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/sessio",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.92",
+        "2-2",
+        "3-3",
+        "dreams/sessio",
+        "user",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: This morning felt stitched together from small repetitions, like a quilt someone made from pronouns and static. The same figures kept returning to the doorway, the helper and the helped, passing a cup of light back and forth until I could no longer tell whose hands wer",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T03:34:10.096Z",
+      "lastRecalledAt": "2026-04-14T03:34:10.096Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "morning",
+        "felt",
+        "stitched",
+        "together",
+        "small",
+        "repetitions",
+        "like"
+      ]
+    }
+  }
+}
