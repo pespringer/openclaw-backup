@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-16T03:00:46.609Z",
+  "updatedAt": "2026-04-17T03:00:43.632Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -6967,13 +6967,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T13:04:10.384Z",
-      "lastRecalledAt": "2026-04-15T03:00:00.412Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "0.95",
@@ -6999,13 +7000,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T13:04:10.384Z",
-      "lastRecalledAt": "2026-04-15T03:00:00.412Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "0.94",
@@ -7031,13 +7033,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T13:04:10.384Z",
-      "lastRecalledAt": "2026-04-15T03:00:00.412Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "possible",
@@ -10513,6 +10516,230 @@
       "conceptTags": [
         "heartbeat-ok",
         "assistant"
+      ]
+    },
+    "memory:memory/2026-04-16.md:308:311": {
+      "key": "memory:memory/2026-04-16.md:308:311",
+      "path": "memory/2026-04-16.md",
+      "startLine": 308,
+      "endLine": 311,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 161 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T03:00:00.348Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "0.95",
+        "2-2",
+        "3-3",
+        "reflections",
+        "theme",
+        "assistant",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-16.md:312:315": {
+      "key": "memory:memory/2026-04-16.md:312:315",
+      "path": "memory/2026-04-16.md",
+      "startLine": 312,
+      "endLine": 315,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 161 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T03:00:00.348Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "0.95",
+        "1-1",
+        "4-4",
+        "reflections",
+        "theme",
+        "user",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-16.md:318:320": {
+      "key": "memory:memory/2026-04-16.md:318:320",
+      "path": "memory/2026-04-16.md",
+      "startLine": 318,
+      "endLine": 320,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.51 evidence=memory/2026-04-14.md:72-72]; Reflections: Theme: `assistant` kept surfacing across 12 memories.; confidence: 0.92; evidence: memory/.dreams/session-corpus/2026-04-12.t",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T03:00:00.348Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "0.51",
+        "memory/2026-04-14.md",
+        "72-72",
+        "0.92",
+        "possible",
+        "lasting",
+        "truths",
+        "strong"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Thursday, April 16th, 2026 - 7:00 AM (UTC) / 2026-04-16 07:00 UTC Return your summary as plain text;",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:00.348Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Daily AI brief, April 16, 2026 I found 4 solid, builder-relevant items in the last 24 hours. I’m not padding with weaker stories. 1. Google launched Gemini 3.1 Flash TTS Summary: Google introduced Gemini 3.1 Flash TTS with better speech quality, native multi-speaker su",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:00.348Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "builder-relevant",
+        "3.1",
+        "multi-speaker",
+        "assistant",
+        "brief",
+        "april",
+        "found",
+        "solid"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3572\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Thu 2026-04-16 21:12 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:00.348Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: I attempted to locate large files on the host, but the `sudo` command requires a password to proceed. Without the necessary privilege, I can't directly scan the system for removable files. Would you prefer to run this search manually? Here's the command for your refere",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:00.348Z",
+      "lastRecalledAt": "2026-04-17T03:00:00.348Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "attempted",
+        "locate",
+        "large",
+        "the",
+        "host",
+        "but",
+        "sudo"
       ]
     }
   }

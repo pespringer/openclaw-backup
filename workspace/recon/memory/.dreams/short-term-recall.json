@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-16T03:01:26.118Z",
+  "updatedAt": "2026-04-17T03:01:20.067Z",
   "entries": {
     "memory:memory/2026-04-11.md:3:6": {
       "key": "memory:memory/2026-04-11.md:3:6",
@@ -15,7 +15,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T03:00:38.320Z",
-      "lastRecalledAt": "2026-04-16T03:00:46.875Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "2213b71c3c98"
       ],
@@ -23,7 +23,8 @@
         "2026-04-11",
         "2026-04-14",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "sub-agents",
@@ -49,7 +50,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T03:00:38.320Z",
-      "lastRecalledAt": "2026-04-16T03:00:46.875Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "2213b71c3c98"
       ],
@@ -57,7 +58,8 @@
         "2026-04-11",
         "2026-04-14",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "emoji",
@@ -1519,13 +1521,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T05:04:49.132Z",
-      "lastRecalledAt": "2026-04-15T03:01:03.192Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "1.00",
@@ -1551,13 +1554,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T05:04:49.132Z",
-      "lastRecalledAt": "2026-04-15T03:01:03.192Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "1.00",
@@ -1583,13 +1587,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T05:04:49.132Z",
-      "lastRecalledAt": "2026-04-15T03:01:03.192Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "memory/2026-04-14.md",
@@ -2198,13 +2203,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T06:35:00.933Z",
-      "lastRecalledAt": "2026-04-15T03:01:03.192Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "1.00",
@@ -2230,13 +2236,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T06:35:00.933Z",
-      "lastRecalledAt": "2026-04-15T03:01:03.192Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "1.00",
@@ -2262,13 +2269,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T06:35:00.933Z",
-      "lastRecalledAt": "2026-04-15T03:01:03.192Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "13-16",
@@ -2294,13 +2302,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T06:35:00.933Z",
-      "lastRecalledAt": "2026-04-15T03:01:03.192Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "17-20",
@@ -2326,13 +2335,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T06:35:00.933Z",
-      "lastRecalledAt": "2026-04-15T03:01:03.192Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-17"
       ],
       "conceptTags": [
         "9-12",
@@ -4466,6 +4476,678 @@
         "drafted",
         "here",
         "home"
+      ]
+    },
+    "memory:memory/2026-04-16.md:363:366": {
+      "key": "memory:memory/2026-04-16.md:363:366",
+      "path": "memory/2026-04-16.md",
+      "startLine": 363,
+      "endLine": 366,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `reflections` kept surfacing across 63 memories.; confidence: 0.88; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "0.88",
+        "memory/2026-04-14.md",
+        "9-12",
+        "13-16",
+        "17-20",
+        "reflections",
+        "theme",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-16.md:367:370": {
+      "key": "memory:memory/2026-04-16.md:367:370",
+      "path": "memory/2026-04-16.md",
+      "startLine": 367,
+      "endLine": 370,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `theme` kept surfacing across 63 memories.; confidence: 0.88; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "0.88",
+        "memory/2026-04-14.md",
+        "9-12",
+        "13-16",
+        "17-20",
+        "reflections",
+        "theme",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-16.md:371:374": {
+      "key": "memory:memory/2026-04-16.md:371:374",
+      "path": "memory/2026-04-16.md",
+      "startLine": 371,
+      "endLine": 374,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `memory/2026-04-14.md` kept surfacing across 54 memories.; confidence: 0.76; evidence: memory/2026-04-14.md:33-36, memory/2026-04-14.md:37-40, memory/2026-04-14.md:41-44; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "memory/2026-04-14.md",
+        "0.76",
+        "33-36",
+        "37-40",
+        "41-44",
+        "reflections",
+        "theme",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-16.md:377:379": {
+      "key": "memory:memory/2026-04-16.md:377:379",
+      "path": "memory/2026-04-16.md",
+      "startLine": 377,
+      "endLine": 379,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to pleasant but direct. [confidence=0.58 evidence=memory/2026-04-11.md:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "sub-agents",
+        "0.58",
+        "memory/2026-04-11.md",
+        "possible",
+        "lasting",
+        "truths",
+        "first",
+        "conversation"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"82\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Thu 2026-04-16 14:44 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\",",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: I’m packaging this into implementation artifacts now so you can move from idea to setup without rethinking the structure later.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "i’m",
+        "packaging",
+        "implementation",
+        "artifacts",
+        "now",
+        "you",
+        "can"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] Done. I prepared all 3 artifacts and committed them. Files: - `/home/claw/.openclaw/workspace/recon/KHOJ_SHARED_BRAIN_CONVENTIONS.md` - `/home/claw/.openclaw/workspace/recon/KHOJ_SHARED_BRAIN_SCAFFOLD.md` - `/home/claw/.openclaw/workspace/recon/KHO",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "home/claw",
+        "openclaw/workspace/recon/kho",
+        "assistant",
+        "done",
+        "prepared",
+        "all",
+        "artifacts"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"85\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Thu 2026-04-16 14:55 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\",",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: I’m going ahead and laying down the actual structure plus starter notes now, then I’ll add the concrete Khoj install/config plan.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "install/config",
+        "assistant",
+        "i’m",
+        "going",
+        "ahead",
+        "laying",
+        "down",
+        "the"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] Done. I took care of all 3. ## Created on disk Shared brain scaffold: - `/home/claw/shared-brain/` Folders created: - `inbox/` - `daily/` - `projects/` - `research/` - `memory/` - `decisions/` - `videos/` - `creators/` - `references/` - `exports/`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "home/claw/shared-brain",
+        "assistant",
+        "done",
+        "took",
+        "care",
+        "all",
+        "created"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"88\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Thu 2026-04-16 15:09 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\",",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: I’ve got the compose file. I’m going to turn this into a safer local config instead of leaving the stock placeholder secrets and anonymous mode as-is.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "as-is",
+        "assistant",
+        "i’ve",
+        "got",
+        "the",
+        "compose",
+        "i’m",
+        "going"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] Done. I fetched the official compose file to: - `/home/claw/.khoj/docker-compose.yml` Then I reviewed it and created a concrete edits guide here: - `/home/claw/.openclaw/workspace/recon/KHOJ_LOCAL_SETUP_EDITS.md` I also committed the new guidance f",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "home/claw",
+        "khoj/docker-compose.yml",
+        "assistant",
+        "done",
+        "fetched",
+        "the",
+        "official"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"91\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Thu 2026-04-16 16:07 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\",",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] Done. I created the ready-to-fill template here: `/home/claw/.openclaw/workspace/recon/KHOJ_DOCKER_COMPOSE_TEMPLATE.md` and committed it. ## What it gives you - a cleaner minimal compose template - anonymous mode removed - only the core services ke",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "ready-to-fill",
+        "home/claw",
+        "assistant",
+        "done",
+        "created",
+        "the",
+        "ready"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"93\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Thu 2026-04-16 16:10 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\",",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] That’s the right call. I set it up conceptually as: - **active first path:** Ollama - **commented future switch path:** OpenAI I updated the template and added a provider recommendation note. Files: - `/home/claw/.openclaw/workspace/recon/KHOJ_PROV",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "openai",
+        "reply-to-current",
+        "home/claw",
+        "assistant",
+        "that’s",
+        "the",
+        "right",
+        "call"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"95\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Thu 2026-04-16 17:21 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\",",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] Perfect. I baked that into the docs. Updated: - `/home/claw/.openclaw/workspace/recon/KHOJ_PROVIDER_RECOMMENDATION.md` - `/home/claw/.openclaw/workspace/recon/KHOJ_DOCKER_COMPOSE_TEMPLATE.md` Also noted in the shared brain: - `/home/claw/shared-bra",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "home/claw",
+        "home/claw/shared-bra",
+        "assistant",
+        "perfect",
+        "baked",
+        "the",
+        "docs"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"97\", \"sender_id\": \"8445509532\", \"sender\": \"Patrick Springer\", \"timestamp\": \"Thu 2026-04-16 17:23 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Patrick Springer (8445509532)\", \"id\": \"8445509532\",",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] Paste this into the `server.environment` section of `/home/claw/.khoj/docker-compose.yml`: ```yaml - POSTGRES_DB=postgres - POSTGRES_USER=postgres - POSTGRES_PASSWORD=*** - POSTGRES_HOST=database - POSTGRES_PORT=5432 - KHOJ_DJANGO_SECRET_KEY=REPLAC",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T03:00:43.749Z",
+      "lastRecalledAt": "2026-04-17T03:00:43.749Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "server.environment",
+        "home/claw",
+        "khoj/docker-compose.yml",
+        "postgres-db",
+        "postgres-user",
+        "postgres-password",
+        "postgres-host"
       ]
     }
   }
