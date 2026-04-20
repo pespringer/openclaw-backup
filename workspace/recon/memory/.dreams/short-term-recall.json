@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-19T03:01:13.118Z",
+  "updatedAt": "2026-04-20T03:01:28.014Z",
   "entries": {
     "memory:memory/2026-04-11.md:3:6": {
       "key": "memory:memory/2026-04-11.md:3:6",
@@ -1523,7 +1523,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T05:04:49.132Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
@@ -1532,7 +1532,8 @@
         "2026-04-15",
         "2026-04-17",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "1.00",
@@ -1558,7 +1559,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T05:04:49.132Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
@@ -1567,7 +1568,8 @@
         "2026-04-15",
         "2026-04-17",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "1.00",
@@ -1593,7 +1595,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T05:04:49.132Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
@@ -1602,7 +1604,8 @@
         "2026-04-15",
         "2026-04-17",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "memory/2026-04-14.md",
@@ -2211,7 +2214,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T06:35:00.933Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
@@ -2220,7 +2223,8 @@
         "2026-04-15",
         "2026-04-17",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "1.00",
@@ -2246,7 +2250,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T06:35:00.933Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
@@ -2255,7 +2259,8 @@
         "2026-04-15",
         "2026-04-17",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "1.00",
@@ -2281,7 +2286,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T06:35:00.933Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
@@ -2290,7 +2295,8 @@
         "2026-04-15",
         "2026-04-17",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "13-16",
@@ -3227,7 +3233,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-16T03:00:46.875Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -3235,7 +3241,8 @@
         "2026-04-15",
         "2026-04-16",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "youtube-history",
@@ -3261,7 +3268,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-16T03:00:46.875Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -3269,7 +3276,8 @@
         "2026-04-15",
         "2026-04-16",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "popular/current",
@@ -4511,14 +4519,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:43.749Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "b628913e3912"
       ],
       "recallDays": [
         "2026-04-16",
         "2026-04-17",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "0.88",
@@ -4544,14 +4553,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:43.749Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "b628913e3912"
       ],
       "recallDays": [
         "2026-04-16",
         "2026-04-17",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "0.88",
@@ -4577,14 +4587,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:43.749Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "b628913e3912"
       ],
       "recallDays": [
         "2026-04-16",
         "2026-04-17",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "memory/2026-04-14.md",
@@ -4610,14 +4621,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:43.749Z",
-      "lastRecalledAt": "2026-04-19T03:00:36.913Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "b628913e3912"
       ],
       "recallDays": [
         "2026-04-16",
         "2026-04-17",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "sub-agents",
@@ -5187,13 +5199,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:37.981Z",
-      "lastRecalledAt": "2026-04-18T03:00:37.981Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "500c0eda9949"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-20"
       ],
       "conceptTags": [
         "0.80",
@@ -5219,13 +5232,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:37.981Z",
-      "lastRecalledAt": "2026-04-18T03:00:37.981Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "500c0eda9949"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-20"
       ],
       "conceptTags": [
         "0.80",
@@ -5251,13 +5265,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:37.981Z",
-      "lastRecalledAt": "2026-04-18T03:00:37.981Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
       "queryHashes": [
         "500c0eda9949"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-20"
       ],
       "conceptTags": [
         "sub-agents",
@@ -5364,6 +5379,102 @@
         "truths",
         "first",
         "conversation"
+      ]
+    },
+    "memory:memory/2026-04-19.md:173:176": {
+      "key": "memory:memory/2026-04-19.md:173:176",
+      "path": "memory/2026-04-19.md",
+      "startLine": 173,
+      "endLine": 176,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `reflections` kept surfacing across 70 memories.; confidence: 0.82; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T03:00:57.935Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
+      "queryHashes": [
+        "21faa0df9302"
+      ],
+      "recallDays": [
+        "2026-04-19",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "0.82",
+        "memory/2026-04-14.md",
+        "9-12",
+        "13-16",
+        "17-20",
+        "reflections",
+        "theme",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-19.md:177:180": {
+      "key": "memory:memory/2026-04-19.md:177:180",
+      "path": "memory/2026-04-19.md",
+      "startLine": 177,
+      "endLine": 180,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `theme` kept surfacing across 70 memories.; confidence: 0.82; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T03:00:57.935Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
+      "queryHashes": [
+        "21faa0df9302"
+      ],
+      "recallDays": [
+        "2026-04-19",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "0.82",
+        "memory/2026-04-14.md",
+        "9-12",
+        "13-16",
+        "17-20",
+        "reflections",
+        "theme",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-19.md:183:185": {
+      "key": "memory:memory/2026-04-19.md:183:185",
+      "path": "memory/2026-04-19.md",
+      "startLine": 183,
+      "endLine": 185,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: Continued research on a YouTube-history analysis workflow for Patrick.; Verified that the OpenClaw-managed headless Chromium path is available and can reach YouTube history pages.; Found the key blocker for Phase 1: the managed browser is not signed into",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T03:00:57.935Z",
+      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
+      "queryHashes": [
+        "21faa0df9302"
+      ],
+      "recallDays": [
+        "2026-04-19",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "youtube-history",
+        "openclaw-managed",
+        "possible",
+        "lasting",
+        "truths",
+        "continued",
+        "research",
+        "youtube"
       ]
     }
   }
