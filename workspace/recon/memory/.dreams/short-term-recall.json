@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T03:00:46.332Z",
+  "updatedAt": "2026-04-22T03:01:05.108Z",
   "entries": {
     "memory:memory/2026-04-11.md:3:6": {
       "key": "memory:memory/2026-04-11.md:3:6",
@@ -3234,12 +3234,12 @@
       "source": "memory",
       "snippet": "Continued research on a YouTube-history analysis workflow for Patrick.; Verified that the OpenClaw-managed headless Chromium path is available and can reach YouTube history pages.; Found the key blocker for Phase 1: the managed browser is not signed into Patrick's YouTube/Google",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-16T03:00:46.875Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -3249,7 +3249,8 @@
         "2026-04-18",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "youtube-history",
@@ -3270,12 +3271,12 @@
       "source": "memory",
       "snippet": "Practical simplification proposed by Patrick: start without private history access.; Alternative starting plan: Patrick can provide names of creators he follows, and Recon can research popular/current AI videos on YouTube plus videos from those creators.; This simpler approach sh",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-16T03:00:46.875Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -3285,7 +3286,8 @@
         "2026-04-18",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "popular/current",
@@ -4522,12 +4524,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `reflections` kept surfacing across 63 memories.; confidence: 0.88; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:43.749Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -4536,7 +4538,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.88",
@@ -4557,12 +4560,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `theme` kept surfacing across 63 memories.; confidence: 0.88; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:43.749Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -4571,7 +4574,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.88",
@@ -4592,12 +4596,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `memory/2026-04-14.md` kept surfacing across 54 memories.; confidence: 0.76; evidence: memory/2026-04-14.md:33-36, memory/2026-04-14.md:37-40, memory/2026-04-14.md:41-44; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:43.749Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -4606,7 +4610,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "memory/2026-04-14.md",
@@ -4627,12 +4632,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to pleasant but direct. [confidence=0.58 evidence=memory/2026-04-11.md:",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:43.749Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -4641,7 +4646,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "sub-agents",
@@ -5206,12 +5212,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `reflections` kept surfacing across 66 memories.; confidence: 0.80; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:37.981Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -5219,7 +5225,8 @@
         "2026-04-17",
         "2026-04-18",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.80",
@@ -5240,12 +5247,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `theme` kept surfacing across 66 memories.; confidence: 0.80; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:37.981Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -5253,7 +5260,8 @@
         "2026-04-17",
         "2026-04-18",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.80",
@@ -5269,17 +5277,17 @@
     "memory:memory/2026-04-17.md:453:455": {
       "key": "memory:memory/2026-04-17.md:453:455",
       "path": "memory/2026-04-17.md",
-      "startLine": 453,
-      "endLine": 455,
+      "startLine": 13,
+      "endLine": 15,
       "source": "memory",
-      "snippet": "Possible Lasting Truths: First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to pleasant but direct. [confidence=0.58 evidence=memory/2026-04-11.md:",
+      "snippet": "- Candidate: Possible Lasting Truths: First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to pleasant but direct. [confidence=0.58 evidence=memory/2026-04-11.md: - confidence: 0.62 - evidence: memory/2026-04-16.md:377-379",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:37.981Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -5287,7 +5295,8 @@
         "2026-04-17",
         "2026-04-18",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "sub-agents",
@@ -5298,7 +5307,8 @@
         "truths",
         "first",
         "conversation"
-      ]
+      ],
+      "promotedAt": "2026-04-22T03:01:05.108Z"
     },
     "memory:memory/2026-04-18.md:343:346": {
       "key": "memory:memory/2026-04-18.md:343:346",
@@ -5308,19 +5318,20 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `reflections` kept surfacing across 68 memories.; confidence: 0.81; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:36.913Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-19",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.81",
@@ -5341,19 +5352,20 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `theme` kept surfacing across 68 memories.; confidence: 0.81; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:36.913Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-19",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.81",
@@ -5374,19 +5386,20 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to pleasant but direct. [confidence=0.58 evidence=memory/2026-04-11.md:",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:36.913Z",
-      "lastRecalledAt": "2026-04-21T03:00:46.332Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-19",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "sub-agents",
@@ -5407,18 +5420,19 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `reflections` kept surfacing across 70 memories.; confidence: 0.82; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:57.935Z",
-      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.82",
@@ -5439,18 +5453,19 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `theme` kept surfacing across 70 memories.; confidence: 0.82; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:57.935Z",
-      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.82",
@@ -5471,18 +5486,19 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Continued research on a YouTube-history analysis workflow for Patrick.; Verified that the OpenClaw-managed headless Chromium path is available and can reach YouTube history pages.; Found the key blocker for Phase 1: the managed browser is not signed into",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:57.935Z",
-      "lastRecalledAt": "2026-04-20T03:00:57.935Z",
+      "lastRecalledAt": "2026-04-22T03:01:05.108Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "youtube-history",

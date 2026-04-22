@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.4.9",
-    "lastTouchedAt": "2026-04-11T20:53:22.396Z"
+    "lastTouchedVersion": "2026.4.21",
+    "lastTouchedAt": "2026-04-22T03:42:55.147Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-30T02:03:59.346Z",
@@ -258,5 +258,8 @@
         "accountId": "research_agent_recon"
       }
     }
-  ]
+  ],
+  "models": {
+    "providers": {}
+  }
 }
