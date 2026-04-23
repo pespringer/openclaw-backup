@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-22T03:00:00.540Z",
+  "updatedAt": "2026-04-23T03:00:00.821Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -10553,12 +10553,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 161 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:00.348Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -10568,7 +10568,8 @@
         "2026-04-19",
         "2026-04-20",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.95",
@@ -10589,12 +10590,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 161 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:00.348Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -10604,7 +10605,8 @@
         "2026-04-19",
         "2026-04-20",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.95",
@@ -10625,12 +10627,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.51 evidence=memory/2026-04-14.md:72-72]; Reflections: Theme: `assistant` kept surfacing across 12 memories.; confidence: 0.92; evidence: memory/.dreams/session-corpus/2026-04-12.t",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:00.348Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -10640,7 +10642,8 @@
         "2026-04-19",
         "2026-04-20",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.51",
@@ -10789,12 +10792,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 164 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:00.249Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -10803,7 +10806,8 @@
         "2026-04-18",
         "2026-04-20",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.95",
@@ -10824,12 +10828,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 164 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:00.249Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -10838,7 +10842,8 @@
         "2026-04-18",
         "2026-04-20",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.95",
@@ -10859,12 +10864,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:00.249Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -10873,7 +10878,8 @@
         "2026-04-18",
         "2026-04-20",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "builder-relevant",
@@ -10958,12 +10964,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 167 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:00.314Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -10971,7 +10977,8 @@
         "2026-04-18",
         "2026-04-19",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.95",
@@ -10992,12 +10999,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 166 memories.; confidence: 0.94; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:00.314Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -11005,7 +11012,8 @@
         "2026-04-18",
         "2026-04-19",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.94",
@@ -11026,12 +11034,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.58 evidence=memory/2026-04-14.md:72-72]; Reflections: Theme: `assistant` kept surfacing across 12 memories.; confidence: 0.92; evidence: memory/.dreams/session-corpus/2026-04-12.t",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:00.314Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -11039,7 +11047,8 @@
         "2026-04-18",
         "2026-04-19",
         "2026-04-21",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.58",
@@ -11124,19 +11133,20 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 169 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:00.260Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
         "2026-04-20",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.95",
@@ -11157,19 +11167,20 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 168 memories.; confidence: 0.94; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:00.260Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
         "2026-04-20",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.94",
@@ -11190,19 +11201,20 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:00.260Z",
-      "lastRecalledAt": "2026-04-22T03:00:00.540Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
         "2026-04-20",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-23"
       ],
       "conceptTags": [
         "builder-relevant",
@@ -11287,17 +11299,18 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 172 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-21T03:00:00.530Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.95",
@@ -11318,17 +11331,18 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 170 memories.; confidence: 0.94; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-21T03:00:00.530Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-23"
       ],
       "conceptTags": [
         "0.94",
@@ -11349,17 +11363,18 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-21T03:00:00.530Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-23"
       ],
       "conceptTags": [
         "builder-relevant",
@@ -11699,6 +11714,761 @@
         "21st",
         "meta",
         "unveils"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Wednesday, April 22nd, 2026 - 7:00 AM (UTC) / 2026-04-22 07:00 UTC Use the message tool if you need",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: I'll gather the top 5 AI developments from the past 24 hours and structure the brief following the format: headline, summary, importance for builders, and source link. Let me proceed to fetch the relevant stories.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "assistant",
+        "i'll",
+        "gather",
+        "the",
+        "top",
+        "developments",
+        "hours",
+        "structure"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: I encountered some issues with retrieving specific data sources, but I successfully accessed relevant AI-related content from TechCrunch, VentureBeat, the arXiv preprint database, and GitHub trends. I will now synthesize the top 5 AI developments based on the extracted",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "ai-related",
+        "assistant",
+        "encountered",
+        "issues",
+        "retrieving",
+        "specific",
+        "data",
+        "sources"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: Can you help me add the minimax m2.7 model?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "m2.7",
+        "user",
+        "can",
+        "you",
+        "help",
+        "add",
+        "the",
+        "minimax"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: The attempt to add the Minimax M2.7 model failed due to restrictions on modifying protected sections of the configuration. This suggests that certain fields are locked or require additional steps. --- ### Next Steps: 1. Adjust the configuration to exclude protected fie",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "m2.7",
+        "assistant",
+        "the",
+        "attempt",
+        "add",
+        "minimax",
+        "model",
+        "failed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: The configuration update to add the Minimax M2.7 model continues to face restrictions. It seems a direct update to the configuration requires a full or properly prepared raw configuration payload. --- ### Proposal: Should I simplify and structure the entire `openclaw.j",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "m2.7",
+        "openclaw.j",
+        "assistant",
+        "the",
+        "configuration",
+        "update",
+        "add",
+        "minimax"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: The Minimax M2.7 model couldn't be added due to restrictions on directly modifying certain protected configurations (`openclaw.json`). These paths require a specific approach or a fully structured raw configuration payload. ### Options to Proceed: 1. **Full Configurati",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "m2.7",
+        "openclaw.json",
+        "assistant",
+        "the",
+        "minimax",
+        "model",
+        "couldn't",
+        "added"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: I've tried multiple times to add the model by running openclaw onboard, but I keep getting this npm issue. I even ran the install script again but still the same issue. Error: Cannot find module '@larksuiteoapi/node-sdk' Require stack: - /home/claw/.npm-global/lib/node_modu",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "larksuiteoapi/node-sdk",
+        "home/claw",
+        "npm-global/lib/node-modu",
+        "user",
+        "i've",
+        "tried",
+        "multiple",
+        "times"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: The error you're encountering (`Cannot find module '@larksuiteoapi/node-sdk'`) indicates that a required dependency for Feishu support in OpenClaw isn't installed. This could be due to a mismatch in dependencies after running `openclaw onboard` or an incomplete install",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "larksuiteoapi/node-sdk",
+        "assistant",
+        "the",
+        "error",
+        "you're",
+        "encountering",
+        "cannot",
+        "find"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "User: Now I get this error on the rebuild. claw@pesutility01:~$ npm rebuild -g openclaw npm error code 1 npm error path /home/claw/.npm-global/lib/node_modules/openclaw npm error command failed npm error command sh -c node scripts/postinstall-bundled-plugins.mjs npm error file://",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "home/claw",
+        "user",
+        "now",
+        "get",
+        "error",
+        "the",
+        "rebuild",
+        "claw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: The `npm rebuild` error you encountered appears to stem from a problematic or unsafe file detected during the postinstall script for OpenClaw's bundled plugins (`dist/extensions/microsoft/node_modules/.bin/node-edge-tts`). Here’s how we can resolve it: --- ### Step-by-",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "bin/node-edge-tts",
+        "step-by",
+        "assistant",
+        "the",
+        "npm",
+        "rebuild",
+        "error",
+        "you"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "User: I got this error on the rebuild. claw@pesutility01:~$ npm rebuild -g openclaw npm error code 1 npm error path /home/claw/.npm-global/lib/node_modules/openclaw npm error command failed npm error command sh -c node scripts/postinstall-bundled-plugins.mjs npm error file:///hom",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "home/claw",
+        "user",
+        "got",
+        "error",
+        "the",
+        "rebuild",
+        "claw",
+        "pesutility01"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: The `npm rebuild` process continues to fail due to another flagged unsafe file (`dist/extensions/browser/node_modules/.bin/node-which`) in OpenClaw's bundled plugins. Here’s how to address it: --- ### Step-by-Step Fix: 1. **Remove the Problematic File**: Attempt to rem",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "bin/node-which",
+        "step-by-step",
+        "assistant",
+        "the",
+        "npm",
+        "rebuild",
+        "process",
+        "continues"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "User: I get this on the rebuild. claw@pesutility01:~$ npm rebuild -g openclaw npm error code 1 npm error path /home/claw/.npm-global/lib/node_modules/openclaw npm error command failed npm error command sh -c node scripts/postinstall-bundled-plugins.mjs npm error file:///home/claw",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "home/claw",
+        "user",
+        "get",
+        "the",
+        "rebuild",
+        "claw",
+        "pesutility01",
+        "npm"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: The rebuild process is encountering a series of flagged unsafe files, with the latest being from `dist/extensions/browser/node_modules/.bin/playwright-core`. This suggests a systematic issue in the bundled plugins' postinstall script. --- ### Step-by-Step Plan: 1. **Re",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "bin/playwright-core",
+        "step-by-step",
+        "assistant",
+        "the",
+        "rebuild",
+        "process",
+        "encountering",
+        "series"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: Hello! How can I assist you today?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "assistant",
+        "hello",
+        "how",
+        "can",
+        "assist",
+        "you"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: What is my default model?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "user",
+        "what",
+        "model"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "User: What is my default model?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "user",
+        "what",
+        "model"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Your default model is currently configured as **OpenAI Codex (gpt-5.4)**. Let me know if you'd like to: - Change it to another model (like Minimax M2.7 when added). - Add more fallbacks for versatility. Anything you'd like me to adjust or verify?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "gpt",
+        "openai",
+        "gpt-5.4",
+        "m2.7",
+        "assistant",
+        "your",
+        "model",
+        "currently"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "User: Minimax should be added. Please set this to the default.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "user",
+        "minimax",
+        "added",
+        "please",
+        "set",
+        "the"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "User: Minimax should be added. Please set this to the default.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "user",
+        "minimax",
+        "added",
+        "please",
+        "set",
+        "the"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: The attempt to add Minimax M2.7 and set it as the default model failed because the configuration requires a full, raw payload to modify certain fields. --- ### Next Steps: 1. I can generate and apply a complete updated configuration file to include the Minimax M2.7 mod",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "m2.7",
+        "assistant",
+        "the",
+        "attempt",
+        "add",
+        "minimax",
+        "set",
+        "model"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "User: We can proceed whatever way is easiest.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "user",
+        "can",
+        "proceed",
+        "whatever",
+        "way",
+        "easiest"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "User: We can proceed whatever way is easiest.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "user",
+        "can",
+        "proceed",
+        "whatever",
+        "way",
+        "easiest"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: The Minimax M2.7 model has been successfully added and already set as the default model: ### Updated Configuration: - **Primary Model**: `minimax/MiniMax-M2.7` - **Fallbacks**: `github-copilot/gpt-4o` - **Alias**: Minimax M2.7 is available under this identity for usage",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "gpt",
+        "m2.7",
+        "minimax/minimax-m2.7",
+        "github-copilot/gpt-4o",
+        "assistant",
+        "the",
+        "minimax",
+        "model"
       ]
     }
   }

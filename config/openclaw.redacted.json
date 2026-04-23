@@ -1,11 +1,11 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.21",
-    "lastTouchedAt": "2026-04-22T03:42:55.147Z"
+    "lastTouchedAt": "2026-04-22T18:54:14.616Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-30T02:03:59.346Z",
-    "lastRunVersion": "2026.3.24",
+    "lastRunAt": "2026-04-22T18:53:55.210Z",
+    "lastRunVersion": "2026.4.21",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
@@ -23,19 +23,26 @@
         "provider": "openai-codex",
         "mode": "oauth",
         "email": "patrick.springer@gmail.com"
+      },
+      "minimax:cn": {
+        "provider": "minimax",
+        "mode": "api_key"
       }
     }
   },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.4",
+        "primary": "minimax/MiniMax-M2.7",
         "fallbacks": [
           "github-copilot/gpt-4o"
         ]
       },
       "models": {
-        "openai-codex/gpt-5.4": {}
+        "openai-codex/gpt-5.4": {},
+        "minimax/MiniMax-M2.7": {
+          "alias": "Minimax"
+        }
       },
       "workspace": "/home/claw/.openclaw/workspace",
       "memorySearch": {
@@ -207,6 +214,9 @@
             "enabled": true
           }
         }
+      },
+      "minimax": {
+        "enabled": true
       }
     },
     "installs": {
@@ -214,14 +224,14 @@
         "source": "npm",
         "spec": "@martian-engineering/lossless-claw",
         "installPath": "/home/claw/.openclaw/extensions/lossless-claw",
-        "version": "0.5.0",
+        "version": "0.9.2",
         "resolvedName": "@martian-engineering/lossless-claw",
-        "resolvedVersion": "0.5.0",
-        "resolvedSpec": "@martian-engineering/lossless-claw@0.5.0",
-        "integrity": "sha512-bZO3SP1+U7WHy/Zuasb5o5gcccopGr3sF1EnqQWTIf33FewI7Rb1LxVv8Ru6IYo0oMXRh7IdsflxXrsSjD3Vqg==",
-        "shasum": "1c77e2331c37b69fb75c4f5463114aed6415ccb1",
-        "resolvedAt": "2026-03-22T20:02:37.821Z",
-        "installedAt": "2026-03-22T20:03:43.629Z"
+        "resolvedVersion": "0.9.2",
+        "resolvedSpec": "@martian-engineering/lossless-claw@0.9.2",
+        "integrity": "sha512-T33c/xgqwmb2l3W/PaZxMYiG29wu1lhRGiZ034DVay85Xnubcsqq7cF0zKYqfpU3R572+8eWUw813595KMUwiw==",
+        "shasum": "40fc865a4dd53f494cecae7a249dea5ac9126af1",
+        "resolvedAt": "2026-04-22T18:28:00.684Z",
+        "installedAt": "2026-04-22T18:29:07.832Z"
       }
     }
   },
@@ -260,6 +270,32 @@
     }
   ],
   "models": {
-    "providers": {}
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "models": [
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
+              "cacheWrite": 0.375
+            },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          }
+        ],
+        "api": "anthropic-messages",
+        "authHeader": true
+      }
+    },
+    "mode": "merge"
   }
 }
