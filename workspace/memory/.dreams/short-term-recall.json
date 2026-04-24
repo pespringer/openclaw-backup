@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-23T03:00:00.821Z",
+  "updatedAt": "2026-04-24T03:00:00.846Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -10792,12 +10792,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 164 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:00.249Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -10807,7 +10807,8 @@
         "2026-04-20",
         "2026-04-21",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.95",
@@ -10828,12 +10829,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 164 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:00.249Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -10843,7 +10844,8 @@
         "2026-04-20",
         "2026-04-21",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.95",
@@ -10864,12 +10866,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-18T03:00:00.249Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -10879,7 +10881,8 @@
         "2026-04-20",
         "2026-04-21",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "builder-relevant",
@@ -10964,12 +10967,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 167 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:00.314Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -10978,7 +10981,8 @@
         "2026-04-19",
         "2026-04-21",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.95",
@@ -10999,12 +11003,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 166 memories.; confidence: 0.94; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:00.314Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -11013,7 +11017,8 @@
         "2026-04-19",
         "2026-04-21",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.94",
@@ -11034,12 +11039,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.58 evidence=memory/2026-04-14.md:72-72]; Reflections: Theme: `assistant` kept surfacing across 12 memories.; confidence: 0.92; evidence: memory/.dreams/session-corpus/2026-04-12.t",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:00.314Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -11048,7 +11053,8 @@
         "2026-04-19",
         "2026-04-21",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.58",
@@ -11133,12 +11139,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 169 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:00.260Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "21faa0df9302"
       ],
@@ -11146,7 +11152,8 @@
         "2026-04-19",
         "2026-04-20",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.95",
@@ -11167,12 +11174,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 168 memories.; confidence: 0.94; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:00.260Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "21faa0df9302"
       ],
@@ -11180,7 +11187,8 @@
         "2026-04-19",
         "2026-04-20",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.94",
@@ -11201,12 +11209,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:00.260Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "21faa0df9302"
       ],
@@ -11214,7 +11222,8 @@
         "2026-04-19",
         "2026-04-20",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "builder-relevant",
@@ -11299,18 +11308,19 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 172 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
         "2026-04-21",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.95",
@@ -11331,18 +11341,19 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 170 memories.; confidence: 0.94; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
         "2026-04-21",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "0.94",
@@ -11363,18 +11374,19 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-23T03:00:00.821Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
         "2026-04-21",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-24"
       ],
       "conceptTags": [
         "builder-relevant",
@@ -12469,6 +12481,341 @@
         "the",
         "minimax",
         "model"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: [Source](https://techcrunch.com/category/artificial-intelligence) --- ### 2. **New Method for Explainable AI on arXiv** Researchers propose a new framework for generating interpretable outputs in neural networks, enhancing transparency without losing accuracy. **Why it",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "network",
+        "assistant",
+        "source",
+        "https",
+        "techcrunch.com",
+        "category",
+        "artificial",
+        "intelligence"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: [Source](https://github.com/trending/AI) --- ### 4. **Stable Diffusion Plugin for Blender** A new Stable Diffusion plugin for Blender facilitates direct integration of text-to-image generative AI capabilities into 3D modeling workflows. **Why it matters for builders:**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "github.com/trending/ai",
+        "text-to-image",
+        "assistant",
+        "source",
+        "https",
+        "github.com",
+        "trending",
+        "stable"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: productive day! Let me know if you'd like details on any of these.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "assistant",
+        "productive",
+        "day",
+        "let",
+        "know",
+        "you'd",
+        "like",
+        "details"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-23.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-23.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-23.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Thursday, April 23rd, 2026 - 7:00 AM (UTC) / 2026-04-23 07:00 UTC Use the message tool if you need t",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "104ad850261a"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-23.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-23.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-23.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: To create the Daily AI Brief, I'll gather the latest AI news covering the top 5 developments, following the tone and content format outlined in the skill. Stand by while I compile the brief.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "104ad850261a"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "assistant",
+        "create",
+        "the",
+        "brief",
+        "i'll",
+        "gather",
+        "latest",
+        "news"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-23.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-23.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-23.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: ### Daily AI News Brief — Thursday, April 23rd, 2026 1. **Google Unveils Deep Research Max Agents** Google's new AI agents can autonomously conduct exhaustive, multi-source research traditionally handled by human analysts. Built on Gemini 3.1 Pro, these systems target",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "104ad850261a"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "multi-source",
+        "3.1",
+        "assistant",
+        "news",
+        "brief",
+        "thursday",
+        "april",
+        "23rd"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-23.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-23.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-23.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Generative AI in diverse industries, from marketing to education. [Read more](https://venturebeat.com) 3. **AI-Generated Political Campaigns Flood Social Media** Pro-Trump AI influencer accounts are dominating Instagram and TikTok, aiming to drive voter turnout. These",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "104ad850261a"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "venturebeat.com",
+        "ai-generated",
+        "pro-trump",
+        "assistant",
+        "generative",
+        "diverse",
+        "industries",
+        "marketing"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-23.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-23.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-23.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: more](https://syncedreview.com) 5. **VentureBeat Highlights Salesforce's AgentForce Vibes 2.0** Salesforce's updated AI platform addresses \"context overload\" in multi-agent systems, streamlining large-scale orchestration. **Why it matters:** Reflects the evolution of e",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "104ad850261a"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "syncedreview.com",
+        "2.0",
+        "multi-agent",
+        "large-scale",
+        "assistant",
+        "https",
+        "venturebeat",
+        "highlights"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-23.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-23.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-23.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: System: [2026-04-23 23:54:41 UTC] Gateway restart update ok (npm) System: Run: openclaw doctor --non-interactive Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEAR",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "104ad850261a"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "gateway",
+        "non-interactive",
+        "heartbeat.md",
+        "user",
+        "system",
+        "utc",
+        "restart",
+        "update"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-23.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-23.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-23.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: System: [2026-04-23 23:54:41 UTC] Gateway restart update ok (npm) System: Run: openclaw doctor --non-interactive Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEAR",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "104ad850261a"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "gateway",
+        "non-interactive",
+        "heartbeat.md",
+        "user",
+        "system",
+        "utc",
+        "restart",
+        "update"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-23.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-23.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-23.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-24T03:00:00.846Z",
+      "lastRecalledAt": "2026-04-24T03:00:00.846Z",
+      "queryHashes": [
+        "104ad850261a"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "assistant"
       ]
     }
   }
