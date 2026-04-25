@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-24T03:01:04.825Z",
+  "updatedAt": "2026-04-25T03:01:22.031Z",
   "entries": {
     "memory:memory/2026-04-11.md:3:6": {
       "key": "memory:memory/2026-04-11.md:3:6",
@@ -5328,12 +5328,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `reflections` kept surfacing across 68 memories.; confidence: 0.81; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:36.913Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -5343,7 +5343,8 @@
         "2026-04-21",
         "2026-04-22",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "0.81",
@@ -5364,12 +5365,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `theme` kept surfacing across 68 memories.; confidence: 0.81; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:36.913Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -5379,7 +5380,8 @@
         "2026-04-21",
         "2026-04-22",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "0.81",
@@ -5400,12 +5402,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to pleasant but direct. [confidence=0.58 evidence=memory/2026-04-11.md:",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T03:00:36.913Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "77ca9720ec15"
       ],
@@ -5415,7 +5417,8 @@
         "2026-04-21",
         "2026-04-22",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "sub-agents",
@@ -5437,12 +5440,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `reflections` kept surfacing across 70 memories.; confidence: 0.82; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:57.935Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "21faa0df9302"
       ],
@@ -5451,7 +5454,8 @@
         "2026-04-20",
         "2026-04-22",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "0.82",
@@ -5472,12 +5476,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `theme` kept surfacing across 70 memories.; confidence: 0.82; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:57.935Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "21faa0df9302"
       ],
@@ -5486,7 +5490,8 @@
         "2026-04-20",
         "2026-04-22",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "0.82",
@@ -5507,12 +5512,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Continued research on a YouTube-history analysis workflow for Patrick.; Verified that the OpenClaw-managed headless Chromium path is available and can reach YouTube history pages.; Found the key blocker for Phase 1: the managed browser is not signed into",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-20T03:00:57.935Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "21faa0df9302"
       ],
@@ -5521,7 +5526,8 @@
         "2026-04-20",
         "2026-04-22",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "youtube-history",
@@ -5542,19 +5548,20 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `reflections` kept surfacing across 72 memories.; confidence: 0.83; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:46.332Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
         "2026-04-21",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "0.83",
@@ -5575,19 +5582,20 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `theme` kept surfacing across 72 memories.; confidence: 0.83; evidence: memory/2026-04-14.md:9-12, memory/2026-04-14.md:13-16, memory/2026-04-14.md:17-20; note: reflection",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:46.332Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
         "2026-04-21",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "0.83",
@@ -5608,19 +5616,20 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: Continued research on a YouTube-history analysis workflow for Patrick.; Verified that the OpenClaw-managed headless Chromium path is available and can reach YouTube history pages.; Found the key blocker for Phase 1: the managed browser is not signed into",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:46.332Z",
-      "lastRecalledAt": "2026-04-24T03:01:04.825Z",
+      "lastRecalledAt": "2026-04-25T03:01:22.031Z",
       "queryHashes": [
         "511fd8111b88"
       ],
       "recallDays": [
         "2026-04-21",
         "2026-04-23",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-25"
       ],
       "conceptTags": [
         "youtube-history",
