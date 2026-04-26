@@ -22,3 +22,8 @@
 
 <!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:133:135 -->
 - - Candidate: Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker - confidence: 0.62 - evidence: memory/2026-04-17.md:133-135 [score=0.879 recalls=0 avg=0.620 source=memory/2026-04-19.md:68-70]
+
+## Promoted From Short-Term Memory (2026-04-26)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-20.md:138:140 -->
+- - Candidate: Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker - confidence: 0.62 - evidence: memory/2026-04-17.md:133-135 [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-20.md:108-110]

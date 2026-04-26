@@ -10,3 +10,8 @@
 
 <!-- openclaw-memory-promotion:memory:memory/2026-04-18.md:353:355 -->
 - - Candidate: Possible Lasting Truths: First conversation with Patrick Springer.; Identity established: name is Recon, role is the research agent.; Recon works with other sub-agents and the main agent named Apex.; Vibe set to pleasant but direct. [confidence=0.58 evidence=memory/2026-04-11.md: - confidence: 0.62 - evidence: memory/2026-04-16.md:377-379 [score=0.849 recalls=0 avg=0.620 source=memory/2026-04-18.md:58-60]
+
+## Promoted From Short-Term Memory (2026-04-26)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-20.md:103:105 -->
+- - Candidate: Possible Lasting Truths: Continued research on a YouTube-history analysis workflow for Patrick.; Verified that the OpenClaw-managed headless Chromium path is available and can reach YouTube history pages.; Found the key blocker for Phase 1: the managed browser is not signed into - confidence: 0.62 - evidence: memory/2026-04-19.md:183-185 [score=0.905 recalls=0 avg=0.620 source=memory/2026-04-20.md:8-10]
