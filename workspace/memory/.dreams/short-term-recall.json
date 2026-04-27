@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-26T03:00:02.469Z",
+  "updatedAt": "2026-04-27T03:00:01.965Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -11318,12 +11318,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 172 memories.; confidence: 0.95; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-26T03:00:02.469Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
       "queryHashes": [
         "511fd8111b88"
       ],
@@ -11332,7 +11332,8 @@
         "2026-04-23",
         "2026-04-24",
         "2026-04-25",
-        "2026-04-26"
+        "2026-04-26",
+        "2026-04-27"
       ],
       "conceptTags": [
         "0.95",
@@ -11353,12 +11354,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `user` kept surfacing across 170 memories.; confidence: 0.94; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:1-1, memory/.dreams/session-corpus/2026-04-13.txt:4-4; note: reflection",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-26T03:00:02.469Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
       "queryHashes": [
         "511fd8111b88"
       ],
@@ -11367,7 +11368,8 @@
         "2026-04-23",
         "2026-04-24",
         "2026-04-25",
-        "2026-04-26"
+        "2026-04-26",
+        "2026-04-27"
       ],
       "conceptTags": [
         "0.94",
@@ -11383,17 +11385,17 @@
     "memory:memory/2026-04-20.md:138:140": {
       "key": "memory:memory/2026-04-20.md:138:140",
       "path": "memory/2026-04-20.md",
-      "startLine": 108,
-      "endLine": 110,
+      "startLine": 138,
+      "endLine": 140,
       "source": "memory",
-      "snippet": "- Candidate: Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker - confidence: 0.62 - evidence: memory/2026-04-17.md:133-135",
+      "snippet": "Possible Lasting Truths: Possible Lasting Truths: Assistant: Daily AI brief for April 12, 2026 Note: I found 5 solid builder-relevant items in current coverage, but a couple appear to be from the last few days rather than a clean last-24-hours window. I’m not padding with weaker",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T03:00:00.530Z",
-      "lastRecalledAt": "2026-04-26T03:00:02.469Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
       "queryHashes": [
         "511fd8111b88"
       ],
@@ -11402,7 +11404,8 @@
         "2026-04-23",
         "2026-04-24",
         "2026-04-25",
-        "2026-04-26"
+        "2026-04-26",
+        "2026-04-27"
       ],
       "conceptTags": [
         "builder-relevant",
@@ -13464,6 +13467,254 @@
         "attempts",
         "gather",
         "the"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-26.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-26.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-26.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Sunday, April 26th, 2026 - 7:00 AM (UTC) / 2026-04-26 07:00 UTC Use the message tool if you need to",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-27T03:00:01.965Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
+      "queryHashes": [
+        "2f7d4f01eb0b"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-26.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-26.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-26.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: <<<BEGIN_OPENCLAW_INTERNAL_CONTEXT>>> OpenClaw runtime context (internal): This context is runtime-generated, not user-authored. Keep internal details private. [Internal task completion event] source: subagent session_key: agent:…2d62 session_id: ebde57a2-4bb3-4206-993d-65e",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-27T03:00:01.965Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
+      "queryHashes": [
+        "2f7d4f01eb0b"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "begin-openclaw-internal-context",
+        "runtime-generated",
+        "user-authored",
+        "session-key",
+        "session-id",
+        "ebde57a2-4bb3-4206-993d-65e",
+        "user",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-26.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-26.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-26.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: **TechCrunch** - Successfully accessed, but the content extracted was event promotion details and not AI news or advancements. The constraints of automated scraping limited meaningful output. Let me know if you want me to attempt selection of alternate sources or assist in",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-27T03:00:01.965Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
+      "queryHashes": [
+        "2f7d4f01eb0b"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "user",
+        "techcrunch",
+        "successfully",
+        "accessed",
+        "but",
+        "the",
+        "content",
+        "extracted"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-26.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-26.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-26.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: The AI news brief generation faced challenges due to limited access to reliable sources, resulting in insufficient meaningful content. Alternative approaches or source refinements may be needed for future briefs.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-27T03:00:01.965Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
+      "queryHashes": [
+        "2f7d4f01eb0b"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "assistant",
+        "the",
+        "news",
+        "brief",
+        "generation",
+        "faced",
+        "challenges",
+        "due"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-26.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-26.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-26.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: Starting your daily AI brief generation. Progress updates will follow here, and a summary will be delivered shortly!",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-27T03:00:01.965Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
+      "queryHashes": [
+        "2f7d4f01eb0b"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "assistant",
+        "starting",
+        "your",
+        "brief",
+        "generation",
+        "progress",
+        "updates",
+        "will"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-26.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-26.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-26.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your requester; do not busy-poll for status. [Subagent Task]: Collect the top 5 AI news stories from the past 24 hours, excluding opinions/rumors, in the requested format. Maintain emphas",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-27T03:00:01.965Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
+      "queryHashes": [
+        "2f7d4f01eb0b"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "1/1",
+        "auto-announce",
+        "busy-poll",
+        "opinions/rumors",
+        "user",
+        "subagent",
+        "context",
+        "you"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-26.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-26.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-26.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: [Retry after the previous model attempt failed or timed out] [Sun 2026-04-26 07:00 UTC] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your requester; do not busy-poll for status. [Subagent Task]: Collect the top 5 AI news stories fro",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-27T03:00:01.965Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
+      "queryHashes": [
+        "2f7d4f01eb0b"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "1/1",
+        "auto-announce",
+        "busy-poll",
+        "user",
+        "retry",
+        "the",
+        "previous",
+        "model"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-26.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-26.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-26.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: I encountered several challenges accessing reliable AI news sources to extract daily stories. The following summarizes the attempts: 1. **AITopics** - Redirected to a login page. 2. **MarkTechPost** - Page not found (404 error). 3. **VentureBeat AI** - Access blocked d",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-27T03:00:01.965Z",
+      "lastRecalledAt": "2026-04-27T03:00:01.965Z",
+      "queryHashes": [
+        "2f7d4f01eb0b"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "assistant",
+        "encountered",
+        "several",
+        "challenges",
+        "accessing",
+        "reliable",
+        "news",
+        "sources"
       ]
     }
   }
