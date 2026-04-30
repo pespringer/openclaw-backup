@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-29T03:00:01.210Z",
+  "updatedAt": "2026-04-30T03:00:01.252Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -13932,6 +13932,161 @@
         "unstructured",
         "heavily",
         "truncated"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Wednesday, April 29th, 2026 - 7:00 AM (UTC) / 2026-04-29 07:00 UTC Use the message tool if you need",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-30T03:00:01.252Z",
+      "lastRecalledAt": "2026-04-30T03:00:01.252Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: I’ll prepare a daily AI news brief, summarizing up to 5 top developments from the last 24 hours, focusing on announcements, open releases, and product launches, while skipping opinions or speculation. I'll organize these with headlines, summaries, relevance for builder",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-30T03:00:01.252Z",
+      "lastRecalledAt": "2026-04-30T03:00:01.252Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "assistant",
+        "i’ll",
+        "prepare",
+        "news",
+        "brief",
+        "summarizing",
+        "top",
+        "developments"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Here’s your daily AI news brief for April 29, 2026: --- 1. **OpenAI Partners with AWS, Ends Microsoft Exclusivity** OpenAI has signed a deal with Amazon Web Services (AWS), focusing on integrating their technologies with AWS's Bedrock Managed Agents. This marks the end",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-30T03:00:01.252Z",
+      "lastRecalledAt": "2026-04-30T03:00:01.252Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "openai",
+        "assistant",
+        "here’s",
+        "your",
+        "news",
+        "brief",
+        "april",
+        "partners"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: solutions. - [Source](https://github.com/microsoft/VibeVoice) 3. **GitHub Project \"GitNexus\" Brings Zero-Server Code Exploration** GitNexus, a client-side knowledge graph tool for exploring GitHub repositories, launched with compatibility for in-browser interactive ana",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-30T03:00:01.252Z",
+      "lastRecalledAt": "2026-04-30T03:00:01.252Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "github.com/microsoft/vibevoice",
+        "zero-server",
+        "client-side",
+        "in-browser",
+        "assistant",
+        "solutions",
+        "source",
+        "https"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: [Source](https://www.theverge.com) 5. **Generative AI Monitoring Tools Released by Microsoft** Microsoft highlights challenges and releases an enterprise-grade monitoring suite for managing LLM output, addressing drift, retries, and refusals in generative AI. - **Why i",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-30T03:00:01.252Z",
+      "lastRecalledAt": "2026-04-30T03:00:01.252Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "www.theverge.com",
+        "enterprise-grade",
+        "assistant",
+        "source",
+        "https",
+        "generative",
+        "monitoring",
+        "tools"
       ]
     }
   }
