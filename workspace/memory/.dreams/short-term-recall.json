@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-03T03:00:01.318Z",
+  "updatedAt": "2026-05-04T03:00:01.183Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -14458,6 +14458,99 @@
         "top",
         "news",
         "resulted"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-03.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-03.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-03.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: Running the daily AI briefing task. Gathering and processing the top 5 developments in AI from the last 24 hours. Sit tight!",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-04T03:00:01.183Z",
+      "lastRecalledAt": "2026-05-04T03:00:01.183Z",
+      "queryHashes": [
+        "b2bd51325196"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "assistant",
+        "running",
+        "the",
+        "briefing",
+        "task",
+        "gathering",
+        "processing",
+        "top"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-03.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-03.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-03.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Sunday, May 3rd, 2026 - 7:00 AM (UTC) / 2026-05-03 07:00 UTC Use the message tool if you need to not",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-04T03:00:01.183Z",
+      "lastRecalledAt": "2026-05-04T03:00:01.183Z",
+      "queryHashes": [
+        "b2bd51325196"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-03.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-03.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-03.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Encountered issues with both web fetch attempts for sourcing the daily AI brief. Alternative sources or manual intervention might be necessary. Would you like me to try other specific websites, or adjust the approach?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-04T03:00:01.183Z",
+      "lastRecalledAt": "2026-05-04T03:00:01.183Z",
+      "queryHashes": [
+        "b2bd51325196"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "assistant",
+        "encountered",
+        "issues",
+        "both",
+        "web",
+        "fetch",
+        "attempts",
+        "sourcing"
       ]
     }
   }
