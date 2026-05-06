@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-05T03:00:01.337Z",
+  "updatedAt": "2026-05-06T03:00:02.175Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -14675,6 +14675,99 @@
         "https",
         "concludes",
         "today’s"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Tuesday, May 5th, 2026 - 7:00 AM (UTC) / 2026-05-05 07:00 UTC Use the message tool if you need to no",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T03:00:02.175Z",
+      "lastRecalledAt": "2026-05-06T03:00:02.175Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: To deliver the daily AI brief, I'll compile the top AI developments from the past 24 hours following your SKILL.md instructions. Searching now for key announcements, open-source releases, and product launches.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T03:00:02.175Z",
+      "lastRecalledAt": "2026-05-06T03:00:02.175Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "open-source",
+        "assistant",
+        "deliver",
+        "the",
+        "brief",
+        "i'll",
+        "compile"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Today's AI brief will be compiled from the limited data retrieved, focusing on top developments, as some sources were unavailable. Let's summarize key points: ### AI News Brief --- 1. **Hugging Face Diffusers Gain Momentum** - _Summary:_ Hugging Face's `diffusers` libr",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T03:00:02.175Z",
+      "lastRecalledAt": "2026-05-06T03:00:02.175Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "assistant",
+        "today's",
+        "brief",
+        "will",
+        "compiled",
+        "the",
+        "limited",
+        "data"
       ]
     }
   }

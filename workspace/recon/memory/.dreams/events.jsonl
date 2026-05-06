@@ -273,3 +273,6 @@
 {"type":"memory.dream.completed","timestamp":"2026-05-05T03:01:16.088Z","phase":"light","reportPath":"/home/claw/.openclaw/workspace/recon/memory/dreaming/light/2026-05-05.md","lineCount":1,"storageMode":"separate"}
 {"type":"memory.dream.completed","timestamp":"2026-05-05T03:01:16.088Z","phase":"rem","reportPath":"/home/claw/.openclaw/workspace/recon/memory/dreaming/rem/2026-05-05.md","lineCount":5,"storageMode":"separate"}
 {"type":"memory.dream.completed","timestamp":"2026-05-05T03:01:16.088Z","phase":"deep","reportPath":"/home/claw/.openclaw/workspace/recon/memory/dreaming/deep/2026-05-05.md","lineCount":2,"storageMode":"separate"}
+{"type":"memory.dream.completed","timestamp":"2026-05-06T03:01:17.209Z","phase":"light","reportPath":"/home/claw/.openclaw/workspace/recon/memory/dreaming/light/2026-05-06.md","lineCount":1,"storageMode":"separate"}
+{"type":"memory.dream.completed","timestamp":"2026-05-06T03:01:17.209Z","phase":"rem","reportPath":"/home/claw/.openclaw/workspace/recon/memory/dreaming/rem/2026-05-06.md","lineCount":5,"storageMode":"separate"}
+{"type":"memory.dream.completed","timestamp":"2026-05-06T03:01:17.209Z","phase":"deep","reportPath":"/home/claw/.openclaw/workspace/recon/memory/dreaming/deep/2026-05-06.md","lineCount":2,"storageMode":"separate"}
