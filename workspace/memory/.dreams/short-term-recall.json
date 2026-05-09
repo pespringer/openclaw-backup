@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-08T03:00:01.101Z",
+  "updatedAt": "2026-05-09T03:00:01.105Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -15078,6 +15078,130 @@
         "summarizing",
         "top",
         "developments"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Friday, May 8th, 2026 - 7:00 AM (UTC) / 2026-05-08 07:00 UTC Use the message tool if you need to not",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T03:00:01.105Z",
+      "lastRecalledAt": "2026-05-09T03:00:01.105Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Here's today's AI news brief: ### 1. Anthropic Introduces \"Dreaming\" System **Summary:** Anthropic has unveiled \"dreaming,\" an innovative system designed to help AI agents improve autonomously by learning from their mistakes through simulated scenarios. The mechanism a",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T03:00:01.105Z",
+      "lastRecalledAt": "2026-05-09T03:00:01.105Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "assistant",
+        "here's",
+        "today's",
+        "news",
+        "brief",
+        "anthropic",
+        "introduces",
+        "dreaming"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: builders:** The upgraded API promises more cost-effective scaling for custom models. [Source](https://techcrunch.com/search/ai%20news) ### 3. Google's Gemini Adopted by Major Enterprises **Summary:** Google's Gemini model is now being integrated into leading enterprise",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T03:00:01.105Z",
+      "lastRecalledAt": "2026-05-09T03:00:01.105Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "cost-effective",
+        "techcrunch.com/search/ai",
+        "assistant",
+        "builders",
+        "the",
+        "upgraded",
+        "api",
+        "promises"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: shifts—stay ahead by reading. [Source](https://arxiv.org/list/cs.AI/recent) Only four major developments surfaced within the last 24 hours. More updates tomorrow!",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T03:00:01.105Z",
+      "lastRecalledAt": "2026-05-09T03:00:01.105Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "arxiv.org/list/cs.ai/recent",
+        "assistant",
+        "shifts",
+        "stay",
+        "ahead",
+        "reading",
+        "source",
+        "https"
       ]
     }
   }
