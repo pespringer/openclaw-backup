@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-11T03:00:01.069Z",
+  "updatedAt": "2026-05-12T03:00:01.121Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -15326,6 +15326,99 @@
         "brief",
         "top",
         "stories"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Monday, May 11th, 2026 - 7:00 AM (UTC) / 2026-05-11 07:00 UTC Use the message tool if you need to no",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T03:00:01.121Z",
+      "lastRecalledAt": "2026-05-12T03:00:01.121Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: The fetched content spans five sources, primarily raw HTML, tailored summaries, and partially truncated data. I'll synthesize key AI developments based on the available excerpts. Any actionable daily briefing will be encapsulated if incomplete. Stand by as I extract an",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T03:00:01.121Z",
+      "lastRecalledAt": "2026-05-12T03:00:01.121Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "assistant",
+        "the",
+        "fetched",
+        "content",
+        "spans",
+        "five",
+        "sources",
+        "primarily"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Link**: [VentureBeat Article](https://venturebeat.com/category/ai) 2. **Running AI Models on Modest Hardware** - **Summary**: Hacker News discusses running local AI models (e.g., M4 platforms) with specific memory tuning—allowing accessible self-hosted experimentation.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T03:00:01.121Z",
+      "lastRecalledAt": "2026-05-12T03:00:01.121Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "venturebeat.com/category/ai",
+        "e.g",
+        "self-hosted",
+        "assistant",
+        "link",
+        "venturebeat",
+        "article",
+        "https"
       ]
     }
   }
