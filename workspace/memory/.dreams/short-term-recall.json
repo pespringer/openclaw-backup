@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-13T03:00:00.514Z",
+  "updatedAt": "2026-05-14T03:00:00.498Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -16070,6 +16070,223 @@
         "dance",
         "the",
         "observed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-13.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-13.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-13.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Wednesday, May 13th, 2026 - 7:00 AM (UTC) / 2026-05-13 07:00 UTC Use the message tool if you need to",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T03:00:00.498Z",
+      "lastRecalledAt": "2026-05-14T03:00:00.498Z",
+      "queryHashes": [
+        "8c2b6c884df4"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-13.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-13.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-13.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: [cron:313d0aae-9c43-4f89-895a-091d9b1d31f4 daily-ai-brief] Read and follow: ~/skills/daily-ai-brief/SKILL.md # Context (schedule-specific) Telegram: 8445509532 Current time: Wednesday, May 13th, 2026 - 7:00 AM (UTC) / 2026-05-13 07:00 UTC Use the message tool if you need to",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T03:00:00.498Z",
+      "lastRecalledAt": "2026-05-14T03:00:00.498Z",
+      "queryHashes": [
+        "8c2b6c884df4"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "daily-ai-brief",
+        "skills/daily-ai-brief/skill.md",
+        "schedule-specific",
+        "user",
+        "cron",
+        "313d0aae",
+        "9c43",
+        "4f89"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-13.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-13.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-13.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: I'll gather the top 5 developments in AI over the past 24 hours and provide a concise summary for each one. Stand by while I collect and review recent AI news.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T03:00:00.498Z",
+      "lastRecalledAt": "2026-05-14T03:00:00.498Z",
+      "queryHashes": [
+        "8c2b6c884df4"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "i'll",
+        "gather",
+        "the",
+        "top",
+        "developments",
+        "hours",
+        "provide"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-13.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-13.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-13.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: The AI news search yielded no relevant updates directly from the attempted source. Let me perform a broader search for recent AI developments across multiple major sites.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T03:00:00.498Z",
+      "lastRecalledAt": "2026-05-14T03:00:00.498Z",
+      "queryHashes": [
+        "8c2b6c884df4"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "the",
+        "news",
+        "yielded",
+        "relevant",
+        "updates",
+        "directly",
+        "attempted"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-13.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-13.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-13.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: ### Top 5 AI Developments (Past 24 Hours) Here are the latest noteworthy advancements in AI: 1. **OpenAI Expands with \"Deployment Company\" Venture** - OpenAI launched a new initiative to help businesses deploy and integrate advanced AI systems with better customizabili",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T03:00:00.498Z",
+      "lastRecalledAt": "2026-05-14T03:00:00.498Z",
+      "queryHashes": [
+        "8c2b6c884df4"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "openai",
+        "assistant",
+        "top",
+        "developments",
+        "hours",
+        "here",
+        "the",
+        "latest"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-13.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-13.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-13.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Run Rate** - Anthropic, known for its Claude models, announced exponential growth driven largely by enterprise AI adoption. - Why it matters for builders: Signals high demand in enterprise settings; competition in robust language models is intense. - Source: [VentureBe",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T03:00:00.498Z",
+      "lastRecalledAt": "2026-05-14T03:00:00.498Z",
+      "queryHashes": [
+        "8c2b6c884df4"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "run",
+        "rate",
+        "anthropic",
+        "known",
+        "claude",
+        "models",
+        "announced"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-13.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-13.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-13.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: streamline contract and casework. - Why it matters for builders: Opens up opportunities to script domain-focused systems. - Source: [The Verge](https://www.theverge.com/ai) Let me know if you'd like more details about these updates!",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T03:00:00.498Z",
+      "lastRecalledAt": "2026-05-14T03:00:00.498Z",
+      "queryHashes": [
+        "8c2b6c884df4"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "domain-focused",
+        "www.theverge.com/ai",
+        "assistant",
+        "streamline",
+        "contract",
+        "casework",
+        "why",
+        "matters"
       ]
     }
   }
